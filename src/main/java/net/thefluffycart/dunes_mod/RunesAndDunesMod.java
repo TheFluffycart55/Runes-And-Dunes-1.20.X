@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.thefluffycart.dunes_mod.block.ModBlocks;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import org.slf4j.Logger;
 
@@ -26,6 +27,7 @@ public class RunesAndDunesMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -45,6 +47,11 @@ public class RunesAndDunesMod
         {
             event.accept(ModItems.RUBY);
             event.accept(ModItems.SAPPHIRE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.RUBY_BLOCK);
+            event.accept(ModBlocks.SAPPHIRE_BLOCK);
         }
     }
 

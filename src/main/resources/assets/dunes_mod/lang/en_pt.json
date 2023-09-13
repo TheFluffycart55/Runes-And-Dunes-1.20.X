@@ -1,4 +1,9 @@
 {
-  "item.dunes_mod.ruby": "Cthulu's Heart",
-  "item.dunes_mod.sapphire": "Gem o' the sea"
+  "item.dunes_mod.ruby": "Bloodied Gem",
+  "item.dunes_mod.sapphire": "Gem o' the sea",
+
+  "block.dunes_mod.ruby_block": "Block o' Bloodied Gems",
+  "block.dunes_mod.sapphire_block": "Block o' the sea",
+  "blocks.dunes_mod.dust_block": "Block o' Dust",
+  "blocks.dunes_mod.windswept_sand": "Sand o' the dunes"
 }
