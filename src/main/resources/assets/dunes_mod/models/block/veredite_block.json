@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "dunes_mod:block/ruby_block"
+    "all": "dunes_mod:block/veredite_block"
   }
 }

@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
+import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import org.slf4j.Logger;
 
@@ -25,6 +26,8 @@ public class RunesAndDunesMod
     public RunesAndDunesMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -45,13 +48,21 @@ public class RunesAndDunesMod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(ModItems.RUBY);
-            event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.SCORCHSTONE_GEM);
+            event.accept(ModItems.VEREDITE_GEM);
+            event.accept(ModItems.ECLIPSAL_GEM);
+            event.accept(ModItems.DUST);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(ModBlocks.RUBY_BLOCK);
-            event.accept(ModBlocks.SAPPHIRE_BLOCK);
+            event.accept(ModBlocks.SCORCHSTONE_BLOCK);
+            event.accept(ModBlocks.VEREDITE_BLOCK);
+        }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
+        {
+            event.accept(ModBlocks.DUST_BLOCK);
+            event.accept(ModBlocks.WINDSWEPT_SAND);
+            event.accept(ModBlocks.BONE_MARROW_ORE);
         }
     }
 

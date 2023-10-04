@@ -1,9 +1,13 @@
 {
-  "item.dunes_mod.ruby": "Ruby",
-  "item.dunes_mod.sapphire": "Sapphire",
+  "item.dunes_mod.scorchstone_gem": "Scorchstone Gem",
+  "item.dunes_mod.veredite_gem": "Veredite Gem",
+  "item.dunes_mod.eclipsal_gem": "Eclipsal Gem",
+  "item.dunes_mod.dust": "Dust",
 
-  "block.dunes_mod.ruby_block": "Block of Ruby",
-  "block.dunes_mod.sapphire_block": "Block of Sapphire",
+  "block.dunes_mod.scorchstone_block": "Scorchstone Block",
+  "block.dunes_mod.veredite_block": "Veredite Block",
   "block.dunes_mod.dust_block": "Block of Dust",
-  "block.dunes_mod.windswept_sand": "Windswept Sand"
+  "block.dunes_mod.windswept_sand": "Windswept Sand",
+  "block.dunes_mod.bone_marrow_ore": "Bone Marrow Ore",
+  "creativetab.gems_tab": "Gemstones Tab"
 }

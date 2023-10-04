@@ -18,19 +18,19 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, RunesAndDunesMod.MOD_ID);
-
-    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).instrument(NoteBlockInstrument.BELL)));
-
-    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).instrument(NoteBlockInstrument.BELL)));
+    //Gem blocks, fuck you
+    public static final RegistryObject<Block> SCORCHSTONE_BLOCK = registerBlock("scorchstone_block",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)));
+    public static final RegistryObject<Block> VEREDITE_BLOCK = registerBlock("veredite_block",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)));
 
     public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GRAVEL).instrument(NoteBlockInstrument.DIDGERIDOO)));
-
     public static final RegistryObject<Block> WINDSWEPT_SAND = registerBlock("windswept_sand",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)));
 
+    public static final RegistryObject<Block> BONE_MARROW_ORE = registerBlock("bone_marrow_ore",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
