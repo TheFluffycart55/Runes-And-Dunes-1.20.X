@@ -1,12 +1,28 @@
 {
   "item.dunes_mod.scorchstone_gem": "Gem o' da Sands",
   "item.dunes_mod.veredite_gem": "Gem o' da Wilds",
-  "item.dunes_mod.eclipsal_gem": "Gem o' da void",
-  "item.dunes_mod.dust": "Ye Slitherbeast's Ashes",
+  "item.dunes_mod.eclipsal_gem": "Gem o' da Abyss",
+
+  "item.dunes_mod.scorchstone_relic": "Trinket o' the sands",
+  "item.dunes_mod.veredite_relic": "Trinket o' the vines",
+  "item.dunes_mod.eclipsal_relic": "Trinket o' the abyss",
+
+  "item.dunes_mod.shattered_relic": "Crumbled Trinket",
+  "item.dunes_mod.shattered_weapon": "Crumbled Defenses",
+  "item.dunes_mod.weapon_template": " Defense Guide",
+  "item.dunes_mod.relic_template": "Trinket Guide",
+
+  "item.dunes_mod.dust": "Ashes of tha dead",
+  "item.dunes_mod.raw_bone_marrow": "Pure Slitherbeast's Remains",
 
   "block.dunes_mod.scorchstone_block": "Block o' da Sands",
   "block.dunes_mod.veredite_block": "Block o' da Jungles",
-  "blocks.dunes_mod.dust_block": "Block o' Dust",
-  "blocks.dunes_mod.windswept_sand": "Sand o' the dunes",
-  "blocks.dunes_mod.bone_marrow_ore": "Ye Dusty Bones"
+  "block.dunes_mod.eclipsal_block": "Block o' da Abyss",
+
+  "block.dunes_mod.dust_block": "Block o'f' Ashes",
+  "block.dunes_mod.windswept_sand": "Slitherbeast's Trails",
+  "block.dunes_mod.bone_marrow_ore": "Ore of tha Slitherbeast",
+
+  "creativetab.artifacts_tab": "THERE BE GOLD!",
+  "creativetab.resources_tab": "Nature's Bounties"
 }

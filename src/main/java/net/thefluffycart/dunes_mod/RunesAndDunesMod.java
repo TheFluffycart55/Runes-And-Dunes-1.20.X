@@ -1,6 +1,8 @@
 package net.thefluffycart.dunes_mod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
+import net.thefluffycart.dunes_mod.entity.ModEntities;
+import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import org.slf4j.Logger;
@@ -31,6 +35,7 @@ public class RunesAndDunesMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -80,7 +85,7 @@ public class RunesAndDunesMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.MEERKAT.get(), MeerkatRenderer::new);
         }
     }
 }

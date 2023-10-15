@@ -2,12 +2,28 @@
   "item.dunes_mod.scorchstone_gem": "Scorchstone Gem",
   "item.dunes_mod.veredite_gem": "Veredite Gem",
   "item.dunes_mod.eclipsal_gem": "Eclipsal Gem",
+
+  "item.dunes_mod.scorchstone_relic": "Scorchstone Relic",
+  "item.dunes_mod.veredite_relic": "Veredite Relic",
+  "item.dunes_mod.eclipsal_relic": "Eclipsal Relic",
+
+  "item.dunes_mod.shattered_relic": "Shattered Relic",
+  "item.dunes_mod.shattered_weapon": "Shattered Weapon",
+  "item.dunes_mod.weapon_template": "Weapon Template",
+  "item.dunes_mod.relic_template": "Relic Tempalte",
+
   "item.dunes_mod.dust": "Dust",
+  "item.dunes_mod.raw_bone_marrow": "Raw Bone Marrow",
+  "item.dunes_mod.meerkat_spawn_egg": "Meerkat Spawn Egg",
 
   "block.dunes_mod.scorchstone_block": "Scorchstone Block",
   "block.dunes_mod.veredite_block": "Veredite Block",
+  "block.dunes_mod.eclipsal_block": "Eclipsal Block",
+
   "block.dunes_mod.dust_block": "Block of Dust",
   "block.dunes_mod.windswept_sand": "Windswept Sand",
   "block.dunes_mod.bone_marrow_ore": "Bone Marrow Ore",
-  "creativetab.gems_tab": "Gemstones Tab"
+
+  "creativetab.artifacts_tab": "Artifacts Tab",
+  "creativetab.resources_tab": "Resources Tab"
 }

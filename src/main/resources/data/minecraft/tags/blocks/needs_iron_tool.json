@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "dunes_mod:scorchstone_block",
+    "dunes_mod:veredite_block",
+    "dunes_mod:eclipsal_block"
+  ]
+}

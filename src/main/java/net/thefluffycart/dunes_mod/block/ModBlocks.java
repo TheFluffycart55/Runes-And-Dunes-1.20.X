@@ -1,9 +1,11 @@
 package net.thefluffycart.dunes_mod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,17 +22,29 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, RunesAndDunesMod.MOD_ID);
     //Gem blocks, fuck you
     public static final RegistryObject<Block> SCORCHSTONE_BLOCK = registerBlock("scorchstone_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)));
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
+                    .requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> VEREDITE_BLOCK = registerBlock("veredite_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)));
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ECLIPSAL_BLOCK = registerBlock("eclipsal_block",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
+                    .requiresCorrectToolForDrops()));
+
 
     public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GRAVEL).instrument(NoteBlockInstrument.DIDGERIDOO)));
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GRAVEL).instrument(NoteBlockInstrument.DIDGERIDOO)
+                    .requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> WINDSWEPT_SAND = registerBlock("windswept_sand",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)));
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BONE_MARROW_ORE = registerBlock("bone_marrow_ore",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)));
+            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.5f).requiresCorrectToolForDrops()
+                    , UniformInt.of(2,4)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
