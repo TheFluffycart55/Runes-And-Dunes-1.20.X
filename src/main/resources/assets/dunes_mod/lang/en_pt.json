@@ -14,6 +14,7 @@
 
   "item.dunes_mod.dust": "Ashes of tha dead",
   "item.dunes_mod.raw_bone_marrow": "Pure Slitherbeast's Remains",
+  "item.dunes_mod.meerkat_spawn_egg": "Desert Weasel's Egg",
 
   "block.dunes_mod.scorchstone_block": "Block o' da Sands",
   "block.dunes_mod.veredite_block": "Block o' da Jungles",
@@ -22,6 +23,8 @@
   "block.dunes_mod.dust_block": "Block o'f' Ashes",
   "block.dunes_mod.windswept_sand": "Slitherbeast's Trails",
   "block.dunes_mod.bone_marrow_ore": "Ore of tha Slitherbeast",
+  "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
+  "block.dunes_mod.sand_tombed_artifact": "Sand Tombed Artifact",
 
   "creativetab.artifacts_tab": "THERE BE GOLD!",
   "creativetab.resources_tab": "Nature's Bounties"

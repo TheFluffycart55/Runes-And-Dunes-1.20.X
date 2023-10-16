@@ -12,9 +12,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class ScorchstoneRelicItem extends Item
+public class EclipsalRelicItem extends Item
 {
-    public ScorchstoneRelicItem(Item.Properties pProperties) {super(pProperties);}
+    public EclipsalRelicItem(Properties pProperties) {super(pProperties);}
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
@@ -22,8 +22,8 @@ public class ScorchstoneRelicItem extends Item
             ItemStack itemstack = pPlayer.getItemInHand(pHand);
             pLevel.playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.TOTEM_USE, SoundSource.PLAYERS, 0.5F, 1F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
             System.out.println("Totem Right Clicked!");
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 1));
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 100, 20));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 0));
 
 
             if (pPlayer instanceof Player) {

@@ -30,6 +30,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ECLIPSAL_RELIC.get());
                         pOutput.accept(ModItems.SHATTERED_RELIC.get());
                         pOutput.accept(ModItems.SHATTERED_WEAPON.get());
+                        pOutput.accept(ModItems.RELIC_TEMPLATE.get());
+                        pOutput.accept(ModItems.WEAPON_TEMPLATE.get());
                     }
                     ).build());
 
@@ -41,6 +43,12 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.DUST.get());
                                 pOutput.accept(ModItems.RAW_BONE_MARROW.get());
                                 pOutput.accept(ModBlocks.DUST_BLOCK.get());
+                                pOutput.accept(ModBlocks.WINDSWEPT_SAND.get());
+                                pOutput.accept(ModBlocks.BONE_MARROW_ORE.get());
+                                pOutput.accept(ModBlocks.DUST_TOMBED_ARTIFACT.get());
+                                pOutput.accept(ModBlocks.SAND_TOMBED_ARTIFACT.get());
+                                pOutput.accept(ModItems.DUSTY_ARTIFACT.get());
+                                pOutput.accept(ModItems.SANDY_ARTIFACT.get());
                                 pOutput.accept(ModItems.MEERKAT_SPAWN_EGG.get());
                             }
                     ).build());

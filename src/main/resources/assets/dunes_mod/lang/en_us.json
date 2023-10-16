@@ -23,6 +23,11 @@
   "block.dunes_mod.dust_block": "Block of Dust",
   "block.dunes_mod.windswept_sand": "Windswept Sand",
   "block.dunes_mod.bone_marrow_ore": "Bone Marrow Ore",
+  "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
+  "block.dunes_mod.sand_tombed_artifact": "Sand Tombed Artifact",
+  "item.dunes_mod.dusty_artifact": "Dusty Artifact",
+  "item.dunes_mod.sandy_artifact": "Sandy Artifact",
+
 
   "creativetab.artifacts_tab": "Artifacts Tab",
   "creativetab.resources_tab": "Resources Tab"
