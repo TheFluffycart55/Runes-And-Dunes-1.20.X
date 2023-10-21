@@ -35,9 +35,9 @@ public class ModCreativeModeTabs {
                     }
                     ).build());
 
-    public static final RegistryObject<CreativeModeTab> RESOURCES_TAB = CREATIVE_MODE_TABS.register("resources_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.DUST.get()))
-                    .title(Component.translatable("creativetab.resources_tab"))
+    public static final RegistryObject<CreativeModeTab> EXCAVATION_TAB = CREATIVE_MODE_TABS.register("excavation_tab",
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.DUSTY_ARTIFACT.get()))
+                    .title(Component.translatable("creativetab.excavation_tab"))
                     .displayItems((pParameters, pOutput) ->
                             {
                                 pOutput.accept(ModItems.DUST.get());
@@ -50,6 +50,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.DUSTY_ARTIFACT.get());
                                 pOutput.accept(ModItems.SANDY_ARTIFACT.get());
                                 pOutput.accept(ModItems.MEERKAT_SPAWN_EGG.get());
+                                pOutput.accept(ModBlocks.EXCAVATION_LANTERN.get());
                             }
                     ).build());
 

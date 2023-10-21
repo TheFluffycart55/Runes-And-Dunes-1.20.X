@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "dunes_mod:item/sandy_artifact"
-  }
-}

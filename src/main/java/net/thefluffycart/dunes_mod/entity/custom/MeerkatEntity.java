@@ -60,7 +60,7 @@ public class MeerkatEntity extends Animal {
             f = 0.0F;
         }
 
-        this.walkAnimation.update(f, 0.2F);
+        this.walkAnimation.update(f, 0.15F);
     }
 
     @Override

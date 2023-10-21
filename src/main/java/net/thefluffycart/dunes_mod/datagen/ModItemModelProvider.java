@@ -20,51 +20,27 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(ModItems.DUST);
+        simpleItem(ModItems.DUSTY_ARTIFACT);
+        simpleItem(ModItems.SANDY_ARTIFACT);
+        simpleItem(ModItems.BONE_MARROW_INGOT);
+        simpleItem(ModItems.RAW_BONE_MARROW);
+        simpleItem(ModItems.SCORCHSTONE_GEM);
+        simpleItem(ModItems.SCORCHSTONE_RELIC);
+        simpleItem(ModItems.VEREDITE_GEM);
+        simpleItem(ModItems.VEREDITE_RELIC);
+        simpleItem(ModItems.ECLIPSAL_GEM);
+        simpleItem(ModItems.ECLIPSAL_RELIC);
+        simpleItem(ModItems.RELIC_TEMPLATE);
+        simpleItem(ModItems.WEAPON_TEMPLATE);
+        simpleItem(ModItems.SHATTERED_RELIC);
+        simpleItem(ModItems.SHATTERED_WEAPON);
         withExistingParent(ModItems.MEERKAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
-    }
-
-    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(RunesAndDunesMod.MOD_ID,"block/" + item.getId().getPath()));
-    }
-
-    private ItemModelBuilder complexBlock(Block block) {
-        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(RunesAndDunesMod.MOD_ID,
-                "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
-    }
-
-    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
-    }
-
-    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
-    }
-
-    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
-    }
-
-
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(RunesAndDunesMod.MOD_ID,"item/" + item.getId().getPath()));
-    }
-
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(RunesAndDunesMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(RunesAndDunesMod.MOD_ID,"item/" + item.getId().getPath()));
+                new ResourceLocation(RunesAndDunesMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

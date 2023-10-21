@@ -25,7 +25,24 @@
   "block.dunes_mod.bone_marrow_ore": "Ore of tha Slitherbeast",
   "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
   "block.dunes_mod.sand_tombed_artifact": "Sand Tombed Artifact",
+  "block.dunes_mod.excavation_lantern": "Digger's Torchlight",
+
+  "item.dunes_mod.cured_beef": "Cured Beef",
+  "item.dunes_mod.cured_chicken": "Cured Chicken",
+  "item.dunes_mod.cured_porkchop": "Cured Porkchop",
+  "item.dunes_mod.cured_salmon": "Cured Salmon",
+  "item.dunes_mod.cured_cod": "Cured Cod",
+  "item.dunes_mod.cured_rabbit": "Cured Rabbit",
+  "item.dunes_mod.cured_mutton": "Cured Mutton",
+
+  "item.dunes_mod.salted_beef": "Salted Beef",
+  "item.dunes_mod.salted_chicken": "Salted Chicken",
+  "item.dunes_mod.salted_porkchop": "Salted Porkchop",
+  "item.dunes_mod.salted_salmon": "Salted Salmon",
+  "item.dunes_mod.salted_cod": "Salted Cod",
+  "item.dunes_mod.salted_rabbit": "Salted Rabbit",
+  "item.dunes_mod.salted_mutton": "Salted Mutton",
 
   "creativetab.artifacts_tab": "THERE BE GOLD!",
-  "creativetab.resources_tab": "Nature's Bounties"
+  "creativetab.excavation_tab": "Nature's Bounties"
 }

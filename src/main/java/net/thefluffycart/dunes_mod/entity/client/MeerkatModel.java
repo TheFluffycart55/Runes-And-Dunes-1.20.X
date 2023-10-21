@@ -59,7 +59,7 @@ public class MeerkatModel<T extends MeerkatEntity> extends HierarchicalModel<T> 
 	@Override
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animateWalk(ModAnimationDefinitions.MEERKAT_WALK, limbSwing, limbSwingAmount, 4f, 4.5f);
+		this.animateWalk(ModAnimationDefinitions.MEERKAT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(entity.idleAnimationState, ModAnimationDefinitions.MEERKAT_IDLE, ageInTicks, 1f);
 	}
 

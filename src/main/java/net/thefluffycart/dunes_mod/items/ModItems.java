@@ -38,6 +38,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_BONE_MARROW = ITEMS.register("raw_bone_marrow",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONE_MARROW_INGOT = ITEMS.register("bone_marrow_ingot",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DUSTY_ARTIFACT = ITEMS.register("dusty_artifact",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SANDY_ARTIFACT = ITEMS.register("sandy_artifact",
@@ -47,7 +49,7 @@ public class ModItems {
 
 //RELICS
     public static final RegistryObject<Item> SCORCHSTONE_RELIC= ITEMS.register("scorchstone_relic",
-        () -> new ScorchstoneRelicItem(new Item.Properties().stacksTo(1)));
+            () -> new ScorchstoneRelicItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> VEREDITE_RELIC= ITEMS.register("veredite_relic",
             () -> new VerediteRelicItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ECLIPSAL_RELIC= ITEMS.register("eclipsal_relic",

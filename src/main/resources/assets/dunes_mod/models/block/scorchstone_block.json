@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "dunes_mod:block/scorchstone_block"
-  }
-}

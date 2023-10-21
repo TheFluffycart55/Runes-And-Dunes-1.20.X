@@ -29,7 +29,7 @@ public class MeerkatRenderer extends MobRenderer<MeerkatEntity, MeerkatModel<Mee
     public void render(MeerkatEntity pEntity, float pEntityYaw, float pPartialTicks,
                        PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight) {
         if(pEntity.isBaby()) {
-            pMatrixStack.scale(0.65f, 0.65f, 0.65f);
+            pMatrixStack.scale(0.75f, 0.75f, 0.75f);
         }
 
         super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);

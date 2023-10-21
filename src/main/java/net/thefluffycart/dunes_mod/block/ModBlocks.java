@@ -3,10 +3,7 @@ package net.thefluffycart.dunes_mod.block;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.GravelBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +28,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ECLIPSAL_BLOCK = registerBlock("eclipsal_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> EXCAVATION_LANTERN = registerBlock("excavation_lantern",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.JACK_O_LANTERN)
+                    .instrument(NoteBlockInstrument.CHIME).sound(SoundType.CHAIN)
                     .requiresCorrectToolForDrops()));
 
     //RESOURCES

@@ -27,8 +27,16 @@
   "block.dunes_mod.sand_tombed_artifact": "Sand Tombed Artifact",
   "item.dunes_mod.dusty_artifact": "Dusty Artifact",
   "item.dunes_mod.sandy_artifact": "Sandy Artifact",
+  "block.dunes_mod.excavation_lantern": "Excavation Lantern",
 
+
+  "tooltip.dunes_mod.scorchstone_relic.tooltip": "Press §eSHIFT§r for more Informtion",
+  "tooltip.dunes_mod.scorchstone_relic.tooltip.shift": "§eRight Click§r while holding the Scorchstone Relic to obtain hidden strength",
+  "tooltip.dunes_mod.veredite_relic.tooltip": "Press §eSHIFT§r for more Informtion",
+  "tooltip.dunes_mod.veredite_relic.tooltip.shift": "§eRight Click§r while holding the Veredite Relic to traverse new obstacles",
+  "tooltip.dunes_mod.eclipsal_relic.tooltip": "Press §eSHIFT§r for more Informtion",
+  "tooltip.dunes_mod.eclipsal_relic.tooltip.shift": "§eRight Click§r while holding the Eclipsal Relic to reach new heights",
 
   "creativetab.artifacts_tab": "Artifacts Tab",
-  "creativetab.resources_tab": "Resources Tab"
+  "creativetab.excavation_tab": "Excavation Tab"
 }
