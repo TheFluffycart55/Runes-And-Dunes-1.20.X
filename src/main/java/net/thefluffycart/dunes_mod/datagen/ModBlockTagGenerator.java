@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
@@ -40,6 +41,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DUST_TOMBED_ARTIFACT.get(),
                 ModBlocks.SAND_TOMBED_ARTIFACT.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.OLIVE_STAIRS.get(),
+                ModBlocks.OLIVE_PLANKS.get(),
+                ModBlocks.OLIVE_SLAB.get(),
+                ModBlocks.OLIVE_PRESSURE_PLATE.get(),
+                ModBlocks.OLIVE_BUTTON.get(),
+                ModBlocks.OLIVE_FENCE.get(),
+                ModBlocks.OLIVE_FENCE_GATE.get());
+
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.DUST_TOMBED_ARTIFACT.get(),
                         ModBlocks.SAND_TOMBED_ARTIFACT.get(),
@@ -52,6 +62,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.BONE_MARROW_ORE.get(),
                         ModBlocks.WINDSWEPT_SAND.get(),
                         ModBlocks.DUST_BLOCK.get());
+
+        this.tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.OLIVE_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.OLIVE_FENCE_GATE.get());
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.OLIVE_PLANKS.get());
+        this.tag(BlockTags.WOODEN_SLABS)
+                .add(ModBlocks.OLIVE_SLAB.get());
+        this.tag(BlockTags.WOODEN_DOORS)
+                .add(ModBlocks.OLIVE_DOOR.get());
+        this.tag(BlockTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.OLIVE_TRAPDOOR.get());
+        this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(ModBlocks.OLIVE_PRESSURE_PLATE.get());
+        this.tag(BlockTags.WOODEN_BUTTONS)
+                .add(ModBlocks.OLIVE_BUTTON.get());
+        this.tag(BlockTags.WOODEN_STAIRS)
+                .add(ModBlocks.OLIVE_STAIRS.get());
     }
 
     @Override

@@ -1,6 +1,8 @@
 package net.thefluffycart.dunes_mod.entity.custom;
 
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -12,6 +14,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
+import net.thefluffycart.dunes_mod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class MeerkatEntity extends Animal {
@@ -26,9 +29,9 @@ public class MeerkatEntity extends Animal {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new FollowParentGoal(this, 1.1d));
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 4f));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this,1d));
+        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 4f));
     }
 
     public static AttributeSupplier.Builder createAttributes ()
@@ -70,5 +73,19 @@ public class MeerkatEntity extends Animal {
         if (this.level().isClientSide()) {
             this.setupAnimationStates();
         }
+    }
+
+    /*SOUNDS*/
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.MEERKAT_IDLE.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return ModSounds.MEERKAT_HURT.get();
     }
 }

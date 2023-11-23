@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, RunesAndDunesMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> ARTIFACTS_TAB = CREATIVE_MODE_TABS.register("artifacts_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.SHATTERED_RELIC.get()))
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.SCORCHSTONE_GEM.get()))
                     .title(Component.translatable("creativetab.artifacts_tab"))
                     .displayItems((pParameters, pOutput) ->
                     {
@@ -28,7 +28,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SCORCHSTONE_RELIC.get());
                         pOutput.accept(ModItems.VEREDITE_RELIC.get());
                         pOutput.accept(ModItems.ECLIPSAL_RELIC.get());
-                        pOutput.accept(ModItems.SHATTERED_RELIC.get());
+                        pOutput.accept(ModItems.SHATTERED_RELIC_TEMPLATE.get());
                         pOutput.accept(ModItems.SHATTERED_WEAPON.get());
                         pOutput.accept(ModItems.RELIC_TEMPLATE.get());
                         pOutput.accept(ModItems.WEAPON_TEMPLATE.get());
@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
                             {
                                 pOutput.accept(ModItems.DUST.get());
                                 pOutput.accept(ModItems.RAW_BONE_MARROW.get());
+                                pOutput.accept(ModItems.BONE_MARROW_INGOT.get());
                                 pOutput.accept(ModBlocks.DUST_BLOCK.get());
                                 pOutput.accept(ModBlocks.WINDSWEPT_SAND.get());
                                 pOutput.accept(ModBlocks.BONE_MARROW_ORE.get());
@@ -51,6 +52,8 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.SANDY_ARTIFACT.get());
                                 pOutput.accept(ModItems.MEERKAT_SPAWN_EGG.get());
                                 pOutput.accept(ModBlocks.EXCAVATION_LANTERN.get());
+                                pOutput.accept(ModItems.PAPYRUS_CULM.get());
+                                pOutput.accept(ModItems.PAPYRUS.get());
                             }
                     ).build());
 

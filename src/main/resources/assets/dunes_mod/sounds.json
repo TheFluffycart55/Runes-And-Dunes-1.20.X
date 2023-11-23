@@ -1,0 +1,15 @@
+{
+  "meerkat_idle": {
+    "subtitle": "sounds.dunes_mod.meerkat_idle",
+    "sounds": [
+      "dunes_mod:meerkat_idle"
+    ]
+  },
+
+  "meerkat_hurt": {
+    "subtitle": "sounds.dunes_mod.meerkat_hurt",
+    "sounds": [
+      "dunes_mod:meerkat_hurt"
+    ]
+  }
+}

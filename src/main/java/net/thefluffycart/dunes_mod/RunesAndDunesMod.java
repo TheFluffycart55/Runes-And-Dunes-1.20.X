@@ -1,7 +1,6 @@
 package net.thefluffycart.dunes_mod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,6 +18,7 @@ import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
+import net.thefluffycart.dunes_mod.sound.ModSounds;
 import org.slf4j.Logger;
 
 @Mod(RunesAndDunesMod.MOD_ID)
@@ -36,6 +36,7 @@ public class RunesAndDunesMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -62,12 +63,29 @@ public class RunesAndDunesMod
         {
             event.accept(ModBlocks.SCORCHSTONE_BLOCK);
             event.accept(ModBlocks.VEREDITE_BLOCK);
+            event.accept(ModBlocks.ECLIPSAL_BLOCK);
+            event.accept(ModBlocks.OLIVE_PLANKS);
+            event.accept(ModBlocks.OLIVE_STAIRS);
+            event.accept(ModBlocks.OLIVE_SLAB);
+            event.accept(ModBlocks.OLIVE_FENCE);
+            event.accept(ModBlocks.OLIVE_FENCE_GATE);
+            event.accept(ModBlocks.OLIVE_DOOR);
+            event.accept(ModBlocks.OLIVE_TRAPDOOR);
         }
+
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
         {
             event.accept(ModBlocks.DUST_BLOCK);
             event.accept(ModBlocks.WINDSWEPT_SAND);
             event.accept(ModBlocks.BONE_MARROW_ORE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS)
+        {
+            event.accept(ModBlocks.OLIVE_PRESSURE_PLATE);
+            event.accept(ModBlocks.OLIVE_BUTTON);
+            event.accept(ModBlocks.OLIVE_DOOR);
+            event.accept(ModBlocks.OLIVE_TRAPDOOR);
         }
     }
 

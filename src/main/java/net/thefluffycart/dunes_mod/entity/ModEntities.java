@@ -16,6 +16,15 @@ public class ModEntities {
     public static final RegistryObject<EntityType<MeerkatEntity>> MEERKAT =
             ENTITY_TYPES.register("meerkat",()-> EntityType.Builder.of(MeerkatEntity::new, MobCategory.CREATURE)
                     .sized(0.5f,1f).build("meerkat"));
+
+    //public static final RegistryObject<EntityType<FireflyEntity>> FIREFLY =
+           // ENTITY_TYPES.register("firefly",()-> EntityType.Builder.of(FireflyEntity::new, MobCategory.AMBIENT)
+                  //  .sized(0.5f,1f).build("firefly"));
+
+    //public static final RegistryObject<EntityType<LeglessEntity>> LEGLESS =
+            //ENTITY_TYPES.register("legless",()-> EntityType.Builder.of(LeglessEntity::new, MobCategory.MONSTER)
+                    //.sized(1f,0.8f).build("legless"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

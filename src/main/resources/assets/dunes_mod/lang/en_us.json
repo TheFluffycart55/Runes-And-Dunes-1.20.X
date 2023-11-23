@@ -7,13 +7,19 @@
   "item.dunes_mod.veredite_relic": "Veredite Relic",
   "item.dunes_mod.eclipsal_relic": "Eclipsal Relic",
 
-  "item.dunes_mod.shattered_relic": "Shattered Relic",
+  "item.dunes_mod.shattered_relic_template": "Shattered Relic Template",
   "item.dunes_mod.shattered_weapon": "Shattered Weapon",
+  "item.dunes_mod.relic_template": "Relic Template",
   "item.dunes_mod.weapon_template": "Weapon Template",
-  "item.dunes_mod.relic_template": "Relic Tempalte",
+
+  "item.dunes_mod.papyrus": "Papyrus",
+  "item.dunes_mod.papyrus_culm": "Papyrus Culm",
 
   "item.dunes_mod.dust": "Dust",
   "item.dunes_mod.raw_bone_marrow": "Raw Bone Marrow",
+  "item.dunes_mod.bone_marrow_ingot": "Bone Marrow Ingot",
+  "item.dunes_mod.dusty_artifact": "Dusty Artifact",
+  "item.dunes_mod.sandy_artifact": "Sandy Artifact",
   "item.dunes_mod.meerkat_spawn_egg": "Meerkat Spawn Egg",
 
   "block.dunes_mod.scorchstone_block": "Scorchstone Block",
@@ -23,12 +29,20 @@
   "block.dunes_mod.dust_block": "Block of Dust",
   "block.dunes_mod.windswept_sand": "Windswept Sand",
   "block.dunes_mod.bone_marrow_ore": "Bone Marrow Ore",
-  "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
   "block.dunes_mod.sand_tombed_artifact": "Sand Tombed Artifact",
-  "item.dunes_mod.dusty_artifact": "Dusty Artifact",
-  "item.dunes_mod.sandy_artifact": "Sandy Artifact",
+  "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
   "block.dunes_mod.excavation_lantern": "Excavation Lantern",
 
+  "block.dunes_mod.olive_planks": "Olive Planks",
+  "block.dunes_mod.olive_stairs": "Olive Stairs",
+  "block.dunes_mod.olive_slab": "Olive Slab",
+  "block.dunes_mod.olive_fence": "Olive Fence",
+  "block.dunes_mod.olive_fence_gate": "Olive Fence Gate",
+  "block.dunes_mod.olive_door": "Olive Door",
+  "block.dunes_mod.olive_trapdoor": "Olive Trapdoor",
+  "block.dunes_mod.olive_pressure_plate": "Olive Pressure Plate",
+  "block.dunes_mod.olive_button": "Olive Button",
+  "block.dunes_mod.sifter": "Sifter",
 
   "tooltip.dunes_mod.scorchstone_relic.tooltip": "Press §eSHIFT§r for more Informtion",
   "tooltip.dunes_mod.scorchstone_relic.tooltip.shift": "§eRight Click§r while holding the Scorchstone Relic to obtain hidden strength",
@@ -38,5 +52,8 @@
   "tooltip.dunes_mod.eclipsal_relic.tooltip.shift": "§eRight Click§r while holding the Eclipsal Relic to reach new heights",
 
   "creativetab.artifacts_tab": "Artifacts Tab",
-  "creativetab.excavation_tab": "Excavation Tab"
+  "creativetab.excavation_tab": "Excavation Tab",
+
+  "sounds.dunes_mod.meerkat_idle": "Meerkat Sniffs",
+  "sounds.dunes_mod.meerkat_hurt": "Meerkat Hurt"
 }

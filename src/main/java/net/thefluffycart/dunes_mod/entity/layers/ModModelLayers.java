@@ -8,4 +8,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation MEERKAT_LAYER = new ModelLayerLocation(
             new ResourceLocation(RunesAndDunesMod.MOD_ID, "meerkat_layer"), "meerkat_layer");
 
+    //public static final ModelLayerLocation LEGLESS_LAYER = new ModelLayerLocation(
+            //new ResourceLocation(RunesAndDunesMod.MOD_ID, "legless_layer"), "legless_layer");
+
 }

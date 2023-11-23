@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "dunes_mod:excavation_site",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 4203690,
+
+    "spacing": 22,
+
+    "separation": 8
+  }
+}

@@ -6,7 +6,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
+//import net.thefluffycart.dunes_mod.entity.client.LeglessModel;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatModel;
+//import net.thefluffycart.dunes_mod.entity.custom.LeglessEntity;
 import net.thefluffycart.dunes_mod.entity.custom.MeerkatEntity;
 import net.thefluffycart.dunes_mod.entity.layers.ModModelLayers;
 
@@ -16,11 +18,13 @@ public class ModEventBusEvents {
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event)
     {
         event.registerLayerDefinition(ModModelLayers.MEERKAT_LAYER, MeerkatModel::createBodyLayer);
+        //event.registerLayerDefinition(ModModelLayers.LEGLESS_LAYER, LeglessModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event)
     {
         event.put(ModEntities.MEERKAT.get(), MeerkatEntity.createAttributes().build());
+        //event.put(ModEntities.LEGLESS.get(), LeglessEntity.createAttributes().build());
     }
 }
