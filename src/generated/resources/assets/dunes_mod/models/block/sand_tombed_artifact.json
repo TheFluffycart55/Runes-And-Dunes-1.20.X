@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "dunes_mod:block/sand_tombed_artifact"
+  }
+}

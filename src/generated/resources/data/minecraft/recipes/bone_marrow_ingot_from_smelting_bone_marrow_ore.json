@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "group": "bone_marrow",
+  "ingredient": {
+    "item": "dunes_mod:bone_marrow_ore"
+  },
+  "result": "dunes_mod:bone_marrow_ingot"
+}

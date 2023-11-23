@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dunes_mod:block/olive_pressure_plate"
+    },
+    "powered=true": {
+      "model": "dunes_mod:block/olive_pressure_plate_down"
+    }
+  }
+}

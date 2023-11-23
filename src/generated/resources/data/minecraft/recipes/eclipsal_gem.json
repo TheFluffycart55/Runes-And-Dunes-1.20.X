@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dunes_mod:eclipsal_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "dunes_mod:eclipsal_gem"
+  }
+}

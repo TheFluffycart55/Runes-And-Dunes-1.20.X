@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "R": {
+      "item": "dunes_mod:shattered_relic_template"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    }
+  },
+  "pattern": [
+    "CRC",
+    "CSC",
+    "CCC"
+  ],
+  "result": {
+    "item": "dunes_mod:relic_template"
+  },
+  "show_notification": true
+}

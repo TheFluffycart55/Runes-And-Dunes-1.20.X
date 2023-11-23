@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "dunes_mod:block/papyrus_stage0"
+    },
+    "age=1": {
+      "model": "dunes_mod:block/papyrus_stage1"
+    },
+    "age=2": {
+      "model": "dunes_mod:block/papyrus_stage2"
+    },
+    "age=3": {
+      "model": "dunes_mod:block/papyrus_stage3"
+    },
+    "age=4": {
+      "model": "dunes_mod:block/papyrus_stage4"
+    },
+    "age=5": {
+      "model": "dunes_mod:block/papyrus_stage5"
+    },
+    "age=6": {
+      "model": "dunes_mod:block/papyrus_stage6"
+    },
+    "age=7": {
+      "model": "dunes_mod:block/papyrus_stage7"
+    },
+    "age=8": {
+      "model": "dunes_mod:block/papyrus_stage8"
+    }
+  }
+}

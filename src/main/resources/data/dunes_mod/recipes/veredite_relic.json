@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dunes_mod:relic_template"
+  },
+  "base": {
+    "item": "dunes_mod:veredite_gem"
+  },
+  "addition": {
+    "item": "minecraft:rabbit_foot"
+  },
+  "result": {
+    "item": "dunes_mod:veredite_relic"
+  }
+}
