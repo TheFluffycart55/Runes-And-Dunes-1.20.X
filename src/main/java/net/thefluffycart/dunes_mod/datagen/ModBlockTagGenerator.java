@@ -32,14 +32,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SCORCHSTONE_BLOCK.get(),
                         ModBlocks.VEREDITE_BLOCK.get(),
                         ModBlocks.ECLIPSAL_BLOCK.get(),
-                        ModBlocks.EXCAVATION_LANTERN.get());
+                        ModBlocks.EXCAVATION_LANTERN.get(),
+                        ModBlocks.DUST_BRICKS.get(),
+                        ModBlocks.CHISELED_DUST_BRICKS.get(),
+                        ModBlocks.DUST_BRICK_STAIRS.get(),
+                        ModBlocks.DUST_BRICK_SLAB.get(),
+                        ModBlocks.DUST_BRICK_WALL.get(),
+                        ModBlocks.DUST_BRICK_PRESSURE_PLATE.get(),
+                        ModBlocks.DUST_BRICK_BUTTON.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.DUST_BLOCK.get(),
                 ModBlocks.BONE_MARROW_ORE.get(),
-                ModBlocks.WINDSWEPT_SAND.get(),
-                ModBlocks.DUST_TOMBED_ARTIFACT.get(),
-                ModBlocks.SAND_TOMBED_ARTIFACT.get());
+                ModBlocks.WINDSWEPT_SAND.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.OLIVE_STAIRS.get(),
@@ -51,9 +56,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.OLIVE_FENCE_GATE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.DUST_TOMBED_ARTIFACT.get(),
-                        ModBlocks.SAND_TOMBED_ARTIFACT.get(),
-                        ModBlocks.SCORCHSTONE_BLOCK.get(),
+                .add(ModBlocks.SCORCHSTONE_BLOCK.get(),
                         ModBlocks.VEREDITE_BLOCK.get(),
                         ModBlocks.ECLIPSAL_BLOCK.get());
 
@@ -81,6 +84,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.OLIVE_BUTTON.get());
         this.tag(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.OLIVE_STAIRS.get());
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.DUST_BRICK_WALL.get());
+        this.tag(BlockTags.STAIRS)
+                .add(ModBlocks.DUST_BRICK_STAIRS.get());
+        this.tag(BlockTags.SLABS)
+                .add(ModBlocks.DUST_BRICK_SLAB.get());
+        this.tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.DUST_BRICK_PRESSURE_PLATE.get());
+        this.tag(BlockTags.BUTTONS)
+                .add(ModBlocks.DUST_BRICK_BUTTON.get());
     }
 
     @Override

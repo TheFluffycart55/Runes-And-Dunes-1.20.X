@@ -34,7 +34,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.OLIVE_FENCE.get());
         this.dropSelf(ModBlocks.OLIVE_FENCE_GATE.get());
         this.dropSelf(ModBlocks.OLIVE_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.WILTFLOWER.get());
         this.dropSelf(ModBlocks.SIFTER.get());
+        this.dropSelf(ModBlocks.DUST_BRICKS.get());
+        this.dropSelf(ModBlocks.CHISELED_DUST_BRICKS.get());
+        this.dropSelf(ModBlocks.DUST_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.DUST_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.DUST_BRICK_BUTTON.get());
+        this.dropSelf(ModBlocks.DUST_BRICK_WALL.get());
+
 
 
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PAPYRUS_CROP.get())
@@ -42,18 +50,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.PAPYRUS_CROP.get(), this.createCropDrops(ModBlocks.PAPYRUS_CROP.get(),
                ModItems.PAPYRUS.get(), ModItems.PAPYRUS_CULM.get(), lootitemcondition$builder2));
 
+        this.add(ModBlocks.POTTED_WILTFLOWER.get(),createPotFlowerItemTable(ModBlocks.POTTED_WILTFLOWER.get()));
 
         this.add(ModBlocks.OLIVE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.OLIVE_SLAB.get()));
+        this.add(ModBlocks.DUST_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.DUST_BRICK_SLAB.get()));
 
         this.add(ModBlocks.BONE_MARROW_ORE.get(),
                 block -> createOreDrop(ModBlocks.BONE_MARROW_ORE.get(), ModItems.RAW_BONE_MARROW.get()));
         this.add(ModBlocks.DUST_BLOCK.get(),
                 block -> createOreDrop(ModBlocks.DUST_BLOCK.get(), ModItems.DUST.get()));
-        this.add(ModBlocks.SAND_TOMBED_ARTIFACT.get(),
-                block -> createOreDrop(ModBlocks.SAND_TOMBED_ARTIFACT.get(), ModItems.SANDY_ARTIFACT.get()));
-        this.add(ModBlocks.DUST_TOMBED_ARTIFACT.get(),
-                block -> createOreDrop(ModBlocks.SAND_TOMBED_ARTIFACT.get(), ModItems.DUSTY_ARTIFACT.get()));
         this.add(ModBlocks.OLIVE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.OLIVE_DOOR.get()));
     }

@@ -12,15 +12,14 @@
   "item.dunes_mod.relic_template": "Relic Template",
   "item.dunes_mod.weapon_template": "Weapon Template",
 
-  "item.dunes_mod.papyrus": "Papyrus",
-  "item.dunes_mod.papyrus_culm": "Papyrus Culm",
-
   "item.dunes_mod.dust": "Dust",
   "item.dunes_mod.raw_bone_marrow": "Raw Bone Marrow",
   "item.dunes_mod.bone_marrow_ingot": "Bone Marrow Ingot",
   "item.dunes_mod.dusty_artifact": "Dusty Artifact",
   "item.dunes_mod.sandy_artifact": "Sandy Artifact",
   "item.dunes_mod.meerkat_spawn_egg": "Meerkat Spawn Egg",
+  "item.dunes_mod.papyrus": "Papyrus",
+  "item.dunes_mod.papyrus_culm": "Papyrus Culm",
 
   "block.dunes_mod.scorchstone_block": "Scorchstone Block",
   "block.dunes_mod.veredite_block": "Veredite Block",
@@ -42,7 +41,17 @@
   "block.dunes_mod.olive_trapdoor": "Olive Trapdoor",
   "block.dunes_mod.olive_pressure_plate": "Olive Pressure Plate",
   "block.dunes_mod.olive_button": "Olive Button",
+
+  "block.dunes_mod.dust_bricks": "Dust Bricks",
+  "block.dunes_mod.chiseled_dust_bricks": "Chiseled Dust Bricks",
+  "block.dunes_mod.dust_brick_stairs": "Dust Brick Stairs",
+  "block.dunes_mod.dust_brick_slab": "Dust Brick Slab",
+  "block.dunes_mod.dust_brick_pressure_plate": "Dust Brick Pressure Plate",
+  "block.dunes_mod.dust_brick_button": "Dust Brick Button",
+  "block.dunes_mod.dust_brick_wall": "Dust Brick Wall",
+
   "block.dunes_mod.sifter": "Sifter",
+  "block.dunes_mod.wiltflower": "Wiltflower",
 
   "tooltip.dunes_mod.scorchstone_relic.tooltip": "Press §eSHIFT§r for more Informtion",
   "tooltip.dunes_mod.scorchstone_relic.tooltip.shift": "§eRight Click§r while holding the Scorchstone Relic to obtain hidden strength",
@@ -51,8 +60,10 @@
   "tooltip.dunes_mod.eclipsal_relic.tooltip": "Press §eSHIFT§r for more Informtion",
   "tooltip.dunes_mod.eclipsal_relic.tooltip.shift": "§eRight Click§r while holding the Eclipsal Relic to reach new heights",
 
-  "creativetab.artifacts_tab": "Artifacts Tab",
-  "creativetab.excavation_tab": "Excavation Tab",
+  "creativetab.valuables_tab": "Valuables Tab",
+  "creativetab.resources_tab": "Resources Tab",
+
+  "entity.minecraft.villager.dunes_mod.historian": "Historian",
 
   "sounds.dunes_mod.meerkat_idle": "Meerkat Sniffs",
   "sounds.dunes_mod.meerkat_hurt": "Meerkat Hurt"

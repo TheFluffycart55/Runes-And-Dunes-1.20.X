@@ -2,6 +2,7 @@ package net.thefluffycart.dunes_mod.block;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -13,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
+import net.thefluffycart.dunes_mod.block.custom.DustBlock;
 import net.thefluffycart.dunes_mod.block.custom.PapyrusCropBlock;
 import net.thefluffycart.dunes_mod.block.custom.SifterBlock;
 import net.thefluffycart.dunes_mod.items.ModItems;
@@ -36,22 +38,21 @@ public class ModBlocks {
 
     //RESOURCES
     public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GRAVEL).instrument(NoteBlockInstrument.DIDGERIDOO)
-                    .requiresCorrectToolForDrops()));
+            () -> new DustBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
     public static final RegistryObject<Block> WINDSWEPT_SAND = registerBlock("windswept_sand",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)));
     public static final RegistryObject<Block> BONE_MARROW_ORE = registerBlock("bone_marrow_ore",
             ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.5f).requiresCorrectToolForDrops()
                     , UniformInt.of(2,4)));
-    public static final RegistryObject<Block> SAND_TOMBED_ARTIFACT = registerBlock("sand_tombed_artifact",
-            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.5f).requiresCorrectToolForDrops()
-                    , UniformInt.of(2,4)));
-    public static final RegistryObject<Block> DUST_TOMBED_ARTIFACT = registerBlock("dust_tombed_artifact",
-            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.5f).requiresCorrectToolForDrops()
-                    , UniformInt.of(2,4)));
     public static final RegistryObject<Block> EXCAVATION_LANTERN = registerBlock("excavation_lantern",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.JACK_O_LANTERN)
                     .instrument(NoteBlockInstrument.CHIME).sound(SoundType.CHAIN)));
+    public static final RegistryObject<Block> DUST_BRICKS = registerBlock("dust_bricks",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CHISELED_DUST_BRICKS = registerBlock("chiseled_dust_bricks",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .requiresCorrectToolForDrops()));
 
     //Wood
     public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
@@ -74,12 +75,30 @@ public class ModBlocks {
     public static final RegistryObject<Block> OLIVE_TRAPDOOR = registerBlock("olive_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_TRAPDOOR), BlockSetType.BIRCH));
 
+    public static final RegistryObject<Block> WILTFLOWER = registerBlock("wiltflower",
+            () -> new FlowerBlock(()->MobEffects.DIG_SLOWDOWN, 4, BlockBehaviour.Properties.copy(Blocks.SUNFLOWER)));
+    public static final RegistryObject<Block> POTTED_WILTFLOWER = BLOCKS.register("potted_wiltflower",
+            () -> new FlowerPotBlock((()->(FlowerPotBlock) Blocks.FLOWER_POT), WILTFLOWER, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
+
     //CUSTOM
     public static final RegistryObject<Block> SIFTER = registerBlock("sifter",
             ()-> new SifterBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS).noOcclusion()));
-
     public static final RegistryObject<Block> PAPYRUS_CROP = registerBlock("papyrus_crop",
-            ()-> new PapyrusCropBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)));
+            ()-> new PapyrusCropBlock(BlockBehaviour.Properties.copy(Blocks.SMALL_DRIPLEAF)));
+
+
+    //DUST BRICK SET
+    public static final RegistryObject<Block> DUST_BRICK_STAIRS = registerBlock("dust_brick_stairs",
+            ()-> new StairBlock(() -> ModBlocks.OLIVE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DUST_BRICK_SLAB = registerBlock("dust_brick_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DUST_BRICK_PRESSURE_PLATE = registerBlock("dust_brick_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).requiresCorrectToolForDrops().sound(SoundType.STONE), BlockSetType.POLISHED_BLACKSTONE));
+    public static final RegistryObject<Block> DUST_BRICK_BUTTON = registerBlock("dust_brick_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_BUTTON).requiresCorrectToolForDrops().sound(SoundType.STONE), BlockSetType.POLISHED_BLACKSTONE, 10, true));
+    public static final RegistryObject<Block> DUST_BRICK_WALL = registerBlock("dust_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_WALL).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

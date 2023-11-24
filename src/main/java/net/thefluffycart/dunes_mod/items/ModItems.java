@@ -2,6 +2,7 @@ package net.thefluffycart.dunes_mod.items;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -53,7 +54,7 @@ public class ModItems {
     public static final RegistryObject<Item> DUSTY_ARTIFACT = ITEMS.register("dusty_artifact",
             () -> new Item(new Item.Properties().craftRemainder(ModItems.DUST.get())));
     public static final RegistryObject<Item> SANDY_ARTIFACT = ITEMS.register("sandy_artifact",
-            () -> new Item(new Item.Properties().craftRemainder(ModItems.DUST.get())));
+            () -> new Item(new Item.Properties().craftRemainder(Items.SAND)));
     public static final RegistryObject<Item> MEERKAT_SPAWN_EGG = ITEMS.register("meerkat_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MEERKAT, 0xe0b679, 0x453c30,new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS = ITEMS.register("papyrus",

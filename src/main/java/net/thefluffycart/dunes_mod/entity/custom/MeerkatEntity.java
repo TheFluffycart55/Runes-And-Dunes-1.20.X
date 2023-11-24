@@ -12,6 +12,9 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
@@ -29,9 +32,14 @@ public class MeerkatEntity extends Animal {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new FollowParentGoal(this, 1.1d));
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this,1d));
-        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 4f));
+
+        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.1d, Ingredient.of(Items.COD), true));
+
+        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this,1d));
+        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 4f));
+
     }
 
     public static AttributeSupplier.Builder createAttributes ()
@@ -87,5 +95,12 @@ public class MeerkatEntity extends Animal {
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
         return ModSounds.MEERKAT_HURT.get();
+    }
+
+    /*BREEDING*/
+
+    @Override
+    public boolean isFood(ItemStack pStack) {
+        return pStack.is(Items.COD);
     }
 }

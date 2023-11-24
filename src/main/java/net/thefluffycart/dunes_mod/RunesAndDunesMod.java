@@ -3,6 +3,10 @@ package net.thefluffycart.dunes_mod;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,10 +20,16 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
+import net.thefluffycart.dunes_mod.event.ModEvents;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
+import net.thefluffycart.dunes_mod.loot.ModLootModifiers;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
+import net.thefluffycart.dunes_mod.villager.ModVillagers;
+import net.thefluffycart.dunes_mod.worldgen.biome.ModTerraBlenderAPI;
+import net.thefluffycart.dunes_mod.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 @Mod(RunesAndDunesMod.MOD_ID)
 public class RunesAndDunesMod
@@ -38,7 +48,12 @@ public class RunesAndDunesMod
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
+        ModTerraBlenderAPI.registerRegions();
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -46,6 +61,13 @@ public class RunesAndDunesMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(()-> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.PAPYRUS.get(), 0.4f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.PAPYRUS_CULM.get(), 0.15f);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.WILTFLOWER.getId(), ModBlocks.POTTED_WILTFLOWER);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
+        });
 
     }
 

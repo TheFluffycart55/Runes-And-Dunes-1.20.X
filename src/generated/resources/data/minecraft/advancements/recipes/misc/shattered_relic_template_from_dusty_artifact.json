@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dusty_artifact": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:dusty_artifact"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:shattered_relic_template_from_dusty_artifact"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dusty_artifact",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:shattered_relic_template_from_dusty_artifact"
+    ]
+  },
+  "sends_telemetry_event": false
+}

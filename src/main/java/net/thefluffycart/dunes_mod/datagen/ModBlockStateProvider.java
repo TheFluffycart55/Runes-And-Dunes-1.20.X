@@ -28,17 +28,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.VEREDITE_BLOCK);
         blockWithItem(ModBlocks.ECLIPSAL_BLOCK);
         blockWithItem(ModBlocks.BONE_MARROW_ORE);
-        blockWithItem(ModBlocks.DUST_TOMBED_ARTIFACT);
-        blockWithItem(ModBlocks.SAND_TOMBED_ARTIFACT);
         blockWithItem(ModBlocks.WINDSWEPT_SAND);
         blockWithItem(ModBlocks.EXCAVATION_LANTERN);
         blockWithItem(ModBlocks.OLIVE_PLANKS);
+        blockWithItem(ModBlocks.DUST_BRICKS);
 
         stairsBlock((StairBlock) ModBlocks.OLIVE_STAIRS.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.OLIVE_SLAB.get()), blockTexture(ModBlocks.OLIVE_PLANKS.get()), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
         buttonBlock((ButtonBlock) ModBlocks.OLIVE_BUTTON.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.OLIVE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
 
+        stairsBlock((StairBlock) ModBlocks.DUST_BRICK_STAIRS.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.DUST_BRICK_SLAB.get()), blockTexture(ModBlocks.DUST_BRICKS.get()), blockTexture(ModBlocks.DUST_BRICKS.get()));
+        buttonBlock((ButtonBlock) ModBlocks.DUST_BRICK_BUTTON.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.DUST_BRICK_PRESSURE_PLATE.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
+        wallBlock((WallBlock) ModBlocks.DUST_BRICK_WALL.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
 
         fenceBlock((FenceBlock) ModBlocks.OLIVE_FENCE.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
         fenceGateBlock((FenceGateBlock) ModBlocks.OLIVE_FENCE_GATE.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
@@ -53,8 +57,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.OLIVE_FENCE_GATE);
         blockItem(ModBlocks.OLIVE_TRAPDOOR, "_bottom");
 
+        blockItem(ModBlocks.DUST_BRICK_STAIRS);
+        blockItem(ModBlocks.DUST_BRICK_SLAB);
+        blockItem(ModBlocks.DUST_BRICK_PRESSURE_PLATE);
+        blockItem(ModBlocks.OLIVE_FENCE_GATE);
+
         horizontalBlock(ModBlocks.SIFTER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/sifter")));
+
+        simpleBlock(ModBlocks.WILTFLOWER.get(),
+                models().cross(blockTexture(ModBlocks.WILTFLOWER.get()).getPath(), blockTexture(ModBlocks.WILTFLOWER.get())).renderType("cutout"));
 
         makePapyrusCrop(((PapyrusCropBlock) ModBlocks.PAPYRUS_CROP.get()), "papyrus_stage", "papyrus_stage");
     }

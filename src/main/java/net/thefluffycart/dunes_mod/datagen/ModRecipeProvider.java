@@ -49,6 +49,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().of(Items.COPPER_INGOT).build()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER)
+                .define('P', ModItems.PAPYRUS.get())
+                .pattern("   ")
+                .pattern("PPP")
+                .pattern("   ")
+                .unlockedBy("has_papyrus", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.PAPYRUS.get()).build()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RELIC_TEMPLATE.get())
                 .define('R', ModItems.SHATTERED_RELIC_TEMPLATE.get())
                 .define('S', Items.SAND)
@@ -87,12 +95,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.DUSTY_ARTIFACT.get())
                 .requires(Items.WATER_BUCKET)
                 .unlockedBy("has_dusty_artifact", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.DUSTY_ARTIFACT.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "shattered_relic_template_from_dusty_artifact");
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
                 .requires(ModItems.SANDY_ARTIFACT.get())
                 .requires(Items.WATER_BUCKET)
-                .unlockedBy("has_sandy_artifact", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.DUSTY_ARTIFACT.get()).build()))
-                .save(pWriter);
+                .unlockedBy("has_sandy_artifact", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.SANDY_ARTIFACT.get()).build()))
+                .save(pWriter, "shattered_relic_template_from_sandy_artifact");
     }
+
+
 }

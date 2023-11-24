@@ -43,7 +43,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.OLIVE_BUTTON, ModBlocks.OLIVE_PLANKS);
         fenceItem(ModBlocks.OLIVE_FENCE, ModBlocks.OLIVE_PLANKS);
 
+        buttonItem(ModBlocks.DUST_BRICK_BUTTON, ModBlocks.DUST_BRICKS);
+        wallItem(ModBlocks.DUST_BRICK_WALL, ModBlocks.DUST_BRICKS);
+
         simpleBlockItem(ModBlocks.OLIVE_DOOR);
+        simpleBlockItem(ModBlocks.WILTFLOWER);
+        complexBlock(ModBlocks.CHISELED_DUST_BRICKS.get());
 
         complexBlock(ModBlocks.SIFTER.get());
     }
@@ -62,6 +67,11 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {

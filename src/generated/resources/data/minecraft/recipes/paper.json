@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "dunes_mod:papyrus"
+    }
+  },
+  "pattern": [
+    "   ",
+    "PPP",
+    "   "
+  ],
+  "result": {
+    "item": "minecraft:paper"
+  },
+  "show_notification": true
+}

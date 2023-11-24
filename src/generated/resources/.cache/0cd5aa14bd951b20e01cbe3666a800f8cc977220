@@ -1,7 +1,10 @@
-// 1.20.1	2023-11-22T20:02:21.5811784	Item Models: dunes_mod
+// 1.20.1	2023-11-23T19:03:21.9997736	Item Models: dunes_mod
 30a4f96dbc835c807ec306b50dcd00bbbdeb71f1 assets/dunes_mod/models/item/bone_marrow_ingot.json
+b803a7c36fa4f750f12e23c5089cc186443fbc7a assets/dunes_mod/models/item/chiseled_dust_bricks.json
 26fca11903fe84027332a5fd6e6376dc9dfc83f0 assets/dunes_mod/models/item/dust.json
 4d5137f8518aa372fabfade94bfb23f69b7bc81e assets/dunes_mod/models/item/dusty_artifact.json
+4a5bd15cc440fe3fc7179d7fb627608eccf085ef assets/dunes_mod/models/item/dust_brick_button.json
+7d16a9a48a0d3acdd8e3b71a4df068ee392fb2f7 assets/dunes_mod/models/item/dust_brick_wall.json
 1cb81f08df1bb770d86e41183f81c86708b8d808 assets/dunes_mod/models/item/eclipsal_gem.json
 c33b073a0ad0f578b791858ccd1ca9a11da52110 assets/dunes_mod/models/item/eclipsal_relic.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/dunes_mod/models/item/meerkat_spawn_egg.json
@@ -21,3 +24,4 @@ a197cc242e1faf523653be920fba7d8dea879b9c assets/dunes_mod/models/item/sifter.jso
 ca48399a6bb4e8dfe8ea3eef217d3adea775f813 assets/dunes_mod/models/item/veredite_gem.json
 15501b4f36b8b8563d4d39f43fa41dc4ca86363e assets/dunes_mod/models/item/veredite_relic.json
 86af9c8838e5e45be65a5498386b9426df5c8eff assets/dunes_mod/models/item/weapon_template.json
+7ceba06df0e2adba180238adb9d8704fe79f5840 assets/dunes_mod/models/item/wiltflower.json

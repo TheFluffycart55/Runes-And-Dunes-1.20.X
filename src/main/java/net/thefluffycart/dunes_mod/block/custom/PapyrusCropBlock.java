@@ -20,6 +20,7 @@ import net.minecraftforge.common.IPlantable;
 import net.thefluffycart.dunes_mod.items.ModItems;
 
 public class PapyrusCropBlock extends CropBlock {
+    protected static final float AABB_OFFSET = 6.0F;
     public static final int FIRST_STAGE_MAX_AGE = 7;
     public static final int SECOND_STAGE_MAX_AGE = 1;
 
@@ -32,6 +33,7 @@ public class PapyrusCropBlock extends CropBlock {
                     Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D),
                     Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
                     Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+                    Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
                     Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 8);
@@ -113,5 +115,10 @@ public class PapyrusCropBlock extends CropBlock {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(AGE);
+    }
+
+    @Override
+    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return super.mayPlaceOn(pState, pLevel, pPos);
     }
 }

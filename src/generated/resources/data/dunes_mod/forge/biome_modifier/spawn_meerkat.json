@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#forge:is_desert",
+  "spawners": {
+    "type": "dunes_mod:meerkat",
+    "maxCount": 5,
+    "minCount": 3,
+    "weight": 100
+  }
+}
