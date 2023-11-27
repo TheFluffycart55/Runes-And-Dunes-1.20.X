@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-23T23:42:59.9959268	Block States: dunes_mod
+// 1.20.1	2023-11-25T21:43:56.1121931	Block States: dunes_mod
 153ff2a6f01f7e574b7e6122a94fe54ea173d04d assets/dunes_mod/blockstates/bone_marrow_ore.json
 d5100a9817d42dbcb7e6ec9f591565f7b60fa44e assets/dunes_mod/blockstates/dust_block.json
 146ee3b5222103336717f003cd0f946ca9549403 assets/dunes_mod/blockstates/dust_bricks.json
@@ -24,6 +24,7 @@ e783e56c2fb6ad5ae8b7684884a56556ee4ef27f assets/dunes_mod/blockstates/scorchston
 3286872e087b26d5e2cb8e3bb053c2d3a575aecc assets/dunes_mod/blockstates/veredite_block.json
 f6ad822ea65da84db964d03aaf4f0a95d9238643 assets/dunes_mod/blockstates/wiltflower.json
 5722ac17117fde5e1dad9a99f6e363e0dd95349f assets/dunes_mod/blockstates/windswept_sand.json
+c2dd163106a43b7b634d1158e3407df29267fb39 assets/dunes_mod/blockstates/windswept_sand_dupe.json
 997c9aec5815ed7291a9dc4a2e0779b3b09fab53 assets/dunes_mod/models/block/bone_marrow_ore.json
 44c6a857fe6f70cf86e0e59da8964cb79f5c42f8 assets/dunes_mod/models/block/dust_block.json
 260ace0396bf3c765f32748b9ec4cf2b7ffc2d6f assets/dunes_mod/models/block/dust_bricks.json
@@ -81,6 +82,7 @@ d1ac511a8adf67a036ecd4f2445e1fd3e26f5e69 assets/dunes_mod/models/block/scorchsto
 93eea6a9922475b9e76c9e580293757d67eb4a51 assets/dunes_mod/models/block/veredite_block.json
 d3ad6dff2e9812e100e95fa3a617ed95bebcb3a9 assets/dunes_mod/models/block/wiltflower.json
 1dc3ee1c6da019ec9f70028db6dd9f27101cab0a assets/dunes_mod/models/block/windswept_sand.json
+82626fcc7e4cf80eeecc41095410207399d8269f assets/dunes_mod/models/block/windswept_sand_dupe.json
 c8f144e0217390d2ac1f7070279cb1c1b9b63f30 assets/dunes_mod/models/item/bone_marrow_ore.json
 7256aaaf47dc708b905fb599f8406e3b624be119 assets/dunes_mod/models/item/dust_block.json
 111768e8a2fcbc580e0cf5779355e291df494642 assets/dunes_mod/models/item/dust_bricks.json
@@ -98,3 +100,4 @@ dd7114b82daa2066420abd90ae69e8031473ec18 assets/dunes_mod/models/item/olive_pres
 9d282ed6aa9ce3ea9fbf91fea03c9ff23b2628c3 assets/dunes_mod/models/item/scorchstone_block.json
 92b6d08f380e4ea0b7cad817572997bebb4a785b assets/dunes_mod/models/item/veredite_block.json
 15a8f784896bcb9e904dc33ba1b604ff3a93f706 assets/dunes_mod/models/item/windswept_sand.json
+c0b7a3f17a385dd0e17ed92f8c15cd9a12a8cf5b assets/dunes_mod/models/item/windswept_sand_dupe.json

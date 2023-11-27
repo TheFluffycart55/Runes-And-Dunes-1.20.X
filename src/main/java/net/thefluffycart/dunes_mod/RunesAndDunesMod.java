@@ -66,8 +66,7 @@ public class RunesAndDunesMod
             ComposterBlock.COMPOSTABLES.put(ModItems.PAPYRUS_CULM.get(), 0.15f);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.WILTFLOWER.getId(), ModBlocks.POTTED_WILTFLOWER);
 
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
-        });
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());        });
 
     }
 

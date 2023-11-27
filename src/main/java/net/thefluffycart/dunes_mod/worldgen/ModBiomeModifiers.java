@@ -24,10 +24,9 @@ public class ModBiomeModifiers {
         var biomes = context.lookup(Registries.BIOME);
 
         context.register(SPAWN_MEERKAT, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_DESERT),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.MEERKAT.get(), 100, 3, 5))));
+                biomes.getOrThrow(Tags.Biomes.IS_DRY_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.MEERKAT.get(), 500, 1, 3))));
     }
-
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
         return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(RunesAndDunesMod.MOD_ID, name));

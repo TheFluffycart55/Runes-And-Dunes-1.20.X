@@ -1,10 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_desert",
+  "biomes": "#forge:is_dry/overworld",
   "spawners": {
     "type": "dunes_mod:meerkat",
-    "maxCount": 5,
-    "minCount": 3,
-    "weight": 100
+    "maxCount": 3,
+    "minCount": 1,
+    "weight": 500
   }
 }

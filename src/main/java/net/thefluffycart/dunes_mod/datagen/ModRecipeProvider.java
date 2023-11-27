@@ -36,7 +36,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("XX")
                 .define('X', ModItems.DUST.get())
                 .unlockedBy("has_dust", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.DUST.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "dust_block_from_dust");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DUST_BLOCK.get())
+                .pattern("SN")
+                .pattern("NS")
+                .define('N', Items.SAND)
+                .define('S', Items.STRING)
+                .unlockedBy("has_sand", inventoryTrigger(ItemPredicate.Builder.item().of(Items.SAND).build()))
+                .save(pWriter, "dust_block_from_sand_and_string");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SIFTER.get())
                 .define('X', ItemTags.WOODEN_SLABS)
@@ -55,7 +63,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("PPP")
                 .pattern("   ")
                 .unlockedBy("has_papyrus", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.PAPYRUS.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "paper_from_papyrus");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RELIC_TEMPLATE.get())
                 .define('R', ModItems.SHATTERED_RELIC_TEMPLATE.get())
@@ -75,21 +83,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 200, "bone_marrow");
         oreBlasting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 100, "bone_marrow");
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SCORCHSTONE_GEM.get(), 9)
-                .requires(ModBlocks.SCORCHSTONE_BLOCK.get())
-                .unlockedBy("has_scorchstone", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.SCORCHSTONE_GEM.get()).build()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VEREDITE_GEM.get(), 9)
-                .requires(ModBlocks.VEREDITE_BLOCK.get())
-                .unlockedBy("has_veredite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.VEREDITE_GEM.get()).build()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ECLIPSAL_GEM.get(), 9)
-                .requires(ModBlocks.ECLIPSAL_BLOCK.get())
-                .unlockedBy("has_eclipsal", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ECLIPSAL_GEM.get()).build()))
-                .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
                 .requires(ModItems.DUSTY_ARTIFACT.get())

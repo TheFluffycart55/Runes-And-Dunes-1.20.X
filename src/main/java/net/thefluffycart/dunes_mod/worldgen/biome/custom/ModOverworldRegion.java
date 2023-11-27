@@ -19,12 +19,11 @@ public class ModOverworldRegion extends Region {
     }
 
     @Override
-    public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
-
-        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder ->
-        {
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.DESERT, ModBiomes.DUNES_BIOME);
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.SAVANNA, ModBiomes.OASIS_BIOME);
+    public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint,
+            ResourceKey<Biome>>> mapper) {
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.TAIGA, ModBiomes.OASIS_BIOME);
+            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.DESERT, ModBiomes.DESERT_DUNES_BIOME);
         });
     }
 }

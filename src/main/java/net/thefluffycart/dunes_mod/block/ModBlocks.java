@@ -14,7 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
-import net.thefluffycart.dunes_mod.block.custom.DustBlock;
+import net.thefluffycart.dunes_mod.block.custom.GravityBlock;
 import net.thefluffycart.dunes_mod.block.custom.PapyrusCropBlock;
 import net.thefluffycart.dunes_mod.block.custom.SifterBlock;
 import net.thefluffycart.dunes_mod.items.ModItems;
@@ -38,9 +38,9 @@ public class ModBlocks {
 
     //RESOURCES
     public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block",
-            () -> new DustBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
+            () -> new GravityBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
     public static final RegistryObject<Block> WINDSWEPT_SAND = registerBlock("windswept_sand",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SAND)));
+            ()-> new GravityBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
     public static final RegistryObject<Block> BONE_MARROW_ORE = registerBlock("bone_marrow_ore",
             ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.5f).requiresCorrectToolForDrops()
                     , UniformInt.of(2,4)));

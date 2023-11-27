@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:sand"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "SN",
+    "NS"
+  ],
+  "result": {
+    "item": "dunes_mod:dust_block"
+  },
+  "show_notification": true
+}

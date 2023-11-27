@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_eclipsal": {
+    "has_sand": {
       "conditions": {
         "items": [
           {
             "items": [
-              "dunes_mod:eclipsal_gem"
+              "minecraft:sand"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dunes_mod:eclipsal_gem"
+        "recipe": "minecraft:dust_block_from_sand_and_string"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_eclipsal",
+      "has_sand",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "dunes_mod:eclipsal_gem"
+      "minecraft:dust_block_from_sand_and_string"
     ]
   },
   "sends_telemetry_event": false

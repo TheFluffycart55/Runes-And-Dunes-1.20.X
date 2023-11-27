@@ -46,6 +46,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.BONE_MARROW_ORE.get(),
                 ModBlocks.WINDSWEPT_SAND.get());
 
+
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.OLIVE_STAIRS.get(),
                 ModBlocks.OLIVE_PLANKS.get(),
@@ -63,8 +64,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.EXCAVATION_LANTERN.get(),
                         ModBlocks.BONE_MARROW_ORE.get(),
-                        ModBlocks.WINDSWEPT_SAND.get(),
-                        ModBlocks.DUST_BLOCK.get());
+                        ModBlocks.WINDSWEPT_SAND.get());
 
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.OLIVE_FENCE.get());

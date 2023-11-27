@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dunes_mod:dust_block"
+        "recipe": "minecraft:dust_block_from_dust"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "dunes_mod:dust_block"
+      "minecraft:dust_block_from_dust"
     ]
   },
   "sends_telemetry_event": false

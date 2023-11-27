@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-23T23:42:59.9929221	Loot Tables
+// 1.20.1	2023-11-25T21:43:56.1102142	Loot Tables
 af6b12f466ef60e3f0fa80bd38737aec24490a30 data/dunes_mod/loot_tables/blocks/bone_marrow_ore.json
 ff77ec53b0e7671c41b0193d8a89b2cb178d4200 data/dunes_mod/loot_tables/blocks/chiseled_dust_bricks.json
 897b63dd46872e6a522e0eb10013d0267b91d9cd data/dunes_mod/loot_tables/blocks/dust_block.json
@@ -26,3 +26,4 @@ ae9bc762a669fc6c5ebad47c0532e41c47dd8296 data/dunes_mod/loot_tables/blocks/sifte
 ca7a1e6c3c5ae15d96dd67dafe33721af6553aec data/dunes_mod/loot_tables/blocks/veredite_block.json
 cf5082e5c8cf504d5eef2ae69fe4c168f56640b9 data/dunes_mod/loot_tables/blocks/wiltflower.json
 418cc4c50d79416a4e6cdfe6fcc920c4a07f0644 data/dunes_mod/loot_tables/blocks/windswept_sand.json
+12a6d8a5170ad9ae51c65a5bb6a6cb5fa21e7dd8 data/dunes_mod/loot_tables/blocks/windswept_sand_dupe.json

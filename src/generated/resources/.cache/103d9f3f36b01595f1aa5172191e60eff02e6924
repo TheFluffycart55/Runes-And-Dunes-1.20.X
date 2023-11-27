@@ -1,2 +1,4 @@
-// 1.20.1	2023-11-24T11:49:44.7297447	Registries
-ca2ed1ea96792a0234f8aa8a5ef049552372c7f0 data/dunes_mod/forge/biome_modifier/spawn_meerkat.json
+// 1.20.1	2023-11-25T21:11:42.4657139	Registries
+cd604e2760ae8b0b4d9b2bff0dab351e0ed4be66 data/dunes_mod/forge/biome_modifier/spawn_meerkat.json
+563714e25d3021b780e6b62d4bd547d5aa8d5207 data/dunes_mod/worldgen/biome/desert_dunes_biome.json
+3d681491f4ee829b0631b461a5ca653972baf8d2 data/dunes_mod/worldgen/biome/oasis_biome.json

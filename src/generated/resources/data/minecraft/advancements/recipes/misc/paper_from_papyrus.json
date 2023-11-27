@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:paper"
+        "recipe": "minecraft:paper_from_papyrus"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:paper"
+      "minecraft:paper_from_papyrus"
     ]
   },
   "sends_telemetry_event": false
