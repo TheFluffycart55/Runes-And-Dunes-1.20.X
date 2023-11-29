@@ -1,11 +1,11 @@
 {
   "values": [
-    "dunes_mod:olive_stairs",
-    "dunes_mod:olive_planks",
-    "dunes_mod:olive_slab",
-    "dunes_mod:olive_pressure_plate",
-    "dunes_mod:olive_button",
-    "dunes_mod:olive_fence",
-    "dunes_mod:olive_fence_gate"
+    "dunes_mod:mahogany_stairs",
+    "dunes_mod:mahogany_planks",
+    "dunes_mod:mahogany_slab",
+    "dunes_mod:mahogany_pressure_plate",
+    "dunes_mod:mahogany_button",
+    "dunes_mod:mahogany_fence",
+    "dunes_mod:mahogany_fence_gate"
   ]
 }

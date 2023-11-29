@@ -40,17 +40,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PAPYRUS_CULM);
         withExistingParent(ModItems.MEERKAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
-        buttonItem(ModBlocks.OLIVE_BUTTON, ModBlocks.OLIVE_PLANKS);
-        fenceItem(ModBlocks.OLIVE_FENCE, ModBlocks.OLIVE_PLANKS);
+        buttonItem(ModBlocks.MAHOGANY_BUTTON, ModBlocks.MAHOGANY_PLANKS);
+        fenceItem(ModBlocks.MAHOGANY_FENCE, ModBlocks.MAHOGANY_PLANKS);
 
         buttonItem(ModBlocks.DUST_BRICK_BUTTON, ModBlocks.DUST_BRICKS);
         wallItem(ModBlocks.DUST_BRICK_WALL, ModBlocks.DUST_BRICKS);
 
-        simpleBlockItem(ModBlocks.OLIVE_DOOR);
+        simpleBlockItem(ModBlocks.MAHOGANY_DOOR);
         simpleBlockItem(ModBlocks.WILTFLOWER);
         complexBlock(ModBlocks.CHISELED_DUST_BRICKS.get());
 
         complexBlock(ModBlocks.SIFTER.get());
+        saplingItem(ModBlocks.MAHOGANY_SAPLING);
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(RunesAndDunesMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

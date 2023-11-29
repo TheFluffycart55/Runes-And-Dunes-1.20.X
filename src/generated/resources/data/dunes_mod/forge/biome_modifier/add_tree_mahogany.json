@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_swamp",
+  "features": "dunes_mod:mahogany_placed",
+  "step": "vegetal_decoration"
+}

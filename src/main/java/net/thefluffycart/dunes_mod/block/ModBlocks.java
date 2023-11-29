@@ -1,12 +1,16 @@
 package net.thefluffycart.dunes_mod.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,9 +19,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.block.custom.GravityBlock;
+import net.thefluffycart.dunes_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.thefluffycart.dunes_mod.block.custom.PapyrusCropBlock;
 import net.thefluffycart.dunes_mod.block.custom.SifterBlock;
 import net.thefluffycart.dunes_mod.items.ModItems;
+import net.thefluffycart.dunes_mod.worldgen.tree.MahoganyTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -55,24 +61,70 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
 
     //Wood
-    public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
-    public static final RegistryObject<Block> OLIVE_STAIRS = registerBlock("olive_stairs",
-            ()-> new StairBlock(() -> ModBlocks.OLIVE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BIRCH_STAIRS)));
-    public static final RegistryObject<Block> OLIVE_SLAB = registerBlock("olive_slab",
+    public static final RegistryObject<Block> MAHOGANY_LOG = registerBlock("mahogany_log",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> MAHOGANY_WOOD = registerBlock("mahogany_wood",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_MAHOGANY_LOG = registerBlock("stripped_mahogany_log",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_MAHOGANY_WOOD = registerBlock("stripped_mahogany_wood",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> MAHOGANY_PLANKS = registerBlock("mahogany_planks",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+    public static final RegistryObject<Block> MAHOGANY_LEAVES = registerBlock("mahogany_leaves",
+            ()-> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling",
+            ()-> new SaplingBlock(new MahoganyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.DARK_OAK_SAPLING)));
+
+    public static final RegistryObject<Block> MAHOGANY_STAIRS = registerBlock("mahogany_stairs",
+            ()-> new StairBlock(() -> ModBlocks.MAHOGANY_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BIRCH_STAIRS)));
+    public static final RegistryObject<Block> MAHOGANY_SLAB = registerBlock("mahogany_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_SLAB)));
-    public static final RegistryObject<Block> OLIVE_PRESSURE_PLATE = registerBlock("olive_pressure_plate",
+    public static final RegistryObject<Block> MAHOGANY_PRESSURE_PLATE = registerBlock("mahogany_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
                     BlockBehaviour.Properties.copy(Blocks.BIRCH_STAIRS).sound(SoundType.METAL), BlockSetType.BIRCH));
-    public static final RegistryObject<Block> OLIVE_BUTTON = registerBlock("olive_button",
+    public static final RegistryObject<Block> MAHOGANY_BUTTON = registerBlock("mahogany_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB).sound(SoundType.METAL), BlockSetType.IRON, 10, true));
-    public static final RegistryObject<Block> OLIVE_FENCE = registerBlock("olive_fence",
+    public static final RegistryObject<Block> MAHOGANY_FENCE = registerBlock("mahogany_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
-    public static final RegistryObject<Block> OLIVE_FENCE_GATE = registerBlock("olive_fence_gate",
+    public static final RegistryObject<Block> MAHOGANY_FENCE_GATE = registerBlock("mahogany_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final RegistryObject<Block> OLIVE_DOOR = registerBlock("olive_door",
+    public static final RegistryObject<Block> MAHOGANY_DOOR = registerBlock("mahogany_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_DOOR), BlockSetType.BIRCH));
-    public static final RegistryObject<Block> OLIVE_TRAPDOOR = registerBlock("olive_trapdoor",
+    public static final RegistryObject<Block> MAHOGANY_TRAPDOOR = registerBlock("mahogany_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_TRAPDOOR), BlockSetType.BIRCH));
 
     public static final RegistryObject<Block> WILTFLOWER = registerBlock("wiltflower",
@@ -89,7 +141,7 @@ public class ModBlocks {
 
     //DUST BRICK SET
     public static final RegistryObject<Block> DUST_BRICK_STAIRS = registerBlock("dust_brick_stairs",
-            ()-> new StairBlock(() -> ModBlocks.OLIVE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
+            ()-> new StairBlock(() -> ModBlocks.DUST_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DUST_BRICK_SLAB = registerBlock("dust_brick_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DUST_BRICK_PRESSURE_PLATE = registerBlock("dust_brick_pressure_plate",

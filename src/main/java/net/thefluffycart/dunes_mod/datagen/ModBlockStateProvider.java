@@ -30,13 +30,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BONE_MARROW_ORE);
         blockWithItem(ModBlocks.WINDSWEPT_SAND);
         blockWithItem(ModBlocks.EXCAVATION_LANTERN);
-        blockWithItem(ModBlocks.OLIVE_PLANKS);
+        blockWithItem(ModBlocks.MAHOGANY_PLANKS);
         blockWithItem(ModBlocks.DUST_BRICKS);
 
-        stairsBlock((StairBlock) ModBlocks.OLIVE_STAIRS.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
-        slabBlock(((SlabBlock) ModBlocks.OLIVE_SLAB.get()), blockTexture(ModBlocks.OLIVE_PLANKS.get()), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
-        buttonBlock((ButtonBlock) ModBlocks.OLIVE_BUTTON.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
-        pressurePlateBlock((PressurePlateBlock) ModBlocks.OLIVE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.MAHOGANY_STAIRS.get(), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.MAHOGANY_SLAB.get()), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()));
+        buttonBlock((ButtonBlock) ModBlocks.MAHOGANY_BUTTON.get(), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.MAHOGANY_PRESSURE_PLATE.get(), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()));
 
         stairsBlock((StairBlock) ModBlocks.DUST_BRICK_STAIRS.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
         slabBlock(((SlabBlock) ModBlocks.DUST_BRICK_SLAB.get()), blockTexture(ModBlocks.DUST_BRICKS.get()), blockTexture(ModBlocks.DUST_BRICKS.get()));
@@ -44,27 +44,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock((PressurePlateBlock) ModBlocks.DUST_BRICK_PRESSURE_PLATE.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
         wallBlock((WallBlock) ModBlocks.DUST_BRICK_WALL.get(), blockTexture(ModBlocks.DUST_BRICKS.get()));
 
-        fenceBlock((FenceBlock) ModBlocks.OLIVE_FENCE.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
-        fenceGateBlock((FenceGateBlock) ModBlocks.OLIVE_FENCE_GATE.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.MAHOGANY_FENCE.get(), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.MAHOGANY_FENCE_GATE.get(), blockTexture(ModBlocks.MAHOGANY_PLANKS.get()));
 
-        doorBlockWithRenderType((DoorBlock)ModBlocks.OLIVE_DOOR.get(), modLoc("block/olive_door_bottom"), modLoc("block/olive_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock)ModBlocks.MAHOGANY_DOOR.get(), modLoc("block/mahogany_door_bottom"), modLoc("block/mahogany_door_top"), "cutout");
 
-        trapdoorBlockWithRenderType((TrapDoorBlock)ModBlocks.OLIVE_TRAPDOOR.get(), modLoc("block/olive_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock)ModBlocks.MAHOGANY_TRAPDOOR.get(), modLoc("block/mahogany_trapdoor"), true, "cutout");
 
-        blockItem(ModBlocks.OLIVE_STAIRS);
-        blockItem(ModBlocks.OLIVE_SLAB);
-        blockItem(ModBlocks.OLIVE_PRESSURE_PLATE);
-        blockItem(ModBlocks.OLIVE_FENCE_GATE);
-        blockItem(ModBlocks.OLIVE_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.MAHOGANY_STAIRS);
+        blockItem(ModBlocks.MAHOGANY_SLAB);
+        blockItem(ModBlocks.MAHOGANY_PRESSURE_PLATE);
+        blockItem(ModBlocks.MAHOGANY_FENCE_GATE);
+        blockItem(ModBlocks.MAHOGANY_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.MAHOGANY_LOG);
+        blockItem(ModBlocks.MAHOGANY_WOOD);
+        blockItem(ModBlocks.STRIPPED_MAHOGANY_LOG);
+        blockItem(ModBlocks.STRIPPED_MAHOGANY_WOOD);
+        blockItem(ModBlocks.MAHOGANY_FENCE_GATE);
 
         blockItem(ModBlocks.DUST_BRICK_STAIRS);
         blockItem(ModBlocks.DUST_BRICK_SLAB);
         blockItem(ModBlocks.DUST_BRICK_PRESSURE_PLATE);
-        blockItem(ModBlocks.OLIVE_FENCE_GATE);
+
+        saplingBlock(ModBlocks.MAHOGANY_SAPLING);
+
+        leavesBlock(ModBlocks.MAHOGANY_LEAVES);
 
         horizontalBlock(ModBlocks.SIFTER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/sifter")));
 
+        logBlock(((RotatedPillarBlock) ModBlocks.MAHOGANY_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.MAHOGANY_WOOD.get()), blockTexture(ModBlocks.MAHOGANY_LOG.get()),  blockTexture(ModBlocks.MAHOGANY_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAHOGANY_LOG.get(), new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/stripped_mahogany_log"),
+                new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/stripped_mahogany_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAHOGANY_WOOD.get(), new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/stripped_mahogany_log"),
+                new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/stripped_mahogany_log"));
         simpleBlock(ModBlocks.WILTFLOWER.get(),
                 models().cross(blockTexture(ModBlocks.WILTFLOWER.get()).getPath(), blockTexture(ModBlocks.WILTFLOWER.get())).renderType("cutout"));
 
@@ -91,6 +106,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(RunesAndDunesMod.MOD_ID, "block/" + textureName + state.getValue(((PapyrusCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

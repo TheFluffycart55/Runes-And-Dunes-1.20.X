@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "dunes_mod:block/olive_planks",
-    "side": "dunes_mod:block/olive_planks",
-    "top": "dunes_mod:block/olive_planks"
-  }
-}

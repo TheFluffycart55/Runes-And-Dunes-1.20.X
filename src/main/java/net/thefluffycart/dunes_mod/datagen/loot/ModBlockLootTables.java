@@ -25,17 +25,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SCORCHSTONE_BLOCK.get());
         this.dropSelf(ModBlocks.VEREDITE_BLOCK.get());
         this.dropSelf(ModBlocks.ECLIPSAL_BLOCK.get());
+
         this.dropSelf(ModBlocks.EXCAVATION_LANTERN.get());
         this.dropSelf(ModBlocks.WINDSWEPT_SAND.get());
-        this.dropSelf(ModBlocks.OLIVE_STAIRS.get());
-        this.dropSelf(ModBlocks.OLIVE_PLANKS.get());
-        this.dropSelf(ModBlocks.OLIVE_PRESSURE_PLATE.get());
-        this.dropSelf(ModBlocks.OLIVE_BUTTON.get());
-        this.dropSelf(ModBlocks.OLIVE_FENCE.get());
-        this.dropSelf(ModBlocks.OLIVE_FENCE_GATE.get());
-        this.dropSelf(ModBlocks.OLIVE_TRAPDOOR.get());
+
+        this.dropSelf(ModBlocks.MAHOGANY_STAIRS.get());
+        this.dropSelf(ModBlocks.MAHOGANY_PLANKS.get());
+        this.dropSelf(ModBlocks.MAHOGANY_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MAHOGANY_BUTTON.get());
+        this.dropSelf(ModBlocks.MAHOGANY_FENCE.get());
+        this.dropSelf(ModBlocks.MAHOGANY_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.MAHOGANY_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.MAHOGANY_LOG.get());
+        this.dropSelf(ModBlocks.MAHOGANY_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+        this.dropSelf(ModBlocks.MAHOGANY_SAPLING.get());
+
         this.dropSelf(ModBlocks.WILTFLOWER.get());
         this.dropSelf(ModBlocks.SIFTER.get());
+
         this.dropSelf(ModBlocks.DUST_BRICKS.get());
         this.dropSelf(ModBlocks.CHISELED_DUST_BRICKS.get());
         this.dropSelf(ModBlocks.DUST_BRICK_STAIRS.get());
@@ -43,7 +52,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.DUST_BRICK_BUTTON.get());
         this.dropSelf(ModBlocks.DUST_BRICK_WALL.get());
 
-
+        this.add(ModBlocks.MAHOGANY_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MAHOGANY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PAPYRUS_CROP.get())
                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PapyrusCropBlock.AGE, 8));
@@ -52,8 +62,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.POTTED_WILTFLOWER.get(),createPotFlowerItemTable(ModBlocks.POTTED_WILTFLOWER.get()));
 
-        this.add(ModBlocks.OLIVE_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.OLIVE_SLAB.get()));
+        this.add(ModBlocks.MAHOGANY_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MAHOGANY_SLAB.get()));
         this.add(ModBlocks.DUST_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.DUST_BRICK_SLAB.get()));
 
@@ -61,8 +71,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.BONE_MARROW_ORE.get(), ModItems.RAW_BONE_MARROW.get()));
         this.add(ModBlocks.DUST_BLOCK.get(),
                 block -> createOreDrop(ModBlocks.DUST_BLOCK.get(), ModItems.DUST.get()));
-        this.add(ModBlocks.OLIVE_DOOR.get(),
-                block -> createDoorTable(ModBlocks.OLIVE_DOOR.get()));
+        this.add(ModBlocks.MAHOGANY_DOOR.get(),
+                block -> createDoorTable(ModBlocks.MAHOGANY_DOOR.get()));
     }
 
     @Override

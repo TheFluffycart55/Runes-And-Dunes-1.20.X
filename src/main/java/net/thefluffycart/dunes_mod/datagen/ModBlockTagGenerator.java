@@ -48,13 +48,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.OLIVE_STAIRS.get(),
-                ModBlocks.OLIVE_PLANKS.get(),
-                ModBlocks.OLIVE_SLAB.get(),
-                ModBlocks.OLIVE_PRESSURE_PLATE.get(),
-                ModBlocks.OLIVE_BUTTON.get(),
-                ModBlocks.OLIVE_FENCE.get(),
-                ModBlocks.OLIVE_FENCE_GATE.get());
+                .add(ModBlocks.MAHOGANY_STAIRS.get(),
+                ModBlocks.MAHOGANY_PLANKS.get(),
+                ModBlocks.MAHOGANY_SLAB.get(),
+                ModBlocks.MAHOGANY_PRESSURE_PLATE.get(),
+                ModBlocks.MAHOGANY_BUTTON.get(),
+                ModBlocks.MAHOGANY_FENCE.get(),
+                ModBlocks.MAHOGANY_FENCE_GATE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SCORCHSTONE_BLOCK.get(),
@@ -66,24 +66,33 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.BONE_MARROW_ORE.get(),
                         ModBlocks.WINDSWEPT_SAND.get());
 
-        this.tag(BlockTags.WOODEN_FENCES)
-                .add(ModBlocks.OLIVE_FENCE.get());
-        this.tag(BlockTags.FENCE_GATES)
-                .add(ModBlocks.OLIVE_FENCE_GATE.get());
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAHOGANY_LOG.get())
+                .add(ModBlocks.MAHOGANY_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+
         this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.OLIVE_PLANKS.get());
+                .add(ModBlocks.MAHOGANY_PLANKS.get());
+
+        this.tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.MAHOGANY_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MAHOGANY_FENCE_GATE.get());
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.MAHOGANY_PLANKS.get());
         this.tag(BlockTags.WOODEN_SLABS)
-                .add(ModBlocks.OLIVE_SLAB.get());
+                .add(ModBlocks.MAHOGANY_SLAB.get());
         this.tag(BlockTags.WOODEN_DOORS)
-                .add(ModBlocks.OLIVE_DOOR.get());
+                .add(ModBlocks.MAHOGANY_DOOR.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS)
-                .add(ModBlocks.OLIVE_TRAPDOOR.get());
+                .add(ModBlocks.MAHOGANY_TRAPDOOR.get());
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(ModBlocks.OLIVE_PRESSURE_PLATE.get());
+                .add(ModBlocks.MAHOGANY_PRESSURE_PLATE.get());
         this.tag(BlockTags.WOODEN_BUTTONS)
-                .add(ModBlocks.OLIVE_BUTTON.get());
+                .add(ModBlocks.MAHOGANY_BUTTON.get());
         this.tag(BlockTags.WOODEN_STAIRS)
-                .add(ModBlocks.OLIVE_STAIRS.get());
+                .add(ModBlocks.MAHOGANY_STAIRS.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.DUST_BRICK_WALL.get());
         this.tag(BlockTags.STAIRS)

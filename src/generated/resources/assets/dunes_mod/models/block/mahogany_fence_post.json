@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "dunes_mod:block/mahogany_planks"
+  }
+}

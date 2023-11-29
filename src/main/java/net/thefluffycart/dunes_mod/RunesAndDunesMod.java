@@ -1,6 +1,7 @@
 package net.thefluffycart.dunes_mod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -18,12 +19,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
+import net.thefluffycart.dunes_mod.block.entity.ModBlockEntities;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
-import net.thefluffycart.dunes_mod.event.ModEvents;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import net.thefluffycart.dunes_mod.loot.ModLootModifiers;
+import net.thefluffycart.dunes_mod.screen.ModMenuTypes;
+import net.thefluffycart.dunes_mod.screen.SifterScreen;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
 import net.thefluffycart.dunes_mod.villager.ModVillagers;
 import net.thefluffycart.dunes_mod.worldgen.biome.ModTerraBlenderAPI;
@@ -51,6 +54,9 @@ public class RunesAndDunesMod
         ModVillagers.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         ModTerraBlenderAPI.registerRegions();
@@ -85,13 +91,13 @@ public class RunesAndDunesMod
             event.accept(ModBlocks.SCORCHSTONE_BLOCK);
             event.accept(ModBlocks.VEREDITE_BLOCK);
             event.accept(ModBlocks.ECLIPSAL_BLOCK);
-            event.accept(ModBlocks.OLIVE_PLANKS);
-            event.accept(ModBlocks.OLIVE_STAIRS);
-            event.accept(ModBlocks.OLIVE_SLAB);
-            event.accept(ModBlocks.OLIVE_FENCE);
-            event.accept(ModBlocks.OLIVE_FENCE_GATE);
-            event.accept(ModBlocks.OLIVE_DOOR);
-            event.accept(ModBlocks.OLIVE_TRAPDOOR);
+            event.accept(ModBlocks.MAHOGANY_PLANKS);
+            event.accept(ModBlocks.MAHOGANY_STAIRS);
+            event.accept(ModBlocks.MAHOGANY_SLAB);
+            event.accept(ModBlocks.MAHOGANY_FENCE);
+            event.accept(ModBlocks.MAHOGANY_FENCE_GATE);
+            event.accept(ModBlocks.MAHOGANY_DOOR);
+            event.accept(ModBlocks.MAHOGANY_TRAPDOOR);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
@@ -103,10 +109,10 @@ public class RunesAndDunesMod
 
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS)
         {
-            event.accept(ModBlocks.OLIVE_PRESSURE_PLATE);
-            event.accept(ModBlocks.OLIVE_BUTTON);
-            event.accept(ModBlocks.OLIVE_DOOR);
-            event.accept(ModBlocks.OLIVE_TRAPDOOR);
+            event.accept(ModBlocks.MAHOGANY_PRESSURE_PLATE);
+            event.accept(ModBlocks.MAHOGANY_BUTTON);
+            event.accept(ModBlocks.MAHOGANY_DOOR);
+            event.accept(ModBlocks.MAHOGANY_TRAPDOOR);
         }
     }
 
@@ -125,6 +131,8 @@ public class RunesAndDunesMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.MEERKAT.get(), MeerkatRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.SIFTER_MENU.get(), SifterScreen::new);
         }
     }
 }
