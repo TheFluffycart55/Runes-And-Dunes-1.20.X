@@ -23,9 +23,12 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.thefluffycart.dunes_mod.items.ModItems;
+import net.thefluffycart.dunes_mod.recipe.SiftingRecipe;
 import net.thefluffycart.dunes_mod.screen.SifterMenu;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class SifterEntity extends BlockEntity implements MenuProvider {
 
@@ -39,8 +42,7 @@ public class SifterEntity extends BlockEntity implements MenuProvider {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot)
                     {
-                        case 0 -> stack.getItem() == ModItems.DUSTY_ARTIFACT.get();
-                        case 1 -> true;
+                        case 0, 1 -> true;
                         case 2 -> false;
                         default -> super.isItemValid(slot, stack);
                     };
@@ -55,7 +57,7 @@ public class SifterEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 100;
+    private int maxProgress = 78;
 
     public SifterEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.SIFTER_ENTITY_BE.get(), pPos, pBlockState);
@@ -154,10 +156,13 @@ public class SifterEntity extends BlockEntity implements MenuProvider {
     }
 
     private void craftItem() {
+        Optional<SiftingRecipe> recipe = getCurrentRecipe();
+        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(ModItems.SHATTERED_RELIC_TEMPLATE.get(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + 1));
+        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
     }
 
     private void resetProgress() {
@@ -173,12 +178,26 @@ public class SifterEntity extends BlockEntity implements MenuProvider {
     }
 
     private boolean hasRecipe() {
-        return canInsertAmountIntoOutputSlot(1) && canInsertItemIntoOutputSlot(ModItems.SHATTERED_RELIC_TEMPLATE.get())
-                && hasRecipeItemInInputSlot();
+        Optional<SiftingRecipe> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty())
+        {
+            return false;
+        }
+
+        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
+        return canInsertAmountIntoOutputSlot(resultItem.getCount())
+                && canInsertItemIntoOutputSlot(resultItem.getItem());
     }
 
-    private boolean hasRecipeItemInInputSlot() {
-        return this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.DUSTY_ARTIFACT.get();
+    private Optional<SiftingRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for (int i =0; i < this.itemHandler.getSlots(); i++)
+        {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+        return this.level.getRecipeManager().getRecipeFor(SiftingRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

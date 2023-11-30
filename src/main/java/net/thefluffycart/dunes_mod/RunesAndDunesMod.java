@@ -25,6 +25,7 @@ import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import net.thefluffycart.dunes_mod.loot.ModLootModifiers;
+import net.thefluffycart.dunes_mod.recipe.ModRecipes;
 import net.thefluffycart.dunes_mod.screen.ModMenuTypes;
 import net.thefluffycart.dunes_mod.screen.SifterScreen;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
@@ -57,6 +58,7 @@ public class RunesAndDunesMod
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         ModTerraBlenderAPI.registerRegions();

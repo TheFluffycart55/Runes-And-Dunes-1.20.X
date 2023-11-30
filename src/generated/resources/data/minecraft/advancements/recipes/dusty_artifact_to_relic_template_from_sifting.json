@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:shattered_relic_template_from_dusty_artifact"
+        "recipe": "minecraft:dusty_artifact_to_relic_template_from_sifting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,8 +28,8 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:shattered_relic_template_from_dusty_artifact"
+      "minecraft:dusty_artifact_to_relic_template_from_sifting"
     ]
   },
-  "sends_telemetry_event": false
+  "sends_telemetry_event": true
 }

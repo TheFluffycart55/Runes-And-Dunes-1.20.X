@@ -1,0 +1,12 @@
+{
+  "type": "dunes_mod:sifting",
+  "ingredients": [
+    {
+      "item": "dunes_mod:dust_block"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:sand"
+  }
+}

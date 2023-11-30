@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sandy_artifact": {
+    "has_dusty_artifact": {
       "conditions": {
         "items": [
           {
             "items": [
-              "dunes_mod:sandy_artifact"
+              "dunes_mod:dust_block"
             ]
           }
         ]
@@ -15,21 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:shattered_relic_template_from_sandy_artifact"
+        "recipe": "minecraft:sand"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_sandy_artifact",
+      "has_dusty_artifact",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:shattered_relic_template_from_sandy_artifact"
+      "minecraft:sand"
     ]
   },
-  "sends_telemetry_event": false
+  "sends_telemetry_event": true
 }

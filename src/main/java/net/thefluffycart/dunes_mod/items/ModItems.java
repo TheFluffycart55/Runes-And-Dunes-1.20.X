@@ -36,13 +36,13 @@ public class ModItems {
 
 //SHATTERED BLUEPRINTS
     public static final RegistryObject<Item> SHATTERED_RELIC_TEMPLATE= ITEMS.register("shattered_relic_template",
-        () -> new Item(new Item.Properties().stacksTo(1)));
+        () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> SHATTERED_WEAPON= ITEMS.register("shattered_weapon",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> RELIC_TEMPLATE= ITEMS.register("relic_template",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> WEAPON_TEMPLATE= ITEMS.register("weapon_template",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new Item(new Item.Properties().stacksTo(64)));
 
 //RESOURCES
     public static final RegistryObject<Item> DUST = ITEMS.register("dust",

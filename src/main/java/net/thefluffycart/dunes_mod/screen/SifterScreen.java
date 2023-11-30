@@ -35,6 +35,7 @@ public class SifterScreen extends AbstractContainerScreen<SifterMenu> {
         this.titleLabelX = 75;
     }
 
+
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
@@ -50,7 +51,7 @@ public class SifterScreen extends AbstractContainerScreen<SifterMenu> {
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 93, y + 33, 177, 0, 8, menu.getScaledProgress());
+            guiGraphics.blit(TEXTURE, x + 95, y + 33, 180, 0, menu.getScaledProgress(), 25);
         }
     }
 

@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
+import net.thefluffycart.dunes_mod.datagen.custom.SiftingRecipeBuilder;
 import net.thefluffycart.dunes_mod.items.ModItems;
 
 import java.util.List;
@@ -84,18 +85,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 200, "bone_marrow");
         oreBlasting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 100, "bone_marrow");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
-                .requires(ModItems.DUSTY_ARTIFACT.get())
-                .requires(Items.WATER_BUCKET)
-                .unlockedBy("has_dusty_artifact", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.DUSTY_ARTIFACT.get()).build()))
-                .save(pWriter, "shattered_relic_template_from_dusty_artifact");
+        new SiftingRecipeBuilder(ModItems.DUSTY_ARTIFACT.get(), ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
+                .unlockedBy("has_dusty_artifact", has(ModItems.DUSTY_ARTIFACT.get())).save(pWriter,
+                        "dusty_artifact_to_relic_template_from_sifting");
 
+        new SiftingRecipeBuilder(ModItems.SANDY_ARTIFACT.get(), ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
+               .unlockedBy("has_sandy_artifact", has(ModItems.DUSTY_ARTIFACT.get())).save(pWriter,
+                        "sandy_artifact_to_relic_template_from_sifting");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
-                .requires(ModItems.SANDY_ARTIFACT.get())
-                .requires(Items.WATER_BUCKET)
-                .unlockedBy("has_sandy_artifact", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.SANDY_ARTIFACT.get()).build()))
-                .save(pWriter, "shattered_relic_template_from_sandy_artifact");
+        new SiftingRecipeBuilder(ModBlocks.DUST_BLOCK.get(), Blocks.SAND, 2)
+                .unlockedBy("has_dusty_artifact", has(ModBlocks.DUST_BLOCK.get())).save(pWriter);
     }
 
 

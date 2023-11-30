@@ -1,15 +1,11 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "type": "dunes_mod:sifting",
   "ingredients": [
     {
       "item": "dunes_mod:dusty_artifact"
-    },
-    {
-      "item": "minecraft:water_bucket"
     }
   ],
-  "result": {
+  "output": {
     "item": "dunes_mod:shattered_relic_template"
   }
 }
