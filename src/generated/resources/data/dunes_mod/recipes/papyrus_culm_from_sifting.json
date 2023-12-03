@@ -1,0 +1,12 @@
+{
+  "type": "dunes_mod:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "dunes_mod:papyrus_culm"
+  }
+}

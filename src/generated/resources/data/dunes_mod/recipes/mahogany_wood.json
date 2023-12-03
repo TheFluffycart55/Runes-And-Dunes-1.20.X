@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "M": {
+      "item": "dunes_mod:mahogany_log"
+    }
+  },
+  "pattern": [
+    "MM ",
+    "MM ",
+    "   "
+  ],
+  "result": {
+    "count": 3,
+    "item": "dunes_mod:mahogany_wood"
+  },
+  "show_notification": true
+}

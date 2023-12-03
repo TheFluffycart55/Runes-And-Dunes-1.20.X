@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "M": {
+      "item": "dunes_mod:mahogany_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "MSM",
+    "MSM",
+    "   "
+  ],
+  "result": {
+    "count": 3,
+    "item": "dunes_mod:mahogany_fence"
+  },
+  "show_notification": true
+}

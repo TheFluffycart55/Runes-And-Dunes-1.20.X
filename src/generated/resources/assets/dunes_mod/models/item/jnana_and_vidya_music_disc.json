@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dunes_mod:item/jnana_and_vidya_music_disc"
+  }
+}

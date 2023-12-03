@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "V": {
+      "item": "dunes_mod:veredite_gem"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OVO",
+    "OOO"
+  ],
+  "result": {
+    "item": "dunes_mod:whammageddon_music_disc"
+  },
+  "show_notification": true
+}

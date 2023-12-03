@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "dunes_mod:dust_bricks"
+    }
+  },
+  "pattern": [
+    "D  ",
+    "DD ",
+    "DDD"
+  ],
+  "result": {
+    "count": 4,
+    "item": "dunes_mod:dust_brick_stairs"
+  },
+  "show_notification": true
+}

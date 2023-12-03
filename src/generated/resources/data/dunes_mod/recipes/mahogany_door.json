@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "M": {
+      "item": "dunes_mod:mahogany_planks"
+    }
+  },
+  "pattern": [
+    "MM ",
+    "MM ",
+    "MM "
+  ],
+  "result": {
+    "count": 3,
+    "item": "dunes_mod:mahogany_door"
+  },
+  "show_notification": true
+}

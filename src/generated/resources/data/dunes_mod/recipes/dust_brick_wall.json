@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "dunes_mod:dust_bricks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "DDD",
+    "DDD"
+  ],
+  "result": {
+    "count": 6,
+    "item": "dunes_mod:dust_brick_wall"
+  },
+  "show_notification": true
+}
