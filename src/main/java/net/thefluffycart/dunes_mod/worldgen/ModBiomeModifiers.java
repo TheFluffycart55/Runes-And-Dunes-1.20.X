@@ -30,8 +30,8 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SPAWN_MEERKAT, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_DRY_OVERWORLD),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.MEERKAT.get(), 500, 1, 3))));
+                biomes.getOrThrow(Tags.Biomes.IS_SANDY),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.MEERKAT.get(), 80, 3, 8))));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

@@ -32,6 +32,12 @@
   "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
   "block.dunes_mod.excavation_lantern": "Excavation Lantern",
 
+  "item.dunes_mod.jnana_and_vidya_music_disc": "Hoyomix: Forest of Jnana and Vidya",
+  "item.dunes_mod.jnana_and_vidya_music_disc.desc": "Hoyomix: Sumeru Main Theme (Forest of Jnana and Vidya)",
+
+  "item.dunes_mod.whammageddon_music_disc": "Last Christmas Music Disc",
+  "item.dunes_mod.whammageddon_music_disc.desc": "It's a Wham-my",
+
   "block.dunes_mod.mahogany_planks": "Mahogany Planks",
   "block.dunes_mod.mahogany_stairs": "Mahogany Stairs",
   "block.dunes_mod.mahogany_slab": "Mahogany Slab",

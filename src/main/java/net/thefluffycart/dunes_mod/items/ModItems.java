@@ -3,6 +3,7 @@ package net.thefluffycart.dunes_mod.items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.RecordItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,6 +15,7 @@ import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.items.custom.EclipsalRelicItem;
 import net.thefluffycart.dunes_mod.items.custom.ScorchstoneRelicItem;
 import net.thefluffycart.dunes_mod.items.custom.VerediteRelicItem;
+import net.thefluffycart.dunes_mod.sound.ModSounds;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -61,6 +63,11 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS_CULM = ITEMS.register("papyrus_culm",
             () -> new ItemNameBlockItem(ModBlocks.PAPYRUS_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> WHAMMAGEDDON_MUSIC_DISC = ITEMS.register("whammageddon_music_disc",
+            () -> new RecordItem(15, ModSounds.WHAMMAGEDDON_MUSIC_DISC,  new Item.Properties().stacksTo(1), 5060));
+    public static final RegistryObject<Item> JNANA_AND_VIDYA_MUSIC_DISC = ITEMS.register("jnana_and_vidya_music_disc",
+            () -> new RecordItem(3, ModSounds.JNANA_AND_VIDYA_MUSIC_DISC,  new Item.Properties().stacksTo(1), 5060));
 
 
     public static void register(IEventBus eventBus) {

@@ -29,8 +29,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.SHATTERED_RELIC_TEMPLATE.get());
                         pOutput.accept(ModItems.RELIC_TEMPLATE.get());
-                        pOutput.accept(ModItems.SHATTERED_WEAPON.get());
-                        pOutput.accept(ModItems.WEAPON_TEMPLATE.get());
+                        //pOutput.accept(ModItems.SHATTERED_WEAPON.get());
+                        //pOutput.accept(ModItems.WEAPON_TEMPLATE.get());
 
                         pOutput.accept(ModItems.SCORCHSTONE_RELIC.get());
                         pOutput.accept(ModItems.VEREDITE_RELIC.get());
@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.DUSTY_ARTIFACT.get());
                         pOutput.accept(ModItems.SANDY_ARTIFACT.get());
+                        pOutput.accept(ModItems.JNANA_AND_VIDYA_MUSIC_DISC.get());
                     }
                     ).build());
 

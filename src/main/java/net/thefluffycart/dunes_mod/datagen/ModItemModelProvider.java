@@ -38,6 +38,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SHATTERED_WEAPON);
         simpleItem(ModItems.PAPYRUS);
         simpleItem(ModItems.PAPYRUS_CULM);
+        simpleItem(ModItems.JNANA_AND_VIDYA_MUSIC_DISC);
+        simpleItem(ModItems.WHAMMAGEDDON_MUSIC_DISC);
         withExistingParent(ModItems.MEERKAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         buttonItem(ModBlocks.MAHOGANY_BUTTON, ModBlocks.MAHOGANY_PLANKS);

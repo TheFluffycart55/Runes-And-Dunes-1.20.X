@@ -1,0 +1,11 @@
+{
+  "type": "dunes_mod:sifting",
+  "ingredients": [
+    {
+      "item": "dunes_mod:sandy_artifact"
+    }
+  ],
+  "output": {
+    "item": "dunes_mod:shattered_relic_template"
+  }
+}

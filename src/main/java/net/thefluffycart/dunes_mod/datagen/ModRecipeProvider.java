@@ -85,13 +85,185 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 200, "bone_marrow");
         oreBlasting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 100, "bone_marrow");
 
-        new SiftingRecipeBuilder(ModItems.DUSTY_ARTIFACT.get(), ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
-                .unlockedBy("has_dusty_artifact", has(ModItems.DUSTY_ARTIFACT.get())).save(pWriter,
-                        "dusty_artifact_to_relic_template_from_sifting");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS.get(), 4)
+                .requires(ModBlocks.MAHOGANY_LOG.get())
+                .unlockedBy("has_mahogany_log", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MAHOGANY_LOG.get()).build()))
+                .save(pWriter, "mahogany_planks_from_log");
 
-        new SiftingRecipeBuilder(ModItems.SANDY_ARTIFACT.get(), ModItems.SHATTERED_RELIC_TEMPLATE.get(), 1)
-               .unlockedBy("has_sandy_artifact", has(ModItems.DUSTY_ARTIFACT.get())).save(pWriter,
-                        "sandy_artifact_to_relic_template_from_sifting");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS.get(), 4)
+                .requires(ModBlocks.MAHOGANY_WOOD.get())
+                .unlockedBy("has_mahogany_wood", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MAHOGANY_WOOD.get()).build()))
+                .save(pWriter, "mahogany_planks_from_wood");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS.get(), 4)
+                .requires(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .unlockedBy("has_stripped_mahogany_log", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.STRIPPED_MAHOGANY_LOG.get()).build()))
+                .save(pWriter, "mahogany_planks_from_stripped_log");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS.get(), 4)
+                .requires(ModBlocks.STRIPPED_MAHOGANY_WOOD.get())
+                .unlockedBy("has_stripped_mahogany_wood", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.STRIPPED_MAHOGANY_WOOD.get()).build()))
+                .save(pWriter, "mahogany_planks_from_stripped_wood");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_WOOD.get(), 3)
+                .define('M', ModBlocks.MAHOGANY_LOG.get())
+                .pattern("MM ")
+                .pattern("MM ")
+                .pattern("   ")
+                .unlockedBy("has_mahogany_log", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_LOG.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_MAHOGANY_WOOD.get(), 3)
+                .define('M', ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .pattern("MM ")
+                .pattern("MM ")
+                .pattern("   ")
+                .unlockedBy("has_stripped_mahogany_log", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.STRIPPED_MAHOGANY_LOG.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_SLAB.get(), 6)
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("MMM")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_STAIRS.get(), 4)
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .pattern("M  ")
+                .pattern("MM ")
+                .pattern("MMM")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_FENCE.get(), 3)
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .define('S', Items.STICK)
+                .pattern("MSM")
+                .pattern("MSM")
+                .pattern("   ")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_FENCE_GATE.get())
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .define('S', Items.STICK)
+                .pattern("SMS")
+                .pattern("SMS")
+                .pattern("   ")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_TRAPDOOR.get(), 3)
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .pattern("MMM")
+                .pattern("MMM")
+                .pattern("   ")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_DOOR.get(), 3)
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .pattern("MM ")
+                .pattern("MM ")
+                .pattern("MM ")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PRESSURE_PLATE.get())
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .pattern("   ")
+                .pattern("MM ")
+                .pattern("   ")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_BUTTON.get())
+                .define('M', ModBlocks.MAHOGANY_PLANKS.get())
+                .pattern("   ")
+                .pattern(" M ")
+                .pattern("   ")
+                .unlockedBy("has_mahogany_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAHOGANY_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICKS.get(), 4)
+                .define('D', ModBlocks.DUST_BLOCK.get())
+                .pattern("DD ")
+                .pattern("DD ")
+                .pattern("   ")
+                .unlockedBy("has_dust_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DUST_BRICKS.get())
+                .define('D', ModBlocks.DUST_BRICK_SLAB.get())
+                .pattern(" D ")
+                .pattern(" D ")
+                .pattern("   ")
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_SLAB.get(), 6)
+                .define('D', ModBlocks.DUST_BRICKS.get())
+                .pattern("   ")
+                .pattern("DDD")
+                .pattern("   ")
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_STAIRS.get(), 4)
+                .define('D', ModBlocks.DUST_BRICKS.get())
+                .pattern("D  ")
+                .pattern("DD ")
+                .pattern("DDD")
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_WALL.get(), 6)
+                .define('D', ModBlocks.DUST_BRICKS.get())
+                .pattern("   ")
+                .pattern("DDD")
+                .pattern("DDD")
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WHAMMAGEDDON_MUSIC_DISC.get())
+                .define('V', ModItems.VEREDITE_GEM.get())
+                .define('O', Blocks.OBSIDIAN)
+                .pattern("OOO")
+                .pattern("OVO")
+                .pattern("OOO")
+                .unlockedBy("has_veredite_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.DUST_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DUST_BRICKS.get())
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter, "chiseled_dust_bricks_from_cutting");
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.DUST_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_STAIRS.get())
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter, "dust_brick_stairs_from_cutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.DUST_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_WALL.get())
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter, "dust_brick_walls_from_cutting");
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.DUST_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_SLAB.get(), 2)
+                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter, "dust_brick_slabs_from_cutting");
+
+        //new SiftingRecipeBuilder(Blocks.ACACIA_SAPLING, ModBlocks.MAHOGANY_SAPLING.get(), 1)
+                //.unlockedBy("has_acacia_sapling", has(Blocks.ACACIA_SAPLING)).save(pWriter);
+
+        new SiftingRecipeBuilder(Blocks.DIRT, ModItems.PAPYRUS_CULM.get(), 2)
+                .unlockedBy("has_dirt", has(Blocks.DIRT)).save(pWriter);
 
         new SiftingRecipeBuilder(ModBlocks.DUST_BLOCK.get(), Blocks.SAND, 2)
                 .unlockedBy("has_dusty_artifact", has(ModBlocks.DUST_BLOCK.get())).save(pWriter);

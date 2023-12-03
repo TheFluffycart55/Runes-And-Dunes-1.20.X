@@ -51,6 +51,9 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.FERN).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.PAPYRUS_CULM.get()));
 
-
+        add("music_disc_from_desert_pyramid", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
+                LootItemRandomChanceCondition.randomChance(0.15f).build() },
+                ModItems.JNANA_AND_VIDYA_MUSIC_DISC.get()));
     }
 }

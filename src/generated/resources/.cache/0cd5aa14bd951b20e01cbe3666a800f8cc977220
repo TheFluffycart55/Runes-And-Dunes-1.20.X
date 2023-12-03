@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-28T20:51:51.2544026	Item Models: dunes_mod
+// 1.20.1	2023-12-03T00:14:07.6662932	Item Models: dunes_mod
 30a4f96dbc835c807ec306b50dcd00bbbdeb71f1 assets/dunes_mod/models/item/bone_marrow_ingot.json
 b803a7c36fa4f750f12e23c5089cc186443fbc7a assets/dunes_mod/models/item/chiseled_dust_bricks.json
 26fca11903fe84027332a5fd6e6376dc9dfc83f0 assets/dunes_mod/models/item/dust.json
@@ -7,6 +7,7 @@ b803a7c36fa4f750f12e23c5089cc186443fbc7a assets/dunes_mod/models/item/chiseled_d
 7d16a9a48a0d3acdd8e3b71a4df068ee392fb2f7 assets/dunes_mod/models/item/dust_brick_wall.json
 1cb81f08df1bb770d86e41183f81c86708b8d808 assets/dunes_mod/models/item/eclipsal_gem.json
 c33b073a0ad0f578b791858ccd1ca9a11da52110 assets/dunes_mod/models/item/eclipsal_relic.json
+b1c6af603ed5074a9038648e948b575c59e2b29b assets/dunes_mod/models/item/jnana_and_vidya_music_disc.json
 aea52a60ea3deb01f171af21994a28f14a0bda42 assets/dunes_mod/models/item/mahogany_button.json
 8a4a8347fcc7d0d85450243b5389258fdfbf83cb assets/dunes_mod/models/item/mahogany_door.json
 2bf8b07979c5bba2f3370fecb1f18eda1e634d47 assets/dunes_mod/models/item/mahogany_fence.json
@@ -25,4 +26,5 @@ a197cc242e1faf523653be920fba7d8dea879b9c assets/dunes_mod/models/item/sifter.jso
 ca48399a6bb4e8dfe8ea3eef217d3adea775f813 assets/dunes_mod/models/item/veredite_gem.json
 15501b4f36b8b8563d4d39f43fa41dc4ca86363e assets/dunes_mod/models/item/veredite_relic.json
 86af9c8838e5e45be65a5498386b9426df5c8eff assets/dunes_mod/models/item/weapon_template.json
+383c0e6f72d9b1cfbf3340dfd77bcd3264f0eaae assets/dunes_mod/models/item/whammageddon_music_disc.json
 7ceba06df0e2adba180238adb9d8704fe79f5840 assets/dunes_mod/models/item/wiltflower.json

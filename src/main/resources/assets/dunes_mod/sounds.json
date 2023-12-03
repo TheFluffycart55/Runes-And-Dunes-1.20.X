@@ -11,5 +11,23 @@
     "sounds": [
       "dunes_mod:meerkat_hurt"
     ]
+  },
+
+  "jnana_and_vidya_music_disc": {
+    "sounds": [
+      {
+        "name": "dunes_mod:jnana_and_vidya_music_disc",
+        "stream": true
+      }
+    ]
+  },
+
+  "whammageddon_music_disc": {
+    "sounds": [
+      {
+        "name": "dunes_mod:whammageddon_music_disc",
+        "stream": true
+      }
+    ]
   }
 }

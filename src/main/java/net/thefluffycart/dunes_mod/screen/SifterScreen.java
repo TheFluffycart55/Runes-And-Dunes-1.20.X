@@ -51,7 +51,7 @@ public class SifterScreen extends AbstractContainerScreen<SifterMenu> {
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 95, y + 33, 180, 0, menu.getScaledProgress(), 25);
+            guiGraphics.blit(TEXTURE, x + 93, y + 33, 176, 0, menu.getScaledProgress(), 16);
         }
     }
 

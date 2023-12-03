@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
+import net.thefluffycart.dunes_mod.items.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -30,6 +31,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.MAHOGANY_PLANKS.get().asItem());
 
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.JNANA_AND_VIDYA_MUSIC_DISC.get())
+                .add(ModItems.WHAMMAGEDDON_MUSIC_DISC.get());
     }
 
     @Override
