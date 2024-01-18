@@ -2,6 +2,8 @@ package net.thefluffycart.dunes_mod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +23,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
 import net.thefluffycart.dunes_mod.block.entity.ModBlockEntities;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
+import net.thefluffycart.dunes_mod.entity.client.LeglessRenderer;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
@@ -132,7 +135,11 @@ public class RunesAndDunesMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(ModEntities.MEERKAT.get(), MeerkatRenderer::new);
+            event.enqueueWork(() -> {
+
+                    });
+                    EntityRenderers.register(ModEntities.MEERKAT.get(), MeerkatRenderer::new);
+                    EntityRenderers.register(ModEntities.LEGLESS.get(), LeglessRenderer::new);
 
             MenuScreens.register(ModMenuTypes.SIFTER_MENU.get(), SifterScreen::new);
         }

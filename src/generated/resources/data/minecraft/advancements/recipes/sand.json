@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dusty_artifact": {
+    "has_dust_block": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_dusty_artifact",
+      "has_dust_block",
       "has_the_recipe"
     ]
   ],

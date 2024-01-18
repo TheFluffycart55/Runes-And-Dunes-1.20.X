@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "dunes_mod:scorchstone_relic"
+    },
+    "title": "\"Discovered\" Relics",
+    "description": "Makes a perfect addition to the British Mueseum",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "dunes_mod:get_relic_template",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:scorchstone_relic",
+              "dunes_mod:veredite_relic",
+              "dunes_mod:eclipsal_relic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 6
+  },
+  "sends_telemetry_event": true
+}

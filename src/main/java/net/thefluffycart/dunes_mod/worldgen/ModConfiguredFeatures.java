@@ -23,7 +23,7 @@ public class ModConfiguredFeatures {
 
         register(context, MAHOGANY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MAHOGANY_LOG.get()),
-                new StraightTrunkPlacer(2, 1, 2),
+                new StraightTrunkPlacer(3, 1, 2),
                 BlockStateProvider.simple(ModBlocks.MAHOGANY_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
                 new TwoLayersFeatureSize(3, 2, 4)).build());

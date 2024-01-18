@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
+import net.thefluffycart.dunes_mod.entity.custom.LeglessEntity;
 import net.thefluffycart.dunes_mod.entity.custom.MeerkatEntity;
 
 public class ModEntities {
@@ -21,9 +22,9 @@ public class ModEntities {
            // ENTITY_TYPES.register("firefly",()-> EntityType.Builder.of(FireflyEntity::new, MobCategory.AMBIENT)
                   //  .sized(0.5f,1f).build("firefly"));
 
-    //public static final RegistryObject<EntityType<LeglessEntity>> LEGLESS =
-            //ENTITY_TYPES.register("legless",()-> EntityType.Builder.of(LeglessEntity::new, MobCategory.MONSTER)
-                    //.sized(1f,0.8f).build("legless"));
+    public static final RegistryObject<EntityType<LeglessEntity>> LEGLESS =
+            ENTITY_TYPES.register("legless",()-> EntityType.Builder.of(LeglessEntity::new, MobCategory.MONSTER)
+                    .sized(0.9f,0.8f).build("legless"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

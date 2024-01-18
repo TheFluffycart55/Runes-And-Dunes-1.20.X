@@ -15,11 +15,13 @@
   "item.dunes_mod.dust": "Dust",
   "item.dunes_mod.raw_bone_marrow": "Raw Bone Marrow",
   "item.dunes_mod.bone_marrow_ingot": "Bone Marrow Ingot",
-  "item.dunes_mod.dusty_artifact": "Dusty Artifact",
-  "item.dunes_mod.sandy_artifact": "Sandy Artifact",
+  "item.dunes_mod.dusty_tablet": "Dusty Tablet",
+  "item.dunes_mod.sandy_tablet": "Sandy Tablet",
   "item.dunes_mod.meerkat_spawn_egg": "Meerkat Spawn Egg",
+  "item.dunes_mod.legless_spawn_egg": "Legless Spawn Egg",
   "item.dunes_mod.papyrus": "Papyrus",
   "item.dunes_mod.papyrus_culm": "Papyrus Culm",
+  "item.dunes_mod.hot_spring_water_bucket": "Hot Spring Water Bucket",
 
   "block.dunes_mod.scorchstone_block": "Scorchstone Block",
   "block.dunes_mod.veredite_block": "Veredite Block",
@@ -32,8 +34,8 @@
   "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
   "block.dunes_mod.excavation_lantern": "Excavation Lantern",
 
-  "item.dunes_mod.jnana_and_vidya_music_disc": "Hoyomix: Forest of Jnana and Vidya",
-  "item.dunes_mod.jnana_and_vidya_music_disc.desc": "Hoyomix: Sumeru Main Theme (Forest of Jnana and Vidya)",
+  "item.dunes_mod.humian_hymn_06_music_disc": "Humian Hymn-06",
+  "item.dunes_mod.humian_hymn_06_music_disc.desc": "Humian Hymn-06: Circa 1400 B.C.E",
 
   "item.dunes_mod.whammageddon_music_disc": "Last Christmas Music Disc",
   "item.dunes_mod.whammageddon_music_disc.desc": "It's a Wham-my",
@@ -76,7 +78,12 @@
   "creativetab.resources_tab": "Resources Tab",
 
   "entity.minecraft.villager.dunes_mod.historian": "Historian",
+  "entity.dunes_mod.meerkat": "Meerket",
+  "entity.dunes_mod.legless": "Legless",
 
+  "sounds.dunes_mod.legless_moan": "Legless Moans",
+  "sounds.dunes_mod.legless_hurt": "Legless Hurt",
+  "sounds.dunes_mod.legless_death": "Legless Dies",
   "sounds.dunes_mod.meerkat_idle": "Meerkat Sniffs",
   "sounds.dunes_mod.meerkat_hurt": "Meerkat Hurt"
 }

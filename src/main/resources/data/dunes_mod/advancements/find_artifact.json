@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "dunes_mod:sandy_artifact"
+    },
+    "title": "Professional Grave Robber",
+    "description": "When does grave robbery become archaeology?",
+    "frame": "task",
+    "show_toast": true,
+    "hidden": true
+  },
+  "parent": "dunes_mod:enter_desert",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:sandy_artifact",
+              "dunes_mod:dusty_artifact"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "sends_telemetry_event": true
+}

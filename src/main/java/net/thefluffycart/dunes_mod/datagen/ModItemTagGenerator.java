@@ -32,8 +32,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.MAHOGANY_PLANKS.get().asItem());
 
         this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.JNANA_AND_VIDYA_MUSIC_DISC.get())
-                .add(ModItems.WHAMMAGEDDON_MUSIC_DISC.get());
+                .add(ModItems.HUMIAN_HYMN_06_MUSIC_DISC.get());
     }
 
     @Override

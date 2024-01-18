@@ -24,51 +24,71 @@ public class ModEvents {
         public static void addCustomTrades(VillagerTradesEvent event) {
             if (event.getType() == ModVillagers.HISTORIAN.get()) {
                 Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-                ItemStack stack = new ItemStack(ModItems.DUST.get(), 8);
+                ItemStack stack = new ItemStack(ModItems.DUST.get(), 6);
                 int villagerLevel = 1;
 
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 4), stack, 8, 2, 0.04f
+                        new ItemStack(Items.EMERALD, 3), stack, 6, 1, 0.02f
                 ));
 
                 trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 10),
-                        new ItemStack(Items.BRUSH, 1), 3, 2, 0.08f
+                        new ItemStack(Items.SAND, 16),
+                        new ItemStack(Items.EMERALD, 2), 6, 1, 0.02f
                 ));
 
                 trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.FEATHER, 8),
+                        new ItemStack(Items.EMERALD, 1), 5, 4, 0.02f
+                ));
+
+                trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.BONE, 12),
-                        new ItemStack(Items.EMERALD, 3), 8, 1, 0.02f
+                        new ItemStack(Items.EMERALD, 3), 5, 4, 0.02f
                 ));
 
                 trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                        new ItemStack(Items.GOLD_INGOT, 4),
-                        new ItemStack(Items.EMERALD, 2), 5, 3, 0.05f
+                        new ItemStack(Items.EMERALD, 2),
+                        new ItemStack(Items.QUARTZ, 6), 8, 8, 0.04f
                 ));
 
-                trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 6),
-                        new ItemStack(Items.WRITABLE_BOOK, 1), 8, 8, 0.04f
-                ));
-
-                trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 10),
-                        new ItemStack(Items.MAP, 1), 5, 4, 0.04f
+                trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 4),
+                        new ItemStack(ModBlocks.SIFTER.get(), 1), 4, 12, 0.06f
                 ));
 
                 trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 6),
-                        new ItemStack(ModBlocks.SIFTER.get(), 1), 5, 2, 0.06f
+                        new ItemStack(Items.WRITABLE_BOOK, 1), 6, 8, 0.04f
                 ));
 
                 trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 3),
+                        new ItemStack(Items.BRUSH, 1), 8, 12, 0.06f
+                ));
+
+                trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.GOLD_INGOT, 8),
+                        new ItemStack(Items.EMERALD, 3), 8, 12, 0.06f
+                ));
+
+                trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 6),
+                        new ItemStack(Items.SKELETON_SKULL, 1), 6, 20, 0.08f
+                ));
+
+                trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(ModItems.SANDY_TABLET.get(), 1),
+                        new ItemStack(Items.EMERALD, 10), 6, 20, 0.08f
+                ));
+
+                trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.SNIFFER_EGG, 1),
-                        new ItemStack(Items.EMERALD, 8), 5, 2, 0.04f
+                        new ItemStack(Items.EMERALD, 16), 6, 20, 0.08f
                 ));
 
-                trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
-                        new ItemStack(Items.SUSPICIOUS_SAND, 10),
-                        new ItemStack(Items.EMERALD, 6), 5, 2, 0.04f
+                trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 4),
+                        new ItemStack(Items.BONE_BLOCK, 3), 6, 12, 0.06f
                 ));
             }
         }

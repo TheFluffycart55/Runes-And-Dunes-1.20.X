@@ -67,7 +67,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, "paper_from_papyrus");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RELIC_TEMPLATE.get())
-                .define('R', ModItems.SHATTERED_RELIC_TEMPLATE.get())
+                .define('R', ModItems.SHATTERED_RUNE.get())
                 .define('S', Items.SAND)
                 .define('C', Items.COPPER_INGOT)
                 .pattern("CRC")
@@ -198,15 +198,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DD ")
                 .pattern("   ")
                 .unlockedBy("has_dust_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "dust_bricks_from_crafting");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DUST_BRICKS.get())
                 .define('D', ModBlocks.DUST_BRICK_SLAB.get())
                 .pattern(" D ")
                 .pattern(" D ")
                 .pattern("   ")
-                .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
-                .save(pWriter);
+                .unlockedBy("has_dust_brick", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
+                .save(pWriter, "chiseled_dust_bricks_from_crafting");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_SLAB.get(), 6)
                 .define('D', ModBlocks.DUST_BRICKS.get())
@@ -214,7 +214,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DDD")
                 .pattern("   ")
                 .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "dust_slabs_from_crafting");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_STAIRS.get(), 4)
                 .define('D', ModBlocks.DUST_BRICKS.get())
@@ -222,7 +222,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DD ")
                 .pattern("DDD")
                 .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "dust_stairs_from_crafting");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUST_BRICK_WALL.get(), 6)
                 .define('D', ModBlocks.DUST_BRICKS.get())
@@ -230,16 +230,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DDD")
                 .pattern("DDD")
                 .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WHAMMAGEDDON_MUSIC_DISC.get())
-                .define('V', ModItems.VEREDITE_GEM.get())
-                .define('O', Blocks.OBSIDIAN)
-                .pattern("OOO")
-                .pattern("OVO")
-                .pattern("OOO")
-                .unlockedBy("has_veredite_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BRICKS.get()).build()))
-                .save(pWriter);
+                .save(pWriter, "dust_walls_from_crafting");
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.DUST_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DUST_BRICKS.get())
                 .unlockedBy("has_dust_bricks", inventoryTrigger(ItemPredicate.Builder.item().
@@ -266,8 +257,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_dirt", has(Blocks.DIRT)).save(pWriter);
 
         new SiftingRecipeBuilder(ModBlocks.DUST_BLOCK.get(), Blocks.SAND, 2)
-                .unlockedBy("has_dusty_artifact", has(ModBlocks.DUST_BLOCK.get())).save(pWriter);
+                .unlockedBy("has_dust_block", has(ModBlocks.DUST_BLOCK.get())).save(pWriter);
     }
-
 
 }

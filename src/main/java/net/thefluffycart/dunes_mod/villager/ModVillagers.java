@@ -25,7 +25,7 @@ public class ModVillagers {
     public static final RegistryObject<VillagerProfession> HISTORIAN =
             VILLAGER_PROFESSIONS.register("historian", () -> new VillagerProfession("historian",
                     x -> x.get() == SIFTER_POI.get(), x -> x.get() == SIFTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
-                    SoundEvents.VILLAGER_WORK_SHEPHERD));
+                    SoundEvents.BRUSH_SAND));
 
 
     public static void register(IEventBus eventBus) {

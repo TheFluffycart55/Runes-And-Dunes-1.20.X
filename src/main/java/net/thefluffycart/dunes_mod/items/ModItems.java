@@ -1,9 +1,6 @@
 package net.thefluffycart.dunes_mod.items;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.RecordItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,7 +34,7 @@ public class ModItems {
             () -> new EclipsalRelicItem(new Item.Properties().stacksTo(1)));
 
 //SHATTERED BLUEPRINTS
-    public static final RegistryObject<Item> SHATTERED_RELIC_TEMPLATE= ITEMS.register("shattered_relic_template",
+    public static final RegistryObject<Item> SHATTERED_RUNE= ITEMS.register("shattered_rune",
         () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> SHATTERED_WEAPON= ITEMS.register("shattered_weapon",
             () -> new Item(new Item.Properties().stacksTo(64)));
@@ -53,21 +50,21 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONE_MARROW_INGOT = ITEMS.register("bone_marrow_ingot",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> DUSTY_ARTIFACT = ITEMS.register("dusty_artifact",
+    public static final RegistryObject<Item> DUSTY_TABLET = ITEMS.register("dusty_tablet",
             () -> new Item(new Item.Properties().craftRemainder(ModItems.DUST.get())));
-    public static final RegistryObject<Item> SANDY_ARTIFACT = ITEMS.register("sandy_artifact",
+    public static final RegistryObject<Item> SANDY_TABLET = ITEMS.register("sandy_tablet",
             () -> new Item(new Item.Properties().craftRemainder(Items.SAND)));
     public static final RegistryObject<Item> MEERKAT_SPAWN_EGG = ITEMS.register("meerkat_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.MEERKAT, 0xe0b679, 0x453c30,new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.MEERKAT, 0xedd2ab, 0x9e7a46,new Item.Properties()));
+    public static final RegistryObject<Item> LEGLESS_SPAWN_EGG = ITEMS.register("legless_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.LEGLESS, 0x363231, 0xe0be41,new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS = ITEMS.register("papyrus",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS_CULM = ITEMS.register("papyrus_culm",
             () -> new ItemNameBlockItem(ModBlocks.PAPYRUS_CROP.get(), new Item.Properties()));
 
-    public static final RegistryObject<Item> WHAMMAGEDDON_MUSIC_DISC = ITEMS.register("whammageddon_music_disc",
-            () -> new RecordItem(15, ModSounds.WHAMMAGEDDON_MUSIC_DISC,  new Item.Properties().stacksTo(1), 5060));
-    public static final RegistryObject<Item> JNANA_AND_VIDYA_MUSIC_DISC = ITEMS.register("jnana_and_vidya_music_disc",
-            () -> new RecordItem(3, ModSounds.JNANA_AND_VIDYA_MUSIC_DISC,  new Item.Properties().stacksTo(1), 5060));
+    public static final RegistryObject<Item> HUMIAN_HYMN_06_MUSIC_DISC = ITEMS.register("humian_hymn_06_music_disc",
+            () -> new RecordItem(3, ModSounds.HUMIAN_HYMN_06_MUSIC_DISC,  new Item.Properties().stacksTo(1), 5060));
 
 
     public static void register(IEventBus eventBus) {

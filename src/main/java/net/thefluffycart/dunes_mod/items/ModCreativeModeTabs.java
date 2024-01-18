@@ -27,7 +27,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.VEREDITE_BLOCK.get());
                         pOutput.accept(ModBlocks.ECLIPSAL_BLOCK.get());
 
-                        pOutput.accept(ModItems.SHATTERED_RELIC_TEMPLATE.get());
+                        pOutput.accept(ModItems.SHATTERED_RUNE.get());
                         pOutput.accept(ModItems.RELIC_TEMPLATE.get());
                         //pOutput.accept(ModItems.SHATTERED_WEAPON.get());
                         //pOutput.accept(ModItems.WEAPON_TEMPLATE.get());
@@ -39,14 +39,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RAW_BONE_MARROW.get());
                         pOutput.accept(ModItems.BONE_MARROW_INGOT.get());
 
-                        pOutput.accept(ModItems.DUSTY_ARTIFACT.get());
-                        pOutput.accept(ModItems.SANDY_ARTIFACT.get());
-                        pOutput.accept(ModItems.JNANA_AND_VIDYA_MUSIC_DISC.get());
+                        pOutput.accept(ModItems.DUSTY_TABLET.get());
+                        pOutput.accept(ModItems.SANDY_TABLET.get());
+                        pOutput.accept(ModItems.HUMIAN_HYMN_06_MUSIC_DISC.get());
                     }
                     ).build());
 
     public static final RegistryObject<CreativeModeTab> RESOURCES_TAB = CREATIVE_MODE_TABS.register("resources_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.DUSTY_ARTIFACT.get()))
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.DUSTY_TABLET.get()))
                     .title(Component.translatable("creativetab.resources_tab"))
                     .displayItems((pParameters, pOutput) ->
                             {
@@ -88,6 +88,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.PAPYRUS.get());
 
                                 pOutput.accept(ModItems.MEERKAT_SPAWN_EGG.get());
+                                pOutput.accept(ModItems.LEGLESS_SPAWN_EGG.get());
                             }
                     ).build());
 

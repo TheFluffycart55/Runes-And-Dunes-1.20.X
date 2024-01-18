@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "dunes_mod:windswept_sand"
+    },
+    "title": "Desert Dweller",
+    "description": "Enter the desert for the first time",
+    "background": "dunes_mod:textures/block/windswept_sand_dupe.png",
+    "frame": "task",
+    "show_toast": false,
+    "hidden": false
+  },
+  "criteria": {
+    "in_desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biome": "minecraft:desert"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "in_desert"
+    ]
+  ],
+  "rewards": {
+    "experience": 2
+  },
+  "sends_telemetry_event": true
+}

@@ -17,9 +17,13 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> MEERKAT_HURT = registerSoundEvents("meerkat_hurt");
 
-    public static final RegistryObject<SoundEvent> JNANA_AND_VIDYA_MUSIC_DISC = registerSoundEvents("jnana_and_vidya_music_disc");
+    public static final RegistryObject<SoundEvent> LEGLESS_MOAN = registerSoundEvents("legless_moan");
 
-    public static final RegistryObject<SoundEvent> WHAMMAGEDDON_MUSIC_DISC = registerSoundEvents("whammageddon_music_disc");
+    public static final RegistryObject<SoundEvent> LEGLESS_HURT = registerSoundEvents("legless_hurt");
+
+    public static final RegistryObject<SoundEvent> LEGLESS_DEATH = registerSoundEvents("legless_death");
+
+    public static final RegistryObject<SoundEvent> HUMIAN_HYMN_06_MUSIC_DISC = registerSoundEvents("humian_hymn_06_music_disc");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name)
     {

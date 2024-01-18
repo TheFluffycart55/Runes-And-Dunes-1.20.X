@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "dunes_mod:sifter"
+    },
+    "title": "Sifty Behaviour",
+    "description": "If you see anything sift-y, please report it to HR",
+    "frame": "task",
+    "show_toast": true,
+    "hidden": true
+  },
+  "parent": "dunes_mod:find_artifact",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:sifter"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "sends_telemetry_event": true
+}

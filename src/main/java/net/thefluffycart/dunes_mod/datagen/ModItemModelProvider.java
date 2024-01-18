@@ -22,8 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.DUST);
-        simpleItem(ModItems.DUSTY_ARTIFACT);
-        simpleItem(ModItems.SANDY_ARTIFACT);
+        simpleItem(ModItems.DUSTY_TABLET);
+        simpleItem(ModItems.SANDY_TABLET);
         simpleItem(ModItems.BONE_MARROW_INGOT);
         simpleItem(ModItems.RAW_BONE_MARROW);
         simpleItem(ModItems.SCORCHSTONE_GEM);
@@ -34,13 +34,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ECLIPSAL_RELIC);
         simpleItem(ModItems.RELIC_TEMPLATE);
         simpleItem(ModItems.WEAPON_TEMPLATE);
-        simpleItem(ModItems.SHATTERED_RELIC_TEMPLATE);
+        simpleItem(ModItems.SHATTERED_RUNE);
         simpleItem(ModItems.SHATTERED_WEAPON);
         simpleItem(ModItems.PAPYRUS);
         simpleItem(ModItems.PAPYRUS_CULM);
-        simpleItem(ModItems.JNANA_AND_VIDYA_MUSIC_DISC);
-        simpleItem(ModItems.WHAMMAGEDDON_MUSIC_DISC);
+        simpleItem(ModItems.HUMIAN_HYMN_06_MUSIC_DISC);
         withExistingParent(ModItems.MEERKAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.LEGLESS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         buttonItem(ModBlocks.MAHOGANY_BUTTON, ModBlocks.MAHOGANY_PLANKS);
         fenceItem(ModBlocks.MAHOGANY_FENCE, ModBlocks.MAHOGANY_PLANKS);

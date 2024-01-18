@@ -13,19 +13,31 @@
     ]
   },
 
-  "jnana_and_vidya_music_disc": {
+  "legless_moan": {
+    "subtitle": "sounds.dunes_mod.legless_moan",
     "sounds": [
-      {
-        "name": "dunes_mod:jnana_and_vidya_music_disc",
-        "stream": true
-      }
+      "dunes_mod:legless_moan"
     ]
   },
 
-  "whammageddon_music_disc": {
+  "legless_hurt": {
+    "subtitle": "sounds.dunes_mod.legless_hurt",
+    "sounds": [
+      "dunes_mod:legless_hurt"
+    ]
+  },
+
+  "legless_death": {
+    "subtitle": "sounds.dunes_mod.legless_death",
+    "sounds": [
+      "dunes_mod:legless_death"
+    ]
+  },
+
+  "humian_hymn_06_music_disc": {
     "sounds": [
       {
-        "name": "dunes_mod:whammageddon_music_disc",
+        "name": "dunes_mod:humian_hymn_06",
         "stream": true
       }
     ]

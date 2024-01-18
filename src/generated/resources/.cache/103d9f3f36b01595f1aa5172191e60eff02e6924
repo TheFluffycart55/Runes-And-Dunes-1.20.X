@@ -1,7 +1,7 @@
-// 1.20.1	2023-12-02T21:19:36.6090945	Registries
+// 1.20.1	2023-12-12T01:43:20.5269746	Registries
 870f88c4245ad26fd00a47901e6ccc27a75b85e9 data/dunes_mod/forge/biome_modifier/add_tree_mahogany.json
 1ed644f7f0dfce6e076c5417af9acf7b3a71a3a9 data/dunes_mod/forge/biome_modifier/spawn_meerkat.json
 563714e25d3021b780e6b62d4bd547d5aa8d5207 data/dunes_mod/worldgen/biome/desert_dunes_biome.json
 3d681491f4ee829b0631b461a5ca653972baf8d2 data/dunes_mod/worldgen/biome/oasis_biome.json
-3e3ab41214739dc060b88446f9335429497b822d data/dunes_mod/worldgen/configured_feature/olive.json
+5870f1ad726491b475ad1817d0560e93ab9add8f data/dunes_mod/worldgen/configured_feature/olive.json
 bd13a4740d33dfe72b4908d638584422dfa026a0 data/dunes_mod/worldgen/placed_feature/mahogany_placed.json

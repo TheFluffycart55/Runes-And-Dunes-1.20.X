@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "dunes_mod:shattered_relic_template"
+    },
+    "title": "Craftless Restoration",
+    "description": "Attempt to restore an artifact from the past",
+    "frame": "task",
+    "show_toast": true,
+    "hidden": true
+  },
+  "parent": "dunes_mod:get_sifter",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:shattered_relic_template"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "dunes_mod:scorchstone_gem"
+    },
+    "title": "Crown Jewels",
+    "description": "Find a gem inside a temple",
+    "frame": "task",
+    "show_toast": true,
+    "hidden": true
+  },
+  "parent": "dunes_mod:enter_desert",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:scorchstone_gem",
+              "dunes_mod:veredite_gem",
+              "dunes_mod:eclipsal_gem"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "sends_telemetry_event": true
+}
