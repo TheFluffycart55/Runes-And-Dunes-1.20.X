@@ -1,13 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
   "template": {
-    "item": "dunes_mod:relic_template"
+    "item": "dunes_mod:veredite_rune"
   },
   "base": {
-    "item": "dunes_mod:veredite_gem"
+    "item": "minecraft:totem_of_undying"
   },
   "addition": {
-    "item": "minecraft:rabbit_foot"
+    "item": "minecraft:rabbit_hide"
   },
   "result": {
     "item": "dunes_mod:veredite_relic"

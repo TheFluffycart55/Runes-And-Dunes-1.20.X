@@ -34,38 +34,30 @@ public class ModItems {
             () -> new EclipsalRelicItem(new Item.Properties().stacksTo(1)));
 
 //SHATTERED BLUEPRINTS
-    public static final RegistryObject<Item> SHATTERED_RUNE= ITEMS.register("shattered_rune",
-        () -> new Item(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> SHATTERED_WEAPON= ITEMS.register("shattered_weapon",
-            () -> new Item(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> RELIC_TEMPLATE= ITEMS.register("relic_template",
-            () -> new Item(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> WEAPON_TEMPLATE= ITEMS.register("weapon_template",
-            () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> SHATTERED_TABLET= ITEMS.register("shattered_tablet",
+        () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> SCORCHSTONE_RUNE= ITEMS.register("scorchstone_rune",
+            () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> VEREDITE_RUNE= ITEMS.register("veredite_rune",
+            () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> ECLIPSAL_RUNE= ITEMS.register("eclipsal_rune",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
 //RESOURCES
     public static final RegistryObject<Item> DUST = ITEMS.register("dust",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RAW_BONE_MARROW = ITEMS.register("raw_bone_marrow",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BONE_MARROW_INGOT = ITEMS.register("bone_marrow_ingot",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> DUSTY_TABLET = ITEMS.register("dusty_tablet",
-            () -> new Item(new Item.Properties().craftRemainder(ModItems.DUST.get())));
     public static final RegistryObject<Item> SANDY_TABLET = ITEMS.register("sandy_tablet",
             () -> new Item(new Item.Properties().craftRemainder(Items.SAND)));
     public static final RegistryObject<Item> MEERKAT_SPAWN_EGG = ITEMS.register("meerkat_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.MEERKAT, 0xedd2ab, 0x9e7a46,new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.MEERKAT, 0x9c8a6e, 0xebbc73,new Item.Properties()));
     public static final RegistryObject<Item> LEGLESS_SPAWN_EGG = ITEMS.register("legless_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.LEGLESS, 0x363231, 0xe0be41,new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.LEGLESS, 0x47453d, 0xffd000,new Item.Properties()));
+    public static final RegistryObject<Item> RED_PANDA_SPAWN_EGG = ITEMS.register("red_panda_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RED_PANDA, 0xd47400, 0x2b1c05,new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS = ITEMS.register("papyrus",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS_CULM = ITEMS.register("papyrus_culm",
             () -> new ItemNameBlockItem(ModBlocks.PAPYRUS_CROP.get(), new Item.Properties()));
-
-    public static final RegistryObject<Item> HUMIAN_HYMN_06_MUSIC_DISC = ITEMS.register("humian_hymn_06_music_disc",
-            () -> new RecordItem(3, ModSounds.HUMIAN_HYMN_06_MUSIC_DISC,  new Item.Properties().stacksTo(1), 5060));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

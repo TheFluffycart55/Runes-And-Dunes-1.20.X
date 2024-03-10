@@ -28,12 +28,14 @@ public class ScorchstoneRelicItem extends Item
             ItemStack itemstack = pPlayer.getItemInHand(pHand);
             pLevel.playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.TOTEM_USE, SoundSource.PLAYERS, 0.5F, 1F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
             System.out.println("Totem Right Clicked!");
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 1));
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 2));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 2));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 500, 2));
+
 
 
             if (pPlayer instanceof Player) {
-                ((Player)pPlayer).getCooldowns().addCooldown(this, 180);
+                ((Player)pPlayer).getCooldowns().addCooldown(this, 900);
             }
         }
         if (!pPlayer.getAbilities().instabuild) {

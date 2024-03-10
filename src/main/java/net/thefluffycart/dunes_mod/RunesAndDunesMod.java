@@ -2,14 +2,11 @@ package net.thefluffycart.dunes_mod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,6 +22,7 @@ import net.thefluffycart.dunes_mod.block.entity.ModBlockEntities;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.entity.client.LeglessRenderer;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
+import net.thefluffycart.dunes_mod.entity.client.RedPandaRenderer;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import net.thefluffycart.dunes_mod.loot.ModLootModifiers;
@@ -33,16 +31,13 @@ import net.thefluffycart.dunes_mod.screen.ModMenuTypes;
 import net.thefluffycart.dunes_mod.screen.SifterScreen;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
 import net.thefluffycart.dunes_mod.villager.ModVillagers;
-import net.thefluffycart.dunes_mod.worldgen.biome.ModTerraBlenderAPI;
-import net.thefluffycart.dunes_mod.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
-import terrablender.api.SurfaceRuleManager;
 
 @Mod(RunesAndDunesMod.MOD_ID)
 public class RunesAndDunesMod
 {
     public static final String MOD_ID = "dunes_mod";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public RunesAndDunesMod()
     {
@@ -64,7 +59,6 @@ public class RunesAndDunesMod
         ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-        ModTerraBlenderAPI.registerRegions();
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -76,8 +70,7 @@ public class RunesAndDunesMod
             ComposterBlock.COMPOSTABLES.put(ModItems.PAPYRUS.get(), 0.4f);
             ComposterBlock.COMPOSTABLES.put(ModItems.PAPYRUS_CULM.get(), 0.15f);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.WILTFLOWER.getId(), ModBlocks.POTTED_WILTFLOWER);
-
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());        });
+      });
 
     }
 
@@ -93,9 +86,6 @@ public class RunesAndDunesMod
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(ModBlocks.SCORCHSTONE_BLOCK);
-            event.accept(ModBlocks.VEREDITE_BLOCK);
-            event.accept(ModBlocks.ECLIPSAL_BLOCK);
             event.accept(ModBlocks.MAHOGANY_PLANKS);
             event.accept(ModBlocks.MAHOGANY_STAIRS);
             event.accept(ModBlocks.MAHOGANY_SLAB);
@@ -108,8 +98,6 @@ public class RunesAndDunesMod
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
         {
             event.accept(ModBlocks.DUST_BLOCK);
-            event.accept(ModBlocks.WINDSWEPT_SAND);
-            event.accept(ModBlocks.BONE_MARROW_ORE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS)
@@ -140,6 +128,7 @@ public class RunesAndDunesMod
                     });
                     EntityRenderers.register(ModEntities.MEERKAT.get(), MeerkatRenderer::new);
                     EntityRenderers.register(ModEntities.LEGLESS.get(), LeglessRenderer::new);
+                    EntityRenderers.register(ModEntities.RED_PANDA.get(), RedPandaRenderer::new);
 
             MenuScreens.register(ModMenuTypes.SIFTER_MENU.get(), SifterScreen::new);
         }

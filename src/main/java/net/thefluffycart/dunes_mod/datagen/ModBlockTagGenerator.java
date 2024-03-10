@@ -25,13 +25,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(Tags.Blocks.ORES)
-                .add(ModBlocks.BONE_MARROW_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SCORCHSTONE_BLOCK.get(),
-                        ModBlocks.VEREDITE_BLOCK.get(),
-                        ModBlocks.ECLIPSAL_BLOCK.get(),
+                .add(ModBlocks.SCORCHSTONE_RUNE_BLOCK.get(),
+                        ModBlocks.VEREDITE_RUNE_BLOCK.get(),
+                        ModBlocks.ECLIPSAL_RUNE_BLOCK.get(),
                         ModBlocks.EXCAVATION_LANTERN.get(),
                         ModBlocks.DUST_BRICKS.get(),
                         ModBlocks.CHISELED_DUST_BRICKS.get(),
@@ -42,9 +40,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DUST_BRICK_BUTTON.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.DUST_BLOCK.get(),
-                ModBlocks.BONE_MARROW_ORE.get(),
-                ModBlocks.WINDSWEPT_SAND.get());
+                .add(ModBlocks.DUST_BLOCK.get());
 
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
@@ -57,14 +53,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MAHOGANY_FENCE_GATE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.SCORCHSTONE_BLOCK.get(),
-                        ModBlocks.VEREDITE_BLOCK.get(),
-                        ModBlocks.ECLIPSAL_BLOCK.get());
+                .add(ModBlocks.SCORCHSTONE_RUNE_BLOCK.get(),
+                        ModBlocks.VEREDITE_RUNE_BLOCK.get(),
+                        ModBlocks.ECLIPSAL_RUNE_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.EXCAVATION_LANTERN.get(),
-                        ModBlocks.BONE_MARROW_ORE.get(),
-                        ModBlocks.WINDSWEPT_SAND.get());
+                .add(ModBlocks.EXCAVATION_LANTERN.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MAHOGANY_LOG.get())

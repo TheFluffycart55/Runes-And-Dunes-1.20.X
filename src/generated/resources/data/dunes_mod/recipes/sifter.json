@@ -5,20 +5,20 @@
     "B": {
       "item": "minecraft:brush"
     },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
     "S": {
       "item": "minecraft:string"
-    },
-    "T": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "tag": "minecraft:wooden_slabs"
     }
   },
   "pattern": [
-    "XSX",
-    "XBX",
-    "T T"
+    "SSS",
+    "CBC",
+    "PPP"
   ],
   "result": {
     "item": "dunes_mod:sifter"

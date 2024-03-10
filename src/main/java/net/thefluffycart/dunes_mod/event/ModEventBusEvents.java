@@ -14,8 +14,10 @@ import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.entity.client.LeglessModel;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatModel;
 //import net.thefluffycart.dunes_mod.entity.custom.LeglessEntity;
+import net.thefluffycart.dunes_mod.entity.client.RedPandaModel;
 import net.thefluffycart.dunes_mod.entity.custom.LeglessEntity;
 import net.thefluffycart.dunes_mod.entity.custom.MeerkatEntity;
+import net.thefluffycart.dunes_mod.entity.custom.RedPandaEntity;
 import net.thefluffycart.dunes_mod.entity.layers.ModModelLayers;
 
 @Mod.EventBusSubscriber(modid = RunesAndDunesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -25,6 +27,7 @@ public class ModEventBusEvents {
     {
         event.registerLayerDefinition(ModModelLayers.MEERKAT_LAYER, MeerkatModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.LEGLESS_LAYER, LeglessModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.RED_PANDA_LAYER, RedPandaModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -32,6 +35,7 @@ public class ModEventBusEvents {
     {
         event.put(ModEntities.MEERKAT.get(), MeerkatEntity.createAttributes().build());
         event.put(ModEntities.LEGLESS.get(), LeglessEntity.createAttributes().build());
+        event.put(ModEntities.RED_PANDA.get(), RedPandaEntity.createAttributes().build());
     }
 
     @SubscribeEvent

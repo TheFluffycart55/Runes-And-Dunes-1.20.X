@@ -22,25 +22,22 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.DUST);
-        simpleItem(ModItems.DUSTY_TABLET);
         simpleItem(ModItems.SANDY_TABLET);
-        simpleItem(ModItems.BONE_MARROW_INGOT);
-        simpleItem(ModItems.RAW_BONE_MARROW);
         simpleItem(ModItems.SCORCHSTONE_GEM);
         simpleItem(ModItems.SCORCHSTONE_RELIC);
+        simpleItem(ModItems.SCORCHSTONE_RUNE);
         simpleItem(ModItems.VEREDITE_GEM);
         simpleItem(ModItems.VEREDITE_RELIC);
+        simpleItem(ModItems.VEREDITE_RUNE);
         simpleItem(ModItems.ECLIPSAL_GEM);
         simpleItem(ModItems.ECLIPSAL_RELIC);
-        simpleItem(ModItems.RELIC_TEMPLATE);
-        simpleItem(ModItems.WEAPON_TEMPLATE);
-        simpleItem(ModItems.SHATTERED_RUNE);
-        simpleItem(ModItems.SHATTERED_WEAPON);
+        simpleItem(ModItems.ECLIPSAL_RUNE);
+        simpleItem(ModItems.SHATTERED_TABLET);
         simpleItem(ModItems.PAPYRUS);
         simpleItem(ModItems.PAPYRUS_CULM);
-        simpleItem(ModItems.HUMIAN_HYMN_06_MUSIC_DISC);
         withExistingParent(ModItems.MEERKAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.LEGLESS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.RED_PANDA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         buttonItem(ModBlocks.MAHOGANY_BUTTON, ModBlocks.MAHOGANY_PLANKS);
         fenceItem(ModBlocks.MAHOGANY_FENCE, ModBlocks.MAHOGANY_PLANKS);
@@ -51,6 +48,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.MAHOGANY_DOOR);
         simpleBlockItem(ModBlocks.WILTFLOWER);
         complexBlock(ModBlocks.CHISELED_DUST_BRICKS.get());
+        complexBlock(ModBlocks.SCORCHSTONE_RUNE_BLOCK.get());
+        complexBlock(ModBlocks.VEREDITE_RUNE_BLOCK.get());
+        complexBlock(ModBlocks.ECLIPSAL_RUNE_BLOCK.get());
 
         complexBlock(ModBlocks.SIFTER.get());
         saplingItem(ModBlocks.MAHOGANY_SAPLING);

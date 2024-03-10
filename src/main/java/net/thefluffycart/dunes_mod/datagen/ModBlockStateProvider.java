@@ -24,11 +24,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.DUST_BLOCK);
-        blockWithItem(ModBlocks.SCORCHSTONE_BLOCK);
-        blockWithItem(ModBlocks.VEREDITE_BLOCK);
-        blockWithItem(ModBlocks.ECLIPSAL_BLOCK);
-        blockWithItem(ModBlocks.BONE_MARROW_ORE);
-        blockWithItem(ModBlocks.WINDSWEPT_SAND);
         blockWithItem(ModBlocks.EXCAVATION_LANTERN);
         blockWithItem(ModBlocks.MAHOGANY_PLANKS);
         blockWithItem(ModBlocks.DUST_BRICKS);

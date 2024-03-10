@@ -1,12 +1,12 @@
 {
-  "type": "dunes_mod:add_item",
+  "type": "dunes_mod:add_sniffer_item",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:gameplay/sniffer_digging"
     },
     {
-      "chance": 0.25,
+      "chance": 0.5,
       "condition": "minecraft:random_chance"
     }
   ],

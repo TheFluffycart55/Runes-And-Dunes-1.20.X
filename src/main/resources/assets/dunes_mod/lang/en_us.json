@@ -3,42 +3,25 @@
   "item.dunes_mod.veredite_gem": "Veredite Gem",
   "item.dunes_mod.eclipsal_gem": "Eclipsal Gem",
 
+  "item.dunes_mod.scorchstone_rune": "Scorchstone Rune",
+  "item.dunes_mod.veredite_rune": "Veredite Rune",
+  "item.dunes_mod.eclipsal_rune": "Eclipsal Rune",
+
   "item.dunes_mod.scorchstone_relic": "Scorchstone Relic",
   "item.dunes_mod.veredite_relic": "Veredite Relic",
   "item.dunes_mod.eclipsal_relic": "Eclipsal Relic",
 
-  "item.dunes_mod.shattered_relic_template": "Shattered Relic Template",
-  "item.dunes_mod.shattered_weapon": "Shattered Weapon",
-  "item.dunes_mod.relic_template": "Relic Template",
-  "item.dunes_mod.weapon_template": "Weapon Template",
+  "item.dunes_mod.shattered_tablet": "Shattered Tablet",
 
   "item.dunes_mod.dust": "Dust",
-  "item.dunes_mod.raw_bone_marrow": "Raw Bone Marrow",
-  "item.dunes_mod.bone_marrow_ingot": "Bone Marrow Ingot",
-  "item.dunes_mod.dusty_tablet": "Dusty Tablet",
   "item.dunes_mod.sandy_tablet": "Sandy Tablet",
   "item.dunes_mod.meerkat_spawn_egg": "Meerkat Spawn Egg",
   "item.dunes_mod.legless_spawn_egg": "Legless Spawn Egg",
   "item.dunes_mod.papyrus": "Papyrus",
   "item.dunes_mod.papyrus_culm": "Papyrus Culm",
-  "item.dunes_mod.hot_spring_water_bucket": "Hot Spring Water Bucket",
-
-  "block.dunes_mod.scorchstone_block": "Scorchstone Block",
-  "block.dunes_mod.veredite_block": "Veredite Block",
-  "block.dunes_mod.eclipsal_block": "Eclipsal Block",
 
   "block.dunes_mod.dust_block": "Block of Dust",
-  "block.dunes_mod.windswept_sand": "Windswept Sand",
-  "block.dunes_mod.bone_marrow_ore": "Bone Marrow Ore",
-  "block.dunes_mod.sand_tombed_artifact": "Sand Tombed Artifact",
-  "block.dunes_mod.dust_tombed_artifact": "Dust Tombed Artifact",
   "block.dunes_mod.excavation_lantern": "Excavation Lantern",
-
-  "item.dunes_mod.humian_hymn_06_music_disc": "Humian Hymn-06",
-  "item.dunes_mod.humian_hymn_06_music_disc.desc": "Humian Hymn-06: Circa 1400 B.C.E",
-
-  "item.dunes_mod.whammageddon_music_disc": "Last Christmas Music Disc",
-  "item.dunes_mod.whammageddon_music_disc.desc": "It's a Wham-my",
 
   "block.dunes_mod.mahogany_planks": "Mahogany Planks",
   "block.dunes_mod.mahogany_stairs": "Mahogany Stairs",
@@ -63,6 +46,9 @@
   "block.dunes_mod.dust_brick_pressure_plate": "Dust Brick Pressure Plate",
   "block.dunes_mod.dust_brick_button": "Dust Brick Button",
   "block.dunes_mod.dust_brick_wall": "Dust Brick Wall",
+  "block.dunes_mod.scorchstone_rune_block": "Scorchstone Rune Block",
+  "block.dunes_mod.veredite_rune_block": "Veredite Rune Block",
+  "block.dunes_mod.eclipsal_rune_block": "Eclipsal Rune Block",
 
   "block.dunes_mod.sifter": "Sifter",
   "block.dunes_mod.wiltflower": "Wiltflower",
@@ -73,7 +59,8 @@
   "tooltip.dunes_mod.veredite_relic.tooltip.shift": "§eRight Click§r while holding the Veredite Relic to traverse new obstacles",
   "tooltip.dunes_mod.eclipsal_relic.tooltip": "Press §eSHIFT§r for more Informtion",
   "tooltip.dunes_mod.eclipsal_relic.tooltip.shift": "§eRight Click§r while holding the Eclipsal Relic to reach new heights",
-
+  "dunes_mod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "dunes_mod.tooltip.liquid.amount": "%s mB",
   "creativetab.valuables_tab": "Valuables Tab",
   "creativetab.resources_tab": "Resources Tab",
 

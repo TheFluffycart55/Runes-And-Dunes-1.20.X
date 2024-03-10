@@ -34,7 +34,7 @@ public class VerediteRelicItem extends Item
 
 
             if (pPlayer instanceof Player) {
-                ((Player)pPlayer).getCooldowns().addCooldown(this, 180);
+                ((Player)pPlayer).getCooldowns().addCooldown(this, 900);
             }
         }
         if (!pPlayer.getAbilities().instabuild) {

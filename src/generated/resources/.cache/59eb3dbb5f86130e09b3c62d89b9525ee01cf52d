@@ -1,5 +1,4 @@
-// 1.20.1	2023-11-28T20:51:51.2504205	Loot Tables
-af6b12f466ef60e3f0fa80bd38737aec24490a30 data/dunes_mod/loot_tables/blocks/bone_marrow_ore.json
+// 1.20.1	2024-02-25T20:34:47.2324303	Loot Tables
 ff77ec53b0e7671c41b0193d8a89b2cb178d4200 data/dunes_mod/loot_tables/blocks/chiseled_dust_bricks.json
 897b63dd46872e6a522e0eb10013d0267b91d9cd data/dunes_mod/loot_tables/blocks/dust_block.json
 d52e26834271edf090dd271b24f0fbd726467bbc data/dunes_mod/loot_tables/blocks/dust_bricks.json
@@ -8,7 +7,7 @@ d52e26834271edf090dd271b24f0fbd726467bbc data/dunes_mod/loot_tables/blocks/dust_
 c9ea722a83806d0f7b76aa46d469c0deae0ccbce data/dunes_mod/loot_tables/blocks/dust_brick_slab.json
 1f8172328a784804b00f4b87ebd2117496750746 data/dunes_mod/loot_tables/blocks/dust_brick_stairs.json
 926fa4ef59565a1f8e0a39675b2f4218e6c08fe8 data/dunes_mod/loot_tables/blocks/dust_brick_wall.json
-8c826014e15b3dc9ec8e6e165e7bb3a2c37412ac data/dunes_mod/loot_tables/blocks/eclipsal_block.json
+64e5ed881cdebbe408920d697cddc31c5ef1ac90 data/dunes_mod/loot_tables/blocks/eclipsal_rune_block.json
 81282746298dc85db544544b6dd69492dd810ba9 data/dunes_mod/loot_tables/blocks/excavation_lantern.json
 da00a52239d42801ff90e739c32888f0038a98e5 data/dunes_mod/loot_tables/blocks/mahogany_button.json
 609f9608becb8dd9f590e08cbe9a2b93ae02f7e9 data/dunes_mod/loot_tables/blocks/mahogany_door.json
@@ -25,10 +24,9 @@ eee35ae55d449f7c6f6d78c52554cfed4d594209 data/dunes_mod/loot_tables/blocks/mahog
 77f131d4abac42e0d1ad1665e0c0f95838edce7f data/dunes_mod/loot_tables/blocks/mahogany_wood.json
 2a720fff5fe1da6d434b56adc7d54fc02d0f123d data/dunes_mod/loot_tables/blocks/papyrus_crop.json
 7be0ae0102af5e8d5982ade178fe157183c69ac6 data/dunes_mod/loot_tables/blocks/potted_wiltflower.json
-c164d6d5a9d028c641cc5ea74669246d9d464c03 data/dunes_mod/loot_tables/blocks/scorchstone_block.json
+2c855406ec19d957835ca4aaf7d19ebc24a587db data/dunes_mod/loot_tables/blocks/scorchstone_rune_block.json
 ae9bc762a669fc6c5ebad47c0532e41c47dd8296 data/dunes_mod/loot_tables/blocks/sifter.json
 b23d560c9a20b9f52618345e62cfe7d64f23a7a6 data/dunes_mod/loot_tables/blocks/stripped_mahogany_log.json
 92e969d22415e1e0b34e8cc858baf4945e03a58d data/dunes_mod/loot_tables/blocks/stripped_mahogany_wood.json
-ca7a1e6c3c5ae15d96dd67dafe33721af6553aec data/dunes_mod/loot_tables/blocks/veredite_block.json
+c1e3c21b3de7c90e347200d8261f3a328df87027 data/dunes_mod/loot_tables/blocks/veredite_rune_block.json
 cf5082e5c8cf504d5eef2ae69fe4c168f56640b9 data/dunes_mod/loot_tables/blocks/wiltflower.json
-418cc4c50d79416a4e6cdfe6fcc920c4a07f0644 data/dunes_mod/loot_tables/blocks/windswept_sand.json

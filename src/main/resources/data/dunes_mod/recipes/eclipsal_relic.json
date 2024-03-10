@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing_transform",
   "template": {
-    "item": "dunes_mod:relic_template"
+    "item": "dunes_mod:eclipsal_rune"
   },
   "base": {
-    "item": "dunes_mod:eclipsal_gem"
+    "item": "minecraft:totem_of_undying"
   },
   "addition": {
     "item": "minecraft:ender_eye"

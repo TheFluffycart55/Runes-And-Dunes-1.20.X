@@ -32,14 +32,5 @@
     "sounds": [
       "dunes_mod:legless_death"
     ]
-  },
-
-  "humian_hymn_06_music_disc": {
-    "sounds": [
-      {
-        "name": "dunes_mod:humian_hymn_06",
-        "stream": true
-      }
-    ]
   }
 }

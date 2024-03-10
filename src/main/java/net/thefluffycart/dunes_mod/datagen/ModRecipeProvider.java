@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.SmithingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -23,8 +24,6 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder
 {
-    private static final List<ItemLike> BONE_MARROW_SMELTABLES = List.of(ModItems.RAW_BONE_MARROW.get(),
-            ModBlocks.BONE_MARROW_ORE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -39,7 +38,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_dust", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.DUST.get()).build()))
                 .save(pWriter, "dust_block_from_dust");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DUST_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DUST_BLOCK.get(), 2)
                 .pattern("SN")
                 .pattern("NS")
                 .define('N', Items.SAND)
@@ -48,13 +47,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, "dust_block_from_sand_and_string");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SIFTER.get())
-                .define('X', ItemTags.WOODEN_SLABS)
-                .define('T', Items.STICK)
+                .define('P', ItemTags.PLANKS)
+                .define('C', Items.COPPER_INGOT)
                 .define('S', Items.STRING)
                 .define('B', Items.BRUSH)
-                .pattern("XSX")
-                .pattern("XBX")
-                .pattern("T T")
+                .pattern("SSS")
+                .pattern("CBC")
+                .pattern("PPP")
                 .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().of(Items.COPPER_INGOT).build()))
                 .save(pWriter);
 
@@ -66,24 +65,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_papyrus", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.PAPYRUS.get()).build()))
                 .save(pWriter, "paper_from_papyrus");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RELIC_TEMPLATE.get())
-                .define('R', ModItems.SHATTERED_RUNE.get())
-                .define('S', Items.SAND)
-                .define('C', Items.COPPER_INGOT)
-                .pattern("CRC")
-                .pattern("CSC")
-                .pattern("CCC")
-                .unlockedBy("has_brush", inventoryTrigger(ItemPredicate.Builder.item().of(Items.BRUSH).build()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCORCHSTONE_RUNE.get())
+                .define('S', ModItems.SCORCHSTONE_GEM.get())
+                .define('T', ModItems.SHATTERED_TABLET.get())
+                .define('M', Items.MUD_BRICKS)
+                .pattern("MSM")
+                .pattern("MTM")
+                .pattern("MMM")
+                .unlockedBy("has_scorchstone_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.SCORCHSTONE_GEM.get()).build()))
                 .save(pWriter);
 
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.SCORCHSTONE_GEM.get(), RecipeCategory.MISC, ModBlocks.SCORCHSTONE_BLOCK.get());
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VEREDITE_RUNE.get())
+                .define('S', ModItems.VEREDITE_GEM.get())
+                .define('T', ModItems.SHATTERED_TABLET.get())
+                .define('M', Items.MUD_BRICKS)
+                .pattern("MSM")
+                .pattern("MTM")
+                .pattern("MMM")
+                .unlockedBy("has_veredite_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.VEREDITE_GEM.get()).build()))
+                .save(pWriter);
 
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.VEREDITE_GEM.get(), RecipeCategory.MISC, ModBlocks.VEREDITE_BLOCK.get());
-
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.ECLIPSAL_GEM.get(), RecipeCategory.MISC, ModBlocks.ECLIPSAL_BLOCK.get());
-
-        oreSmelting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 200, "bone_marrow");
-        oreBlasting(pWriter, BONE_MARROW_SMELTABLES, RecipeCategory.MISC, ModItems.BONE_MARROW_INGOT.get(), 0.15f, 100, "bone_marrow");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ECLIPSAL_RUNE.get())
+                .define('S', ModItems.ECLIPSAL_GEM.get())
+                .define('T', ModItems.SHATTERED_TABLET.get())
+                .define('M', Items.MUD_BRICKS)
+                .pattern("MSM")
+                .pattern("MTM")
+                .pattern("MMM")
+                .unlockedBy("has_eclipsal_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ECLIPSAL_GEM.get()).build()))
+                .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS.get(), 4)
                 .requires(ModBlocks.MAHOGANY_LOG.get())
@@ -250,14 +260,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModBlocks.DUST_BRICKS.get()).build()))
                 .save(pWriter, "dust_brick_slabs_from_cutting");
 
-        //new SiftingRecipeBuilder(Blocks.ACACIA_SAPLING, ModBlocks.MAHOGANY_SAPLING.get(), 1)
-                //.unlockedBy("has_acacia_sapling", has(Blocks.ACACIA_SAPLING)).save(pWriter);
-
-        new SiftingRecipeBuilder(Blocks.DIRT, ModItems.PAPYRUS_CULM.get(), 2)
-                .unlockedBy("has_dirt", has(Blocks.DIRT)).save(pWriter);
-
         new SiftingRecipeBuilder(ModBlocks.DUST_BLOCK.get(), Blocks.SAND, 2)
                 .unlockedBy("has_dust_block", has(ModBlocks.DUST_BLOCK.get())).save(pWriter);
+        new SiftingRecipeBuilder(ModItems.SANDY_TABLET.get(), ModItems.SHATTERED_TABLET.get(), 1)
+                .unlockedBy("has_sandy_tablet", has(ModItems.SANDY_TABLET.get())).save(pWriter);
+        new SiftingRecipeBuilder(Blocks.GRAVEL, Items.FLINT, 2)
+                .unlockedBy("has_gravel", has(Blocks.GRAVEL)).save(pWriter);
+        new SiftingRecipeBuilder(Blocks.SOUL_SAND, Items.GOLD_NUGGET, 2)
+                .unlockedBy("has_soul_sand", has(Blocks.SOUL_SAND)).save(pWriter);
+        new SiftingRecipeBuilder(Blocks.SOUL_SOIL, Items.QUARTZ, 4)
+                .unlockedBy("has_soul_soil", has(Blocks.SOUL_SOIL)).save(pWriter);
     }
 
 }

@@ -1,0 +1,12 @@
+{
+  "type": "dunes_mod:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:soul_soil"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "item": "minecraft:quartz"
+  }
+}

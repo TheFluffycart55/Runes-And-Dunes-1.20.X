@@ -19,6 +19,7 @@ import java.util.List;
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> SPAWN_MEERKAT = registerKey("spawn_meerkat");
     public static final ResourceKey<BiomeModifier> ADD_TREE_MAHOGANY = registerKey("add_tree_mahogany");
+    public static final ResourceKey<BiomeModifier> ADD_WILTFLOWER = registerKey("add_wiltflower");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -32,6 +33,11 @@ public class ModBiomeModifiers {
         context.register(SPAWN_MEERKAT, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SANDY),
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.MEERKAT.get(), 80, 3, 8))));
+
+        context.register(ADD_WILTFLOWER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_HOT_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILTFLOWER_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

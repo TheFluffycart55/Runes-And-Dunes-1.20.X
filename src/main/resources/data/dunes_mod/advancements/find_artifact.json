@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "dunes_mod:sandy_artifact"
+      "item": "dunes_mod:sandy_tablet"
     },
     "title": "Professional Grave Robber",
     "description": "When does grave robbery become archaeology?",
@@ -17,8 +17,7 @@
         "items": [
           {
             "items": [
-              "dunes_mod:sandy_artifact",
-              "dunes_mod:dusty_artifact"
+              "dunes_mod:sandy_tablet"
             ]
           }
         ]

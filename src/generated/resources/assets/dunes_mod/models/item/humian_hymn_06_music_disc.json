@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "dunes_mod:item/humian_hymn_06_music_disc"
-  }
-}

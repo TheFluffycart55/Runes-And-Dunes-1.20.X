@@ -61,6 +61,7 @@ public class MeerkatModel<T extends MeerkatEntity> extends HierarchicalModel<T> 
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.animateWalk(ModAnimationDefinitions.MEERKAT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(entity.idleAnimationState, ModAnimationDefinitions.MEERKAT_IDLE, ageInTicks, 1f);
+		this.animate(entity.sitAnimationState, ModAnimationDefinitions.MEERKAT_SIT, ageInTicks, 1f);
 	}
 
 

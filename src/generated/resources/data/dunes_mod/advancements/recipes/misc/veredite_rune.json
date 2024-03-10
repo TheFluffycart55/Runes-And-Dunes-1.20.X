@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dunes_mod:veredite_rune"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_veredite_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dunes_mod:veredite_gem"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_veredite_gem",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dunes_mod:veredite_rune"
+    ]
+  },
+  "sends_telemetry_event": false
+}

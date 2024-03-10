@@ -1,0 +1,12 @@
+{
+  "type": "dunes_mod:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:soul_sand"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:gold_nugget"
+  }
+}

@@ -28,12 +28,12 @@ public class EclipsalRelicItem extends Item
             ItemStack itemstack = pPlayer.getItemInHand(pHand);
             pLevel.playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.TOTEM_USE, SoundSource.PLAYERS, 0.5F, 1F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
             System.out.println("Totem Right Clicked!");
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 100, 20));
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 0));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 60, 22));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 180, 1));
 
 
             if (pPlayer instanceof Player) {
-                ((Player)pPlayer).getCooldowns().addCooldown(this, 180);
+                ((Player)pPlayer).getCooldowns().addCooldown(this, 900);
             }
         }
         if (!pPlayer.getAbilities().instabuild) {

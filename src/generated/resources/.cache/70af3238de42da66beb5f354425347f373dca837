@@ -1,13 +1,12 @@
-// 1.20.1	2023-11-28T20:51:51.2494242	Block Tags
-364cf738cc52dbbcce3af554d49bb9cbc4c6d257 data/forge/tags/blocks/ores.json
+// 1.20.1	2024-02-25T20:02:00.9875898	Block Tags
 7b6bd2636a0f9b0e7ed0607015d478c32571029a data/minecraft/tags/blocks/buttons.json
 0b2704e25954b18108482db735efcd22467287cf data/minecraft/tags/blocks/fence_gates.json
 6463497e605abb5413ccdc6eb696920bad90fe56 data/minecraft/tags/blocks/logs_that_burn.json
 1c467a2a681c5816641e800892db0822b705b47f data/minecraft/tags/blocks/mineable/axe.json
-4ebb7505abc2c6b53370d6e1360f689f6f94c640 data/minecraft/tags/blocks/mineable/pickaxe.json
-5d99c01a46fba7f50c5f141a336c7f54cd86bfa9 data/minecraft/tags/blocks/mineable/shovel.json
-5f7aa5b474ce17920db0ff04a4b8136f9215ae9d data/minecraft/tags/blocks/needs_iron_tool.json
-6143e30b92369b463d6e4ede48d86b4d64e5282c data/minecraft/tags/blocks/needs_stone_tool.json
+c272848b020378dcab781cd4b7d8c3fb27b622ab data/minecraft/tags/blocks/mineable/pickaxe.json
+aacce3afb420a564bce52065cf64bd99c0dda89d data/minecraft/tags/blocks/mineable/shovel.json
+0e4104903ee71c45009c2d0f2c6f73bb8552972b data/minecraft/tags/blocks/needs_iron_tool.json
+0323b23fcb1d616e3a7a682fe6316b1a9236cc2d data/minecraft/tags/blocks/needs_stone_tool.json
 af5bfb2abde3cdb11d4a5c2b0e10952a0e298c4c data/minecraft/tags/blocks/planks.json
 b5bf46043eb1ef6203153bf6c22bd79278b72065 data/minecraft/tags/blocks/pressure_plates.json
 34372df2fbdba3a532804634a70ea6c41cb2fbbf data/minecraft/tags/blocks/slabs.json

@@ -9,8 +9,7 @@ import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
 
@@ -18,6 +17,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MAHOGANY_PLACED_KEY = registerKey("mahogany_placed");
+    public static final ResourceKey<PlacedFeature> WILTFLOWER_PLACED_KEY = registerKey("wiltflower_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context){
         HolderGetter<ConfiguredFeature<?,?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.2f,2),
                         ModBlocks.MAHOGANY_SAPLING.get()));
 
+        register(context, WILTFLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILTFLOWER_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

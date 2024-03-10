@@ -32,27 +32,22 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, RunesAndDunesMod.MOD_ID);
 
     //GEM BLOCKS
-    public static final RegistryObject<Block> SCORCHSTONE_BLOCK = registerBlock("scorchstone_block",
+    public static final RegistryObject<Block> SCORCHSTONE_RUNE_BLOCK = registerBlock("scorchstone_rune_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> VEREDITE_BLOCK = registerBlock("veredite_block",
+                    .requiresCorrectToolForDrops().lightLevel(state -> 5)));
+    public static final RegistryObject<Block> VEREDITE_RUNE_BLOCK = registerBlock("veredite_rune_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> ECLIPSAL_BLOCK = registerBlock("eclipsal_block",
+                    .requiresCorrectToolForDrops().lightLevel(state -> 5)));
+    public static final RegistryObject<Block> ECLIPSAL_RUNE_BLOCK = registerBlock("eclipsal_rune_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).instrument(NoteBlockInstrument.BELL)
-                    .requiresCorrectToolForDrops()));
+                    .requiresCorrectToolForDrops().lightLevel(state -> 5)));
 
     //RESOURCES
     public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block",
             () -> new GravityBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
-    public static final RegistryObject<Block> WINDSWEPT_SAND = registerBlock("windswept_sand",
-            ()-> new GravityBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
-    public static final RegistryObject<Block> BONE_MARROW_ORE = registerBlock("bone_marrow_ore",
-            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.5f).requiresCorrectToolForDrops()
-                    , UniformInt.of(2,4)));
     public static final RegistryObject<Block> EXCAVATION_LANTERN = registerBlock("excavation_lantern",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.JACK_O_LANTERN)
-                    .instrument(NoteBlockInstrument.CHIME).sound(SoundType.CHAIN)));
+                    .instrument(NoteBlockInstrument.CHIME).sound(SoundType.CHAIN).lightLevel(state -> 12)));
     public static final RegistryObject<Block> DUST_BRICKS = registerBlock("dust_bricks",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .requiresCorrectToolForDrops()));

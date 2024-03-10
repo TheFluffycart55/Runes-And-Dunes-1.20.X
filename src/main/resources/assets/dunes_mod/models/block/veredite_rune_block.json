@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dunes_mod:block/rune_block_top",
+    "side": "dunes_mod:block/veredite_rune_block"
+  }
+}

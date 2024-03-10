@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, RunesAndDunesMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> VALUABLES_TAB = CREATIVE_MODE_TABS.register("valuables_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.SCORCHSTONE_GEM.get()))
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.SCORCHSTONE_RELIC.get()))
                     .title(Component.translatable("creativetab.valuables_tab"))
                     .displayItems((pParameters, pOutput) ->
                     {
@@ -23,36 +23,30 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.VEREDITE_GEM.get());
                         pOutput.accept(ModItems.ECLIPSAL_GEM.get());
 
-                        pOutput.accept(ModBlocks.SCORCHSTONE_BLOCK.get());
-                        pOutput.accept(ModBlocks.VEREDITE_BLOCK.get());
-                        pOutput.accept(ModBlocks.ECLIPSAL_BLOCK.get());
+                        pOutput.accept(ModBlocks.SCORCHSTONE_RUNE_BLOCK.get());
+                        pOutput.accept(ModBlocks.VEREDITE_RUNE_BLOCK.get());
+                        pOutput.accept(ModBlocks.ECLIPSAL_RUNE_BLOCK.get());
 
-                        pOutput.accept(ModItems.SHATTERED_RUNE.get());
-                        pOutput.accept(ModItems.RELIC_TEMPLATE.get());
-                        //pOutput.accept(ModItems.SHATTERED_WEAPON.get());
-                        //pOutput.accept(ModItems.WEAPON_TEMPLATE.get());
+                        pOutput.accept(ModItems.SCORCHSTONE_RUNE.get());
+                        pOutput.accept(ModItems.VEREDITE_RUNE.get());
+                        pOutput.accept(ModItems.ECLIPSAL_RUNE.get());
+
 
                         pOutput.accept(ModItems.SCORCHSTONE_RELIC.get());
                         pOutput.accept(ModItems.VEREDITE_RELIC.get());
                         pOutput.accept(ModItems.ECLIPSAL_RELIC.get());
 
-                        pOutput.accept(ModItems.RAW_BONE_MARROW.get());
-                        pOutput.accept(ModItems.BONE_MARROW_INGOT.get());
-
-                        pOutput.accept(ModItems.DUSTY_TABLET.get());
                         pOutput.accept(ModItems.SANDY_TABLET.get());
-                        pOutput.accept(ModItems.HUMIAN_HYMN_06_MUSIC_DISC.get());
+                        pOutput.accept(ModItems.SHATTERED_TABLET.get());
                     }
                     ).build());
 
     public static final RegistryObject<CreativeModeTab> RESOURCES_TAB = CREATIVE_MODE_TABS.register("resources_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.DUSTY_TABLET.get()))
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModBlocks.MAHOGANY_PLANKS.get()))
                     .title(Component.translatable("creativetab.resources_tab"))
                     .displayItems((pParameters, pOutput) ->
                             {
-                                pOutput.accept(ModBlocks.WINDSWEPT_SAND.get());
                                 pOutput.accept(ModItems.DUST.get());
-                                pOutput.accept(ModBlocks.BONE_MARROW_ORE.get());
 
                                 pOutput.accept(ModBlocks.DUST_BLOCK.get());
                                 pOutput.accept(ModBlocks.DUST_BRICKS.get());

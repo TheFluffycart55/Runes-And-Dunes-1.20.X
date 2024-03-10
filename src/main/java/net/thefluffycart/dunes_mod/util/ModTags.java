@@ -21,7 +21,6 @@ public class ModTags {
     }
 
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_BONE_MARROW = tag("needs_bone_marrow");
         public static final TagKey<Block> PAPYRUS_MAY_PLACE_ON = tag("papyrus_may_place_on");
 
     private static TagKey<Block> tag(String name){

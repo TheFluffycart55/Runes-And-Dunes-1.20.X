@@ -1,11 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "dunes_mod:windswept_sand"
+      "item": "minecraft:sand"
     },
     "title": "Desert Dweller",
     "description": "Enter the desert for the first time",
-    "background": "dunes_mod:textures/block/windswept_sand_dupe.png",
+    "background": "dunes_mod:textures/block/dust_block.png",
     "frame": "task",
     "show_toast": false,
     "hidden": false

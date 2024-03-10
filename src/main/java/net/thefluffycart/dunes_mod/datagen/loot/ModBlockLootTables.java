@@ -22,12 +22,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.SCORCHSTONE_BLOCK.get());
-        this.dropSelf(ModBlocks.VEREDITE_BLOCK.get());
-        this.dropSelf(ModBlocks.ECLIPSAL_BLOCK.get());
-
         this.dropSelf(ModBlocks.EXCAVATION_LANTERN.get());
-        this.dropSelf(ModBlocks.WINDSWEPT_SAND.get());
 
         this.dropSelf(ModBlocks.MAHOGANY_STAIRS.get());
         this.dropSelf(ModBlocks.MAHOGANY_PLANKS.get());
@@ -67,8 +62,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.DUST_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.DUST_BRICK_SLAB.get()));
 
-        this.add(ModBlocks.BONE_MARROW_ORE.get(),
-                block -> createOreDrop(ModBlocks.BONE_MARROW_ORE.get(), ModItems.RAW_BONE_MARROW.get()));
+        this.add(ModBlocks.DUST_BLOCK.get(),
+                block -> createOreDrop(ModBlocks.DUST_BLOCK.get(), ModItems.DUST.get()));
+        this.add(ModBlocks.SCORCHSTONE_RUNE_BLOCK.get(),
+                block -> createOreDrop(ModBlocks.SCORCHSTONE_RUNE_BLOCK.get(), ModItems.SCORCHSTONE_GEM.get()));
+        this.add(ModBlocks.VEREDITE_RUNE_BLOCK.get(),
+                block -> createOreDrop(ModBlocks.VEREDITE_RUNE_BLOCK.get(), ModItems.VEREDITE_GEM.get()));
+        this.add(ModBlocks.ECLIPSAL_RUNE_BLOCK.get(),
+                block -> createOreDrop(ModBlocks.ECLIPSAL_RUNE_BLOCK.get(), ModItems.ECLIPSAL_GEM.get()));
+
+
+        this.add(ModBlocks.DUST_BLOCK.get(),
+                block -> createOreDrop(ModBlocks.DUST_BLOCK.get(), ModItems.DUST.get()));
         this.add(ModBlocks.DUST_BLOCK.get(),
                 block -> createOreDrop(ModBlocks.DUST_BLOCK.get(), ModItems.DUST.get()));
         this.add(ModBlocks.MAHOGANY_DOOR.get(),

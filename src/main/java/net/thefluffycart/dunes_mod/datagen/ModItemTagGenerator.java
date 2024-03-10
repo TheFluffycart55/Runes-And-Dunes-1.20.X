@@ -30,9 +30,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.MAHOGANY_PLANKS.get().asItem());
-
-        this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.HUMIAN_HYMN_06_MUSIC_DISC.get());
     }
 
     @Override

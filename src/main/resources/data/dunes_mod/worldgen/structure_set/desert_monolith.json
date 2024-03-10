@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "dunes_mod:desert_monolith",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 36936969,
+
+    "spacing": 75,
+
+    "separation": 45
+  }
+}

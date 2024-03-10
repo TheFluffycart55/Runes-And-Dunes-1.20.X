@@ -1,13 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
   "template": {
-    "item": "dunes_mod:relic_template"
+    "item": "dunes_mod:scorchstone_rune"
   },
   "base": {
-    "item": "dunes_mod:scorchstone_gem"
+    "item": "minecraft:totem_of_undying"
   },
   "addition": {
-    "item": "minecraft:blaze_rod"
+    "item": "minecraft:gunpowder"
   },
   "result": {
     "item": "dunes_mod:scorchstone_relic"

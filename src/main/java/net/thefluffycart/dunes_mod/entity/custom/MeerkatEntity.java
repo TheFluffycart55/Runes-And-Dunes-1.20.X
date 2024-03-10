@@ -2,43 +2,50 @@ package net.thefluffycart.dunes_mod.entity.custom;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
-public class MeerkatEntity extends Animal {
+public class MeerkatEntity extends TamableAnimal {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public MeerkatEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public final AnimationState sitAnimationState = new AnimationState();
+    private int sitAnimationTimeout = 0;
+
+    public MeerkatEntity(EntityType<? extends TamableAnimal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new FollowParentGoal(this, 1.1d));
 
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(1, new SitWhenOrderedToGoal(this));
+        this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.2d, 24, 3f, false));
+        this.goalSelector.addGoal(2, new FollowParentGoal(this, 1.1d));
+
+        this.goalSelector.addGoal(3, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.1d, Ingredient.of(Items.COD), true));
 
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this,1d));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 4f));
+        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 4f));
 
     }
 
@@ -60,6 +67,13 @@ public class MeerkatEntity extends Animal {
             this.idleAnimationState.start(this.tickCount);
         } else {
             --this.idleAnimationTimeout;
+        }
+
+        if (this.isInSittingPose()) {
+            sitAnimationState.startIfStopped(this.tickCount);
+        }
+        else{
+            sitAnimationState.stop();
         }
     }
 
@@ -103,4 +117,52 @@ public class MeerkatEntity extends Animal {
     public boolean isFood(ItemStack pStack) {
         return pStack.is(Items.COD);
     }
+
+    /*TAMING*/
+
+    @Override
+    public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
+
+        ItemStack itemstack = pPlayer.getItemInHand(pHand);
+        Item item = itemstack.getItem();
+
+        Item itemForTaming = Items.COD;
+
+        if(item == itemForTaming && !isTame()) {
+            if(this.level().isClientSide()) {
+                return InteractionResult.CONSUME;
+            }
+            else{
+                if(!pPlayer.getAbilities().instabuild){
+                    itemstack.shrink(1);
+                }
+
+                if(!ForgeEventFactory.onAnimalTame(this, pPlayer))
+                {
+                    if(!this.level().isClientSide) {
+                        super.tame(pPlayer);
+                        this.navigation.recomputePath();
+                        this.setTarget(null);
+                        this.level().broadcastEntityEvent(this, (byte)7);
+                        setOrderedToSit(true);
+                        this.setInSittingPose(true);
+                    }
+                }
+
+
+                return InteractionResult.SUCCESS;
+            }
+
+        }
+        //SIT TOGGLE
+        if(isTame() && pHand == InteractionHand.MAIN_HAND)
+        {
+            setOrderedToSit(!isOrderedToSit());
+            setInSittingPose(!isOrderedToSit());
+            return InteractionResult.SUCCESS;
+        }
+
+        return super.mobInteract(pPlayer, pHand);
+    }
+
 }

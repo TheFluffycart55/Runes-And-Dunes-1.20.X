@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "dunes_mod:shattered_relic_template"
+      "item": "dunes_mod:shattered_tablet"
     },
     "title": "Craftless Restoration",
     "description": "Attempt to restore an artifact from the past",
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "dunes_mod:shattered_relic_template"
+              "dunes_mod:shattered_tablet"
             ]
           }
         ]

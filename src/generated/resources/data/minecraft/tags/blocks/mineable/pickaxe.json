@@ -1,8 +1,8 @@
 {
   "values": [
-    "dunes_mod:scorchstone_block",
-    "dunes_mod:veredite_block",
-    "dunes_mod:eclipsal_block",
+    "dunes_mod:scorchstone_rune_block",
+    "dunes_mod:veredite_rune_block",
+    "dunes_mod:eclipsal_rune_block",
     "dunes_mod:excavation_lantern",
     "dunes_mod:dust_bricks",
     "dunes_mod:chiseled_dust_bricks",
