@@ -46,6 +46,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_sand", inventoryTrigger(ItemPredicate.Builder.item().of(Items.SAND).build()))
                 .save(pWriter, "dust_block_from_sand_and_string");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POCKET_DUST.get(), 1)
+                .define('D', ModItems.DUST.get())
+                .define('B', Items.BUNDLE)
+                .pattern("DDD")
+                .pattern("DBD")
+                .pattern("DDD")
+                .unlockedBy("has_bundle", inventoryTrigger(ItemPredicate.Builder.item().of(Items.BUNDLE).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.DUST.get(), 4)
+                        .requires(ModBlocks.DUST_BLOCK.get())
+                        .unlockedBy("has_dust_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DUST_BLOCK.get()).build()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SIFTER.get())
                 .define('P', ItemTags.PLANKS)
                 .define('C', Items.COPPER_INGOT)
@@ -64,6 +78,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("   ")
                 .unlockedBy("has_papyrus", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.PAPYRUS.get()).build()))
                 .save(pWriter, "paper_from_papyrus");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BUNDLE)
+                .define('S', Items.STRING)
+                .define('R', Items.RABBIT_HIDE)
+                .pattern("SRS")
+                .pattern("R R")
+                .pattern("RRR")
+                .unlockedBy("has_rabbit_hide", inventoryTrigger(ItemPredicate.Builder.item().of(Items.RABBIT_HIDE).build()))
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCORCHSTONE_RUNE.get())
                 .define('S', ModItems.SCORCHSTONE_GEM.get())

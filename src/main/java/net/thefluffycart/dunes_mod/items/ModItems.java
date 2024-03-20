@@ -10,6 +10,7 @@ import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 import net.thefluffycart.dunes_mod.items.custom.EclipsalRelicItem;
+import net.thefluffycart.dunes_mod.items.custom.PocketDustItem;
 import net.thefluffycart.dunes_mod.items.custom.ScorchstoneRelicItem;
 import net.thefluffycart.dunes_mod.items.custom.VerediteRelicItem;
 import net.thefluffycart.dunes_mod.sound.ModSounds;
@@ -58,6 +59,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PAPYRUS_CULM = ITEMS.register("papyrus_culm",
             () -> new ItemNameBlockItem(ModBlocks.PAPYRUS_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> POCKET_DUST= ITEMS.register("pocket_dust",
+            () -> new PocketDustItem(new Item.Properties().durability(8).craftRemainder(Items.BUNDLE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
 //import net.thefluffycart.dunes_mod.entity.client.LeglessModel;
+import net.thefluffycart.dunes_mod.entity.client.DustProjectileModel;
 import net.thefluffycart.dunes_mod.entity.client.LeglessModel;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatModel;
 //import net.thefluffycart.dunes_mod.entity.custom.LeglessEntity;
@@ -28,6 +29,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(ModModelLayers.MEERKAT_LAYER, MeerkatModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.LEGLESS_LAYER, LeglessModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.RED_PANDA_LAYER, RedPandaModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.DUST_PROJECTILE_LAYER, DustProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent

@@ -32,5 +32,12 @@
     "sounds": [
       "dunes_mod:legless_death"
     ]
+  },
+
+  "dust_throw": {
+    "subtitle": "sounds.dunes_mod.dust_throw",
+    "sounds": [
+      "dunes_mod:dust_throw"
+    ]
   }
 }

@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
+import net.thefluffycart.dunes_mod.entity.custom.DustProjectileEntity;
 import net.thefluffycart.dunes_mod.entity.custom.LeglessEntity;
 import net.thefluffycart.dunes_mod.entity.custom.MeerkatEntity;
 import net.thefluffycart.dunes_mod.entity.custom.RedPandaEntity;
@@ -30,6 +31,14 @@ public class ModEntities {
     public static final RegistryObject<EntityType<LeglessEntity>> LEGLESS =
             ENTITY_TYPES.register("legless",()-> EntityType.Builder.of(LeglessEntity::new, MobCategory.MONSTER)
                     .sized(0.9f,0.8f).build("legless"));
+
+    public static final RegistryObject<EntityType<DustProjectileEntity>> DUST_PROJECTILE =
+            ENTITY_TYPES.register("dust_projectile",
+                    ()-> EntityType.Builder.<DustProjectileEntity>of(DustProjectileEntity::new, MobCategory.MISC)
+                            .sized(0.4f, 0.4f)
+                            .clientTrackingRange(4)
+                            .updateInterval(20)
+                            .build("dust_projectile"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

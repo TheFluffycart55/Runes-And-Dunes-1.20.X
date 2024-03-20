@@ -72,5 +72,6 @@
   "sounds.dunes_mod.legless_hurt": "Legless Hurt",
   "sounds.dunes_mod.legless_death": "Legless Dies",
   "sounds.dunes_mod.meerkat_idle": "Meerkat Sniffs",
-  "sounds.dunes_mod.meerkat_hurt": "Meerkat Hurt"
+  "sounds.dunes_mod.meerkat_hurt": "Meerkat Hurt",
+  "sounds.dunes_mod.dust_throw": "Pocket Dust Throw"
 }

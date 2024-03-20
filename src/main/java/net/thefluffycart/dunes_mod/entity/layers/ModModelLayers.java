@@ -14,4 +14,6 @@ public class ModModelLayers {
     public static final ModelLayerLocation LEGLESS_LAYER = new ModelLayerLocation(
             new ResourceLocation(RunesAndDunesMod.MOD_ID, "legless_layer"), "legless_layer");
 
+    public static final ModelLayerLocation DUST_PROJECTILE_LAYER = new ModelLayerLocation(
+            new ResourceLocation(RunesAndDunesMod.MOD_ID, "dust_projectile_layer"), "dust_projectile_layer");
 }

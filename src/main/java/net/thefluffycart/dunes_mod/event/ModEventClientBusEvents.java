@@ -7,12 +7,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.thefluffycart.dunes_mod.RunesAndDunesMod;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
 import net.thefluffycart.dunes_mod.block.entity.ModBlockEntities;
 import net.thefluffycart.dunes_mod.block.entity.renderer.SifterBlockEntityRenderer;
+import net.thefluffycart.dunes_mod.particles.DustParticles;
+import net.thefluffycart.dunes_mod.particles.ModParticles;
 
 @Mod.EventBusSubscriber(modid = RunesAndDunesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventClientBusEvents {
@@ -22,7 +25,10 @@ public class ModEventClientBusEvents {
         event.register((pState, pLevel, pPos, pTintIndex) -> pLevel != null &&
                 pPos != null ? BiomeColors.getAverageFoliageColor(pLevel, pPos) : FoliageColor.getDefaultColor(), ModBlocks.MAHOGANY_LEAVES.get());
     }
-
+    @SubscribeEvent
+    public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(ModParticles.DUST_PARTICLES.get(), DustParticles.Provider::new);
+    }
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.SIFTER_ENTITY_BE.get(),

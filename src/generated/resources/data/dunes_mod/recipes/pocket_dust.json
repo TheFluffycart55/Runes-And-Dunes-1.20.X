@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bundle"
+    },
+    "D": {
+      "item": "dunes_mod:dust"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "DBD",
+    "DDD"
+  ],
+  "result": {
+    "item": "dunes_mod:pocket_dust"
+  },
+  "show_notification": true
+}

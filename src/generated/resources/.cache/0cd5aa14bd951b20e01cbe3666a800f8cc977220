@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-10T01:20:27.0111781	Item Models: dunes_mod
+// 1.20.1	2024-03-20T16:18:05.1978825	Item Models: dunes_mod
 b803a7c36fa4f750f12e23c5089cc186443fbc7a assets/dunes_mod/models/item/chiseled_dust_bricks.json
 26fca11903fe84027332a5fd6e6376dc9dfc83f0 assets/dunes_mod/models/item/dust.json
 4a5bd15cc440fe3fc7179d7fb627608eccf085ef assets/dunes_mod/models/item/dust_brick_button.json
@@ -15,6 +15,7 @@ aea52a60ea3deb01f171af21994a28f14a0bda42 assets/dunes_mod/models/item/mahogany_b
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/dunes_mod/models/item/meerkat_spawn_egg.json
 74ad0535682e65493c3ac4c6180411b8961fdea0 assets/dunes_mod/models/item/papyrus.json
 5afcd8510f44624d360c6561738ab2136acaec36 assets/dunes_mod/models/item/papyrus_culm.json
+155608cc561f08bd9b551933b099fd03dfc75c04 assets/dunes_mod/models/item/pocket_dust.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/dunes_mod/models/item/red_panda_spawn_egg.json
 7d1abc72203f46189813e6fe4382982a8afabfdc assets/dunes_mod/models/item/sandy_tablet.json
 00357e471c648a3f6bdba3000a9abb4ad968213f assets/dunes_mod/models/item/scorchstone_gem.json

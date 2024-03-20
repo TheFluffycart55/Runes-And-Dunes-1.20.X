@@ -20,12 +20,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thefluffycart.dunes_mod.block.ModBlocks;
 import net.thefluffycart.dunes_mod.block.entity.ModBlockEntities;
 import net.thefluffycart.dunes_mod.entity.ModEntities;
+import net.thefluffycart.dunes_mod.entity.client.DustProjectileRenderer;
 import net.thefluffycart.dunes_mod.entity.client.LeglessRenderer;
 import net.thefluffycart.dunes_mod.entity.client.MeerkatRenderer;
 import net.thefluffycart.dunes_mod.entity.client.RedPandaRenderer;
 import net.thefluffycart.dunes_mod.items.ModCreativeModeTabs;
 import net.thefluffycart.dunes_mod.items.ModItems;
 import net.thefluffycart.dunes_mod.loot.ModLootModifiers;
+import net.thefluffycart.dunes_mod.particles.ModParticles;
 import net.thefluffycart.dunes_mod.recipe.ModRecipes;
 import net.thefluffycart.dunes_mod.screen.ModMenuTypes;
 import net.thefluffycart.dunes_mod.screen.SifterScreen;
@@ -53,6 +55,7 @@ public class RunesAndDunesMod
         ModVillagers.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
@@ -126,9 +129,11 @@ public class RunesAndDunesMod
             event.enqueueWork(() -> {
 
                     });
+                    EntityRenderers.register(ModEntities.DUST_PROJECTILE.get(), DustProjectileRenderer::new);
                     EntityRenderers.register(ModEntities.MEERKAT.get(), MeerkatRenderer::new);
                     EntityRenderers.register(ModEntities.LEGLESS.get(), LeglessRenderer::new);
                     EntityRenderers.register(ModEntities.RED_PANDA.get(), RedPandaRenderer::new);
+
 
             MenuScreens.register(ModMenuTypes.SIFTER_MENU.get(), SifterScreen::new);
         }

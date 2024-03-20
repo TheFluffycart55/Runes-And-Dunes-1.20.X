@@ -23,7 +23,7 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> LEGLESS_DEATH = registerSoundEvents("legless_death");
 
-    public static final RegistryObject<SoundEvent> HUMIAN_HYMN_06_MUSIC_DISC = registerSoundEvents("humian_hymn_06_music_disc");
+    public static final RegistryObject<SoundEvent> DUST_THROW = registerSoundEvents("dust_throw");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name)
     {
